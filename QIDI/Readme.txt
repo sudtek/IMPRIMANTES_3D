@@ -4,7 +4,7 @@ Contexte : J'ai recement fait l'acquisition d'une imprimante de marque QIDI mod�
  
 * Différent d'une IDEX composée de deux têtes totalement indépandantes.
 
-Important : Les deux extrudeurs de la QIDI IFAST sont montés sur une même unique tête et sont sortis / retractés selon le besoin via une came lorsque la tête arrive en buté gauche / droite. 
+Important : Les deux extrudeurs de la QIDI IFAST sont montés sur une unique tête et sont alternativement sortis / retractés selon le besoin via une came lorsque la tête arrive en buté gauche / droite. 
 
 Exemple : Si la tête arrive en buté gauche la tête Z2 situé à main gauche est mise à hauteur afin de pouvoir imprimer alors que la tête de droite z1 est elle est retactée.
 

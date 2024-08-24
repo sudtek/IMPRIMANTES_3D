@@ -1,1 +1,7 @@
+Etape 00  Réglage de l'alignement des deux buses et du calibrage dit XY. 
 
+Cette étape est certes documenté par QUIDI (différents facicules) néanmoins elle souffre de nombreuses lacunes ... En effet lorsque l'on acquier une impimante de type QIDI IFAST avec double extrudeur c'est géneralement pdans le but de réaliser des impressions techniques. Dans mon cas entre autres pouvoir imprimmer les protypes des corps de piéces en PETG avec des supports dans une autre matiere (PLA) afin de faciliter leurs retraits dans les zones difficiles mais egalement avoir une couche d'appui physique pour certains surplombs, ponts ... ce qui est totalement infaisable si on utilise le même materiaux pour le corps et les supports ils fusionnent si on ne laisse pas 1 ou plusieurs couches vides. Deplus lorsque l'on imprime du PETG on ne peut activer la ventilation donc impossible de faire des ponts verticaux il faut des supports. 
+
+J'ai donc fait ma 1er erreur : mixer les bobines et mettre une bobine de PETG et une de PLA ... malheureusement pour pouvoir calibrer il faut imperativement que les deux buses extrudent du PLA !
+
+Pour pouvoir calibrer 

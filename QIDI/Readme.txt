@@ -19,8 +19,8 @@ QUIDI IFAST (Firmware Marlin)
 |      Impression          |   Corps   |  Supports |
 |   Matière à extruder     |    PETG   |    PLA    |
 | Temperature extrudeurs°c |    235    |    205    |
-| Temperature Bed °c       |          70**         | // Toujours prevoir un filme de colle blanche pour assurer l'hadérence et limiter le warpinget faciliter le retrait par spatulage 
-| Temperature enceinte °c  |          55**         | // Ne pas dépasser les 55°c sinon les supports /radeaux/ jupes en PLA vont fondre et se deformer l'idéal est d'utiliser un pla+ haute température 
+| Temperature Bed °c       |          70**         | // Toujours prevoir un filme de colle blanche pour assurer l'hadérence et limiter le warp et faciliter le retrait par spatulage.
+| Temperature enceinte °c  |          55**         | // Ne pas dépasser les 55°c sinon les supports / radeaux / jupes en PLA vont fondre et se deformer l'idéal est d'utiliser un pla+ 
 
 * Localisation par convention lorsque l'on fait face à l'imprimante.
 note : A la fin de l'impression Il est conseillé de faire baisser la temperature de l'enceinte par palier pour eviter le warping.

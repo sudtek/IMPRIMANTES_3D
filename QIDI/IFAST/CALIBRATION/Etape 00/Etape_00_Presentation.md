@@ -17,9 +17,14 @@ P4) Nettoyer soigneusement le bed avec une microfibre.
 
 P5) Dégraisser le bed avec un alcool ménager et une microfibre.
   
-P6) Appliquer une couche fine de colle UHU stick premier prix au centre sur un carré de 150 mm de section. Ne faites pas de sur épaisseur, personellement j'utilise une colle UHU filuée à leau que j'applique avec un petit rouleau pour uniformiser.
+P6) Appliquer une couche fine de colle UHU stick premier prix au centre sur un carré de 150 mm de section. Ne faites pas de sur épaisseur, personellement j'utilise une colle UHU diluée à l'eau que j'applique avec un petit rouleau pour uniformiser.
 [Technique d'application de colle soluble en baton au rouleau](https://youtu.be/7C0QPmg6328?si=Unesij_6ZGf4jkct)
 
+P7) Faites préchauffer en fixant manuelement le bed à 60°c.
 
-QIDI a integré un programme pour faciliter 
+P8) Faites préchauffer en fixant les buses à 200°c.
+
+P9) Extruder manuellement au minimum 100mm de filament sur les têtes Z1/Z2. 
+
+P9) QIDI a integré un programme lancer la calibration XY 
 

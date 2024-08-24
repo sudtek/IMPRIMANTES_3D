@@ -2,7 +2,7 @@
 
 Contexte : Cette étape est certes documentée par QUIDI (dans différents facicules et langues) néanmoins elle souffre de lacunes. En effet lorsque l'on acquier une imprimante de type QIDI IFAST avec double extrudeur c'est géneralement dans le but de réaliser des impressions techniques. Dans mon cas entre autres pouvoir imprimmer des protypes des corps de piéces en PETG avec des supports dans une autre matiere (PLA) afin de faciliter leurs retraits dans les zones difficiles mais egalement avoir une couche d'appui physique pour certains surplombs, ponts ... En effet si on utilise le même materiaux pour le corps et les supports sans prevoir une couche de séparation ils fusionnent et on ne peut plus retirer les supports. De plus lorsque l'on imprime du PETG on ne peut pas activer la ventilation car le petg refroidi rapidement warp donc impossible de faire des ponts verticaux il faut beaucoup des supports. 
 
-**Calibration de l'offsetdes buses Z2/Z1 selon l'axe XY :**
+**Calibration de l'offset des buses Z2/Z1 selon l'axe XY :**
 
 Prerequis pour pouvoir calibrer les deux buses : 
 
@@ -35,7 +35,7 @@ P10 ) Appliquer une fine couche de colle UHU stick premier prix au centre sur un
 P11) Enlever le couvercle superieur transparent pendant l'impression du PLA. 
 _Note : C'est recommandé pour le PLA néanmoins dans la pratique je prefere avoir mon enciente à temperature constante mais bon ce n'est pas un point crucial dans l'étape 00._
 
-P12) QIDI a integré un menu de calibration XY accesible depuis l'interface mais ... pour l'utiliser il faut obligatoirement utiliser la clef usb* livrée avec l'imprimante, la connecter à l'imprimante et lancer le fichier gcode PLA_E_CALIBRATION.gcode  ...
+P12) QIDI a integré un menu de calibration XY accesible depuis l'interface mais ... pour l'utiliser il faut obligatoirement utiliser la clef usb* livrée avec l'imprimante, la connecter à l'imprimante et lancer le fichier gcode [PLA_E_CALIBRATION.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/3.Test%20file/PLA_E_Calibration.gcode)  ...
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/IMG_20240718_164933.jpg)
 
 _* Pas franchement pratique pour ne pas dire trés mal pensé ... mais pourquoi ne pas avoir tout integré dans le menu QIDI ?_
@@ -59,7 +59,7 @@ Vous fixez les valeurs X et Y et vous relancez l'impression de E_calibration.gco
 _Note : J'ai informé QIDI de ce pb ... leur réponse n'a pas été vraiement satisfaisante ..._
 
 
-P14) Pour valider l'étape 00 de calibration XY il faut imprimer le fichier de controle de calibration dispobnible sur la clef usb et lancer le programme gcode E_calibration.gcode. Si vous avez correctement compensé X et Y vous devriez obtenir une impression bi couleurs distinctes dans ce style sasn melange des couleurs : 
+P14) Pour valider l'étape 00 de calibration XY il faut imprimer le fichier de controle de calibration dispobnible sur la clef usb et lancer le programme gcode [E_calibration.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/3.Test%20file/E_Calibration.gcode) . Si vous avez correctement compensé X et Y vous devriez obtenir une impression bi couleurs distinctes dans ce style sasn melange des couleurs : 
 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/IMG_20240718_191917.jpg)
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/IMG_20240718_192141.jpg)

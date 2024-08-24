@@ -10,7 +10,7 @@ Pour utiliser le logiciel OctoPrint avec l'imprimante Qidi I-Fast, il est néces
 
 2. **Localiser le Connecteur Série** :
    - Identifiez le connecteur série à l'intérieur de l'imprimante. Il existe deux ports série, Attention Qidi recommande de connecter le dongle USB au port situé à proximité immédiate du module Wi-Fi.
-!(PCB)[https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/LOGICIELS/Octoprint/PCB_serial.png]
+![Le PCBen question est celui de droite :](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/LOGICIELS/Octoprint/PCB_serial.png)
 
 3. **Connecter le Dongle USB** :
    - Branchez le dongle USB au connecteur série identifié.

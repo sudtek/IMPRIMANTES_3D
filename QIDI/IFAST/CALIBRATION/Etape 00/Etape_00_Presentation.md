@@ -35,10 +35,10 @@ P10 ) Appliquer une fine couche de colle UHU stick premier prix au centre sur un
 P11) Enlever le couvercle superieur transparent pendant l'impression du PLA. 
 _Note : C'est recommandé pour le PLA néanmoins dans la pratique je prefere avoir mon enciente à temperature constante mais bon ce n'est pas un point crucial dans l'étape 00._
 
-P12) QIDI a integré un menu de calibration XY accesible depuis l'interface mais ... pour l'utiliser il faut obligatoirement utiliser la clef usb* livrée avec l'imprimante, la connecter à l'imprimante et lancer le programme E_calibration.gcode ...
+P12) QIDI a integré un menu de calibration XY accesible depuis l'interface mais ... pour l'utiliser il faut obligatoirement utiliser la clef usb* livrée avec l'imprimante, la connecter à l'imprimante et lancer le fichier gcode PLA_E_CALIBRATION.gcode  ...
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/IMG_20240718_164933.jpg)
 
-_* Pas franchement pratique pour ne pas dire trés mal pensé ... pourquoi ne pas avoir tout integré dans le menu QIDI ?_
+_* Pas franchement pratique pour ne pas dire trés mal pensé ... mais pourquoi ne pas avoir tout integré dans le menu QIDI ?_
 
 L'imprimante va imprimer un gabarit de calibration pour les axes X et Y :
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/1721313001933.jpg)
@@ -54,8 +54,19 @@ Vous fixez les valeurs X et Y et vous relancez l'impression de E_calibration.gco
 **En théorie :** Vous devriez avoir les dents alignées dans les cases X et Y
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/perfect1721314999577.jpg)
 
-**En pratique :** Ce n'est jamais pas le cas pour l'axe X ... il vous faudra chercher cette valeur par dichotmie en accadrant la valeur par pas de +-0.05mm par une serie tests essais. Comptez au moins 5 tentatives pour trouver la bonne valeur ... 
-_Note : J'ai informé QIDI de ce pb à mon gout leur réponse n'a pas été vraiement satisfaisante ..._
+**En pratique :** Ce n'est jamais pas le cas pour l'axe X ... il vous faudra chercher cette valeur par dichotmie en accadrant la valeur par pas de +-0.05mm par une serie de tests essais / erreurs. Compter au moins 5 tentatives pour trouver la bonne valeur ...
+
+_Note : J'ai informé QIDI de ce pb ... leur réponse n'a pas été vraiement satisfaisante ..._
+
+
+P14) Pour valider l'étape 00 de calibration XY il faut imprimer le fichier de controle de calibration dispobnible sur la clef usb et lancer le programme gcode E_calibration.gcode. Si vous avez correctement compensé X et Y vous devriez obtenir une impression bi couleurs distinctes dans ce style sasn melange des couleurs : 
+
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/IMG_20240718_191917.jpg)
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/IMG_20240718_192141.jpg)
+
+Comme vous pouvez le constater la superposition de certaines couches en parois contigues sans melange implique d'avoir des matieres compatibles d'ou le fait que lon ne puisse pas melanger du PETG et du PLA pour cette procédure de calibration. La temperature de la buse de PETG fait fondre le PLA, les deux matieres n'hadérent pas ensemble, la ventilation fait warper le PETG, les temperatures trop basse le font se décoler du bed, le PETG est trop froid à l'extrusion ... bref le mix PLA / PETG ne permet pas de valider la calibration des axes X / Y ... 
+
+
 
 
 

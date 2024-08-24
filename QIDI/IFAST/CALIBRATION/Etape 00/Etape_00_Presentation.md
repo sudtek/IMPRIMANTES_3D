@@ -7,9 +7,9 @@ Contexte : Cette étape est certes documentée par QUIDI (dans différents facic
 Prerequis pour pouvoir calibrer les deux buses : 
 
 P1) Il faut imperativement que les deux buses extrudent la même matiere du PLA ! Vous ne pouvez pas mixer les bobines et mettre par exemple une bobine de PETG en Z2 et une de PLA sur Z1. 
-Note : Le gcode integré à l'interface de l'imprimante va fixer la temperature du bed et des buses pour le PLA qui est inferieures au besoin par exemple d'un PETG.  
+Note : Le gcode integré à l'interface de l'imprimante va automatiquement fixer la temperature du bed et des buses à 198°c pour le PLA qui est inferieures au besoin par exemple d'un PETG 235°c et cela peut déterriorer la tête si la temperature d'extrusion est beaucoup trop base par rapport à la temperature de fusion du filament.  
 
-P2) Charger ddeux bobines bien séches et désydratés.
+P2) Charger deux bobines bien séches et désydratés (le PLA absorbe l'eau) donc prevoir 24 heures de désydration.
 
 P3) Les couleurs des bobines doivent être contrastés exemple une Rouge et une Blanche. Ne pas utiliser de couleur noir ou sombre car il n'y aura pas de contraste avec le bed et la lecture sera dificile.
 

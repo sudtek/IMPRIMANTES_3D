@@ -37,6 +37,7 @@ _Note : C'est recommandé pour le PLA néanmoins dans la pratique je prefere avo
 
 P12) QIDI a integré un menu de calibration XY accesible depuis l'interface mais ... pour l'utiliser il faut obligatoirement utiliser la clef usb livrée avec l'imprimante, la connecter à l'imprimante et lancer le programme E_calibration.gcode ...
 
+
 _Note: Je trouve cela pas franchement pratique pour ne pas dire trés mal pensé ... pourquoi ne pas avoir tout integré dans le menu QIDI ?_ 
 
 

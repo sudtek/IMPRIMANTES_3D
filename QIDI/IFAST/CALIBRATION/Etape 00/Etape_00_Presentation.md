@@ -21,16 +21,15 @@ P7) Faites préchauffer en fixant manuelement le bed à 60°c.
 
 P8) Faites préchauffer en fixant les buses à 200°c.
 
-P9) Extruder manuellement au minimum 100mm de filament sur les têtes Z1/Z2 pour verifier la bonne homoggénité de l'extrusion, présence de bulles lié à un filament mal déshydraté ... 
+P9) Extruder manuellement au minimum 100mm de filament sur les têtes Z1 et Z2 pour verifier la bonne homogénéité de l'extrusion et qu'il n'y est pas présence de bulles lié à un filament mal déshydraté ... 
 
-P10) Lancer un "standard bed leveling"* et utiliser une feuille papier A4 pour régler les 3 molettes. Ne surtout pas utiliser la carte en plastique d'épaisseur 0.20mm livrée à cet effet car elle est en plastique et fondra au contact des buses chaudes. De plus elle n'est pas pratique car pas assez longue.
+P10) Lancer un "standard bed leveling"* et utiliser une feuille papier A4 pour pour régler la distance plateau buse via les 3 molettes à 120° situées sous le plateau. Ne sjamais utiliser la carte en plastique d'épaisseur 0.20mm livrée à cet effet car elle est en plastique et fondra au contact des buses chaudes. De plus elle n'est pas pratique car pas assez longue.
 
-P11) Toujours à temperature buses + bed faites une serie de 3 fasts leveling avec la feuille A4 pour compenser. 
+P11) Toujours à temperature de travail buses +200°c / 60°c bed faites une serie succesives de 3 fasts leveling avec la feuille A4. Je recommande d'attendre au moins 5 minutes entre les fast bedeleveling le temps que la mécanique se dilate et mette en place.
 
-* Note : Cette étape est importante et cruciale, le leveling doit être fait à chaud en conditons d'utilisations et jamais à froid pour des raisons de dilatations ! Il faut que la feuille puisse bouger mais que vous sentier une légère resitance en tirant et poussant la feuille A4. si en poussant la feuille A4 se gondole il vous faudra abaisser le plateau pour liberer la feuille. (je ferais une vidéo explicative)  
+* Note : Cette étape est cruciale, le leveling doit être toujours fait à chaud en conditons d'utilisations et jamais à froid pour des raisons de dilatations ! Il faut que la feuille puisse bouger mais que vous sentiez une légère resitance en tirant et poussant sur la feuille A4. si en poussant la feuille A4 se gondole et ne bouge pas il vous faudra abaisser le plateau pour liberer la pression exercé par la buse sur la feuille A4. (je ferais une vidéo explicative car ce n'est pas trivial)  
 
-* 
-P) Appliquer une couche fine de colle UHU stick premier prix au centre sur un carré de 150 mm de section. Ne faites pas de sur épaisseur, personellement j'utilise une colle UHU diluée à l'eau que j'applique avec un petit rouleau pour uniformiser.
+P) Appliquer une fine couche de colle UHU stick premier prix au centre sur un carré de 150 mm de section sans faire de  surépaisseur. j'utilise une colle UHU diluée à l'eau que j'applique avec un petit rouleau pour uniformiser.
 [Technique d'application de colle soluble en baton au rouleau](https://youtu.be/7C0QPmg6328?si=Unesij_6ZGf4jkct)
 
 P) QIDI a integré un programme lancer la calibration XY 

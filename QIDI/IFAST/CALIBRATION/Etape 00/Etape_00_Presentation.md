@@ -35,9 +35,27 @@ P10 ) Appliquer une fine couche de colle UHU stick premier prix au centre sur un
 P11) Enlever le couvercle superieur transparent pendant l'impression du PLA. 
 _Note : C'est recommandé pour le PLA néanmoins dans la pratique je prefere avoir mon enciente à temperature constante mais bon ce n'est pas un point crucial dans l'étape 00._
 
-P12) QIDI a integré un menu de calibration XY accesible depuis l'interface mais ... pour l'utiliser il faut obligatoirement utiliser la clef usb livrée avec l'imprimante, la connecter à l'imprimante et lancer le programme E_calibration.gcode ...
+P12) QIDI a integré un menu de calibration XY accesible depuis l'interface mais ... pour l'utiliser il faut obligatoirement utiliser la clef usb* livrée avec l'imprimante, la connecter à l'imprimante et lancer le programme E_calibration.gcode ...
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/IMG_20240718_164933.jpg)
 
-_Note: Je trouve cela pas franchement pratique pour ne pas dire trés mal pensé ... pourquoi ne pas avoir tout integré dans le menu QIDI ?_ 
+_* Pas franchement pratique pour ne pas dire trés mal pensé ... pourquoi ne pas avoir tout integré dans le menu QIDI ?_
+
+L'imprimante va imprimer un gabarit de calibration pour les axes X et Y :
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/1721313001933.jpg)
+
+Chaque intervalle vaut 0.05mm. 
+
+P13) Vous sortez la plaque et prennez une loupe pour visualiser l'impression (Si si c'est indispensable...) 
+
+Vous comptez sur l'axe X le nombre de dents qui vous separe du centre pour aller vers les deux dents les plus alignées sauf si chanceux tout est bien aligné dés le départ la valeur est 0.0 . Dans mon exemple elles sont situées à droite de X on est en postif exemple +4 * 0.05mm = +0.20mm nous devons fixer la compensation de +0.20mm. Si les dents alignées avaient été situées à gauche du X le nombre aurait éte négatif exemple -0.20mm. Même principe pour l'axe Y mais de haut + en bas - dans (un repére strandard)
+
+Vous fixez les valeurs X et Y et vous relancez l'impression de E_calibration.gcode pour verifier les valeurs saisies.
+
+**En théorie :** Vous devriez avoir les dents alignées dans les cases X et Y
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/perfect1721314999577.jpg)
+
+**En pratique :** Ce n'est jamais pas le cas pour l'axe X ... il vous faudra chercher cette valeur par dichotmie en accadrant la valeur par pas de +-0.05mm par une serie tests essais. Comptez au moins 5 tentatives pour trouver la bonne valeur ... 
+_Note : J'ai informé QIDI de ce pb à mon gout leur réponse n'a pas été vraiement satisfaisante ..._
+
 
 

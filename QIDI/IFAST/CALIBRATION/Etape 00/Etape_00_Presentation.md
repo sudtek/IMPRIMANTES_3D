@@ -17,7 +17,8 @@ P4) Nettoyer soigneusement le bed avec une microfibre.
 
 P5) Dégraisser le bed avec un alcool ménager et une microfibre.
   
-P6) passer une couche fine de colle UHU stick au centre sur un carré de 150 mm de section 
+P6) Appliquer une couche fine de colle UHU stick premier prix au centre sur un carré de 150 mm de section. Ne faites pas de sur épaisseur, personellement j'utilise une colle UHU filuée à leau que j'applique avec un petit rouleau pour uniformiser.
+
 
 QIDI a integré un programme pour faciliter 
 

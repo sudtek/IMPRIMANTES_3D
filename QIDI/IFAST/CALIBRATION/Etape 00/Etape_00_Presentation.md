@@ -49,7 +49,7 @@ P13) Vous sortez la plaque et prennez une loupe pour visualiser l'impression (Si
 
 Vous comptez sur l'axe X le nombre de dents qui vous separe du centre pour aller vers les deux dents les plus alignées sauf si chanceux tout est bien aligné dés le départ la valeur est 0.0 . Dans mon exemple elles sont situées à droite de X on est en postif exemple +4 * 0.05mm = +0.20mm nous devons fixer la compensation de +0.20mm. Si les dents alignées avaient été situées à gauche du X le nombre aurait éte négatif exemple -0.20mm. Même principe pour l'axe Y mais de haut + en bas - dans (un repére strandard)
 
-Vous fixez les valeurs X et Y et vous relancez l'impression de E_calibration.gcode pour verifier les valeurs saisies.
+Vous fixez les valeurs X et Y et vous relancez l'impression de [E_calibration.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/3.Test%20file/E_Calibration.gcode)  pour verifier les valeurs saisies.
 
 **En théorie :** Vous devriez avoir les dents alignées dans les cases X et Y
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/perfect1721314999577.jpg)

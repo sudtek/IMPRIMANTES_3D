@@ -8,7 +8,7 @@ Important : Les deux extrudeurs de la QIDI IFAST sont montés sur une unique tê
 
 Exemple : Si la tête arrive en buté gauche la tête Z2 situé à main gauche est mise à hauteur afin de pouvoir imprimer alors que la tête de droite z1 est elle est retactée.
 
-J'utilise le sclicer ideamaker qui identifie les têtes de gauche à droite comme T0,T1 ... ce qui n'est pas sans posser des pb avec la numerotation de QUIDI.
+J'utilise uniquement le sclicer ideamaker pour sliccer mes fichiers STL. Celui-ci identifie les têtes de gauche à droite comme T0,T1 ... ce qui n'est pas sans posser des pb avec la numerotation de QUIDI.
 
 QUIDI IFAST (Firmware Marlin)
             

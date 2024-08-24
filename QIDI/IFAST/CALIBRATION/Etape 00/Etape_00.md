@@ -4,9 +4,7 @@ Contexte : Cette étape est certes documentée par QUIDI (dans différents facic
 
 **Calibration de l'offset des buses Z2/Z1 selon l'axe XY :**
 
-Prerequis pour pouvoir calibrer les deux buses : 
-
-P1) Il faut imperativement que les deux buses extrudent la même matiere du PLA ! Vous ne pouvez pas mixer les bobines et mettre par exemple une bobine de PETG en Z2 et une de PLA sur Z1. 
+P1) Il faut imperativement que les deux buses extrudent la même matiere du PLA ! Vous ne pouvez pas mixer les bobines et mettre par exemple une bobine de PETG en Z2 et une de PLA sur Z1 ou vice versa. 
 Note : Le gcode integré à l'interface de l'imprimante va automatiquement fixer la temperature du bed et des buses à 198°c pour le PLA qui est trés inférieures au besoin par exemple d'un PETG 235°c, cela peut déterriorer la tête si la temperature d'extrusion est beaucoup trop base par rapport à la temperature de fusion du filament.  
 
 P2) Charger deux bobines bien séches et désydratés (le PLA absorbe l'eau) donc prevoir 24 heures de désydration.

@@ -29,8 +29,14 @@ P11) Toujours à temperature de travail buses +200°c / 60°c bed faites une ser
 
 * Note : Cette étape est cruciale, le leveling doit être toujours fait à chaud en conditons d'utilisations et jamais à froid pour des raisons de dilatations ! Il faut que la feuille puisse bouger mais que vous sentiez une légère resitance en tirant et poussant sur la feuille A4. si en poussant la feuille A4 se gondole et ne bouge pas il vous faudra abaisser le plateau pour liberer la pression exercé par la buse sur la feuille A4. (je ferais une vidéo explicative car ce n'est pas trivial)  
 
-P) Appliquer une fine couche de colle UHU stick premier prix au centre sur un carré de 150 mm de section sans faire de  surépaisseur. j'utilise une colle UHU diluée à l'eau que j'applique avec un petit rouleau pour uniformiser.
+P10 ) Appliquer une fine couche de colle UHU stick premier prix au centre sur un carré de 150 mm de section sans faire de  surépaisseur. j'utilise une colle UHU diluée à l'eau que j'applique avec un petit rouleau pour uniformiser.
 [Technique d'application de colle soluble en baton au rouleau](https://youtu.be/7C0QPmg6328?si=Unesij_6ZGf4jkct)
 
-P) QIDI a integré un programme lancer la calibration XY 
+P11) Enlever le couvercle superieur transparent pendant l'impression du PLA. 
+_Note : C'est recommandé pour le PLA néanmoins dans la pratique je prefere avoir mon enciente à temperature constante mais bon ce n'est pas un point crucial dans l'étape 00._
+
+P12) QIDI a integré un menu de calibration XY accesible depuis l'interface mais ... pour l'utiliser il faut obligatoirement utiliser la clef usb livrée avec l'imprimante, la connecter à l'imprimante et lancer le programme E_calibration.gcode ...
+
+_Note: Je trouve cela pas franchement pratique pour ne pas dire trés mal pensé ... pourquoi ne pas avoir tout integré dans le menu QIDI ?_ 
+
 

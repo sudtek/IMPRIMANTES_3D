@@ -2,7 +2,7 @@
 
 Contexte : J'ai recement fait l'acquisition d'une imprimante de marque QIDI modéle IFAST avec une tête dual* pour pouvoir imprimer mes piéces du PETG et les supports dans une matiere differente (PLA / PVA) qui n'hadére pas au PETG.
  
-* Différent d'une IDEX qui est composée de têtes indépandantes.
+* Différent d'une IDEX composée de deux têtes totalement indépandantes.
 
 Important : Les deux extrudeurs de la QIDI IFAST sont montés sur une même unique tête et sont sortis / retractés selon le besoin via une came lorsque la tête arrive en buté gauche / droite. 
 

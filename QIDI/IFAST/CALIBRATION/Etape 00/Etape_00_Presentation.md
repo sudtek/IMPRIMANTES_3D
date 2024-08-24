@@ -36,7 +36,7 @@ P11) Enlever le couvercle superieur transparent pendant l'impression du PLA.
 _Note : C'est recommandé pour le PLA néanmoins dans la pratique je prefere avoir mon enciente à temperature constante mais bon ce n'est pas un point crucial dans l'étape 00._
 
 P12) QIDI a integré un menu de calibration XY accesible depuis l'interface mais ... pour l'utiliser il faut obligatoirement utiliser la clef usb livrée avec l'imprimante, la connecter à l'imprimante et lancer le programme E_calibration.gcode ...
-
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/IMG_20240718_164933.jpg)
 
 _Note: Je trouve cela pas franchement pratique pour ne pas dire trés mal pensé ... pourquoi ne pas avoir tout integré dans le menu QIDI ?_ 
 

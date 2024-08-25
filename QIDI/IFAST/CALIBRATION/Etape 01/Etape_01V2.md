@@ -76,19 +76,20 @@ Exemple de tests réalisés sur ma IFAST avec débit 100% pour 100 mm :
 - Gauche Z2 PETG 235°C et en sous-extrusion il reste +4 mm de filament.
 - Droite Z1 PLA 205°C et en sous-extrusion il reste +6.2 mm de filament.
 
-_Attention si vous avez un cas de sur-extrusions, vous ne pourrez pas mesurer la distance puisque votre trait de référence sera passé sous le collier... on traitera ce cas plus tard !_
+S'il reste quelques mm entre le colier et le trait mais que vous n'arrivez pas à mesurer voici l'astuce : Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le second trait pour par exemple Z2 (idem pour Z1).
+Exemple :
+
+- Extrudeur de gauche Z2 PETG 235°C sous-extrusion la longueur de filament restante jusqu'au second trait est de +51.5 mm soit (51.5-50) = +1.5 mm  ... cela vous evitera de galérer et vous contortionner ;)  
+  
+_Attention si vous avez un cas de sur-extrusions, vous ne pourrez pas mesurer la distance puisque votre trait de référence sera passé sous le collier... on discutera ce cas dans la prochaine section _
 
 P8) Appliquer la formule suivante pour calculer les nouveaux E de Z2 et Z1 :
 - Extrudeur de gauche Z2 PETG 235°C sous-extrusion reste de +4 mm -> (100-4)*0.0073/100 = 0.0070
 - Extrudeur de droite Z1 PLA 205°C sous-extrusion reste de +6.2 mm -> (100-6.2)*0.0073/100 = 0.0068
 
-
-
-Relancer une nouvelle procédure depuis l'étape P4 pour vérifier que l'extrusion des deux buses devrait être au niveau du collier, le 0, ce qui voudrait dire que l'extrusion de votre machine est parfaitement calibrée pour les deux buses et que vous avez validé cette étape.
-
 ### Le cas particulier de la sur-extrusion :
 
-A ma connaisance ce cas ne devrait normalement jamais suvenir car dans le gcode "23_08_2024 Calibrage 2 extruders 100mm T1_G_Z2_PETG_235 & T0_D_Z1_PLA_205 OK.gcode" on réinitialise  les deux moteurs en position 0 via "G92 E0" afin que lors vous soyez toujuors dans un cas de sous-extrusion. 
+A ma connaisance ce cas ne devrait normalement jamais survenir car dans le gcode "23_08_2024 Calibrage 2 extruders 100mm T1_G_Z2_PETG_235 & T0_D_Z1_PLA_205 OK.gcode" on réinitialise  les deux moteurs en position 0 via "G92 E0" afin que vous soyez toujours dans un cas de sous-extrusion. 
 
 ```gcode
 ;...
@@ -96,23 +97,31 @@ A ma connaisance ce cas ne devrait normalement jamais suvenir car dans le gcode 
 G92 E0
 ;...
 ```
-Si la remise à 0 de l'extrudeur échoue je vous conseille de contacter le suport QIDI avant de tenter cette étape qui consiste à updater votre firmware avec une valeur d'extrusion négative aprés avoir suivi la procedure suivante. Etant donné que vous ne pourrez pas mesurer la distance puisque votre trait de référence sera passé sous le collier. C'est la que le second trait trouve toute son utilité, Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le second trait pour Z2 (idem pour Z1).
+Si la remise à 0 de l'extrudeur échoue je vous conseille de contacter le suport QIDI avant d'updater votre firmware avec une valeur d'extrusion négative !
+
+~~Etant donné que vous ne pourrez pas mesurer la distance puisque votre trait de référence sera passé sous le collier. C'est la que le second trait trouve toute son utilité, Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le second trait pour Z2 (idem pour Z1).
 Exemple :
 - Extrudeur de gauche Z2 PETG 235°C sur-extrusion la longueur de filament restante jusqu'au second trait est de +45 mm soit (45-50) = 5 mm manquant -> (45-50)*0.0073/100 = -0.0036
-- Extrudeur de droite Z1 PLA 205°C sur-extrusion la longueur de filament restante jusqu'au second trait est de +38.2 mm soit (38.2-50) 11.8 mm manquant -> (38.2-50)*0.0073/100 = -0.0008
+- Extrudeur de droite Z1 PLA 205°C sur-extrusion la longueur de filament restante jusqu'au second trait est de +38.2 mm soit (38.2-50) 11.8 mm manquant -> (38.2-50)*0.0073/100 = -0.0008~~
 
-J'insiste ce cas ne devrait jamais subvenir si c'est le cas alors prendre contact avec le support QIDI et me tenir informer que j'update !
+J'insiste ce cas ne devrait jamais subvenir si c'est le cas alors prendre contact avec le support QIDI et me tenir informer que j'update cette note que tout le monde en profite !
 
 ### Sauvegarder la nouvelle valeur dans le firmware de la QUIDI IFAST :
 
-Pour remplacer ces valeurs dans le G-code suivant pour définir le pas/mm pour E correspondant à Z1 et Z2 et lancer une impression :
+Pour remplacer et sauvegarder les nouvelles valeurs afin de définir les nouveaux pas/mm pour E correspondant à votre Z1 et Z2 il sufit de copier le bout de code suivant,  remplacer par vos valeurs, le sauvegarder sous "JJ_MM_AAAA_QIDI_IFAST_calibration_01_EstepZ1Z2.gcode" et l'executer en l'imprimant sur la QIDI IFAST, cela prendra 1 seconde. 
 
 ```gcode
 ; Définir le pas/mm pour E de Z1 = S ? et Z2 = P ? // À vérifier avec QIDI !!
-; S -> Secondary ?
-; P -> Primary ?
+; S -> Secondary Z2 ?
+; P -> Primary Z1 ?
 
 M8011 S0.00684 P0.0070
 ```
+### Vérification de l abonne prise en compte des nouvelle valeur du firmware de la QUIDI IFAST :
+
+P1) Aprés l'update faites redemarer votre IFAST.
+
+Relancer une nouvelle procédure depuis l'étape P4 pour vérifier que l'extrusion des deux buses devrait être au niveau du collier, le 0, ce qui voudrait dire que l'extrusion de votre machine est parfaitement calibrée pour les deux buses et que vous avez totalement valider cette étape.
+
 
 _Note importante pour les utilisateur Ideamaker : Dans le profil de l'imprimante Ideamaker intégre une variable nommée: **step E / mm = 0.00** ; par defaut elle vaut 0.00 si vous changez cette valeur alors Ideamaker ne tiendra pas compte de notre calibrage et appliquera la valeur au deux moteurs d'extrusion ... donc assurez-vous que dans le profil imprimante Ideamaker votre variable nommée vaut 0.00 ! **step E / mm = 0.00**_

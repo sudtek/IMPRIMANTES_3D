@@ -64,29 +64,32 @@ P4) A l'aide d'un réglé ou d'un pied à coulisse mesurer precisement 100mm sur
 P5) Fixer manuellement la temperature de prechaufage des filaments dans mon cas Z2 à 235°c et Z1 à 205°c. Bien que mon programme se charge de fixer ces valeurs et d'attendre quelle soient atteintes avant d'enchainer cette habitude vous evitera un jour d'extruder par erreur à trop basse temperature et casser une tête ...
 
 P6) Executer le gcode [23_08_2024 Calibrage 2 extruders 100mm T1_G_Z2_PETG_235 & T0_D_Z1_PLA_205 OK.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/23_08_2024%20Calibrage%202%20extruders%20100mm%20T1_G_Z2_PETG_235%20%26%20T0_D_Z1_PLA_205%20OK.gcode) 
-
 Z2 et Z1 vont monter en temperature et extruder tour à tour une longeur proche de 100mm. 
 
-P7) Mesurer la distance entre le 0 de reference (le colier non enfoncé) de la tête et le trait pour Z2 et pour Z1.
-    \n
-    Exemple de tests realisés sur ma IFAST avec debit 100% pour 100mm: 
+P7) Mesurer la distance entre le 0 de reference (le colier non enfoncé) de la tête et le trait pour Z2, idem pour Z1.
     
-    - Gauche Z2 PETG 235°c et en sous extrusion il reste +4 mm de filament. 
-    - Droite Z1 PLA 205°c et en sous extrusion il reste +6.2 mm de filament.
+Exemple de tests realisés sur ma IFAST avec debit 100% pour 100mm : 
     
-    _Attention si vous avez un cas de sur-extrusions vous ne pourrez pas mesurer la distance puisque votre trait de reference serra passé sous le colier ...  on traitera ce cas plus tard !_
+- Gauche Z2 PETG 235°c et en sous extrusion il reste +4 mm de filament. 
+- Droite Z1 PLA 205°c et en sous extrusion il reste +6.2 mm de filament.
+    
+_Attention si vous avez un cas de sur-extrusions vous ne pourrez pas mesurer la distance puisque votre trait de reference serra passé sous le colier ...  on traitera ce cas plus tard !_
 
 P8) Appliquer la formule suivant pour calculer les nouveau E de Z2 et Z1 :
-    Extruder de gauche Z2 PETG 235°c sous extrusion reste de +4 mm -> (100-4)*0.0073/100 = 0.007008
-    Extruder de droite Z1 PLA 205°c sous extrusion reste de +6.2 mm -> (100-6.2)*0.0073/100 = 0.0068474
+- Extruder de gauche Z2 PETG 235°c sous extrusion reste de +4 mm -> (100-4)*0.0073/100 = 0.007008
+- Extruder de droite Z1 PLA 205°c sous extrusion reste de +6.2 mm -> (100-6.2)*0.0073/100 = 0.0068474
     
 PX) Remplacer ces valeurs dans le Gcode suivant pour définir le pas/mm pour E correspondant à Z1 et Z2 etlancer une impression :
-;
+
+```gcode
 ; Définir le pas/mm pour E de Z1 = S ? et Z2 = P ? // A verifier !!
 M8011 S0.0068474 P0.007008
+```
 
-P) Lorsque l'extrusion des deux buses sont terminées dans l'ideal le deux traits devraient être au niveau du colier le 0 ce qui voudrait dire que votre machine est parfaitement calibrée pour les deux buses et qu'il ny aurait plus rien à faire ... mais en pratique   
-    sil est encore visible 
+Relancer une nouvelle procédure depuis l'étape P4 pour verifier que l'extrusion des deux buses devraient être au niveau du colier le 0 ce qui voudrait dire que votre machine est parfaitement calibrée pour les deux buses et que vous avez validé cette étape.
+
+
+Le cas particulier de la sur-extrusion :
 
 
 

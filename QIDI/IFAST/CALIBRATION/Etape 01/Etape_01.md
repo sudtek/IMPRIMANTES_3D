@@ -122,9 +122,13 @@ M8011 S0.0068 P0.0070
 ```
 ### Vérification de l abonne prise en compte des nouvelle valeur du firmware de la QUIDI IFAST :
 
-P1) Aprés l'update faites redemarer votre IFAST.
+Aprés mise à jour faites : 
 
-Relancer une nouvelle procédure depuis l'étape P4 pour vérifier que l'extrusion des deux buses devrait être au niveau du collier, le 0, ce qui voudrait dire que l'extrusion de votre machine est parfaitement calibrée pour les deux buses et que vous avez totalement valider cette étape.
+- Redémarer / rebooter votre IFAST.
+
+- Faites un fast Leveling.
+
+Relancer une nouvelle procédure depuis l'étape P4 pour vérifier que l'extrusion de 100mm sur les des deux buses soit bien au niveau du collier !  Si c'est bien le cas alors l'extrusion de votre machine est parfaitement calibrée pour les deux buses et avez totalement validé cette étape.
 
 
-_Note importante pour les utilisateur Ideamaker : Dans le profil de l'imprimante Ideamaker intégre une variable nommée: **step E / mm = 0.00** ; par defaut elle vaut 0.00 si vous changez cette valeur alors Ideamaker ne tiendra pas compte de notre calibrage et appliquera la valeur au deux moteurs d'extrusion ... donc assurez-vous que dans le profil imprimante Ideamaker votre variable nommée vaut 0.00 ! **step E / mm = 0.00**_
+_Note importante pour les utilisateurs Ideamaker : Dans le profil de l'imprimante Ideamaker intégre une variable nommée: **step E / mm = 0.00** ; par defaut elle vaut 0.00 si vous changez cette valeur alors Ideamaker ne tiendra pas compte de notre calibrage et appliquera la valeur au deux moteurs d'extrusion ... donc assurez-vous que dans le profil imprimante Ideamaker votre variable nommée vaut 0.00 ! **step E / mm = 0.00**_. Cette variable est un option acceptable si et seulement si vous avez un seul moteur d'extrusion E !

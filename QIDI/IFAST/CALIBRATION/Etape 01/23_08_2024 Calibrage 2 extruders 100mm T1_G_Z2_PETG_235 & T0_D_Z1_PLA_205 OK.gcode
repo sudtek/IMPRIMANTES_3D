@@ -2,12 +2,12 @@
 ; Ifast QIDI
 ; Procedure de calibration des moteur pas à pas des extrudeurs
 ,
-; Extrudeur situé à main gauche Z2 -> T1 (ideamaker)
+; Extrudeur situé à main gauche Z2
 ; - PETG 235°c
 ; - 100% de debit
 ; - Longueur de calibrage 100mm
 
-; Extrudeur situé à main droite Z1 -> T0 (ideamaker)
+; Extrudeur situé à main droite Z1
 ; - PLA 205°c
 ; - 100% de debit
 ; - Longueur de calibrage 100mm

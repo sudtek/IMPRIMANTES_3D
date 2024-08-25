@@ -15,9 +15,10 @@ Cette procédure doit impérativement être effectuée chaque fois que vous remp
 Par principe on peut calibrer le pas de des moteurs d'extrudeurs avec n'importe quel type de filament basique peut importe la matiere PLA,PETG ... 
 Dans mon cas j'utilise du PETG sur la tete de gauche nommée Z2 et du PLA sur la tête Z1. Le PETG me sert pour imprimmer les corps de pieces, le PLA lui est utilisé pour les supports. 
 
-**IMPORTANT : Mon choix d'avoir affecté le PETG à Z2 et le PLA à Z1 n'est absoluement pas arbitraire mais est imposé par mon sliccer IDEAMAKER qui a une convention de referencement  des têtes / buses de gauche à droite (T0,T1, ...); du fait le profil de filament dominant pour le imprimmer un corps de piece est la tête la plus situé à main gauche dans ideamaker ce qui correspond à Z2. Si vous n'utilisez pas Ideamaker et que vous utilisez le logiciels sliccer de QIDI (ou un autre) vous n'êtes peut être pas concerné par ce cas mais je n'en suis pas certain puisque je ne l'utilise pas ... il vous incombe donc de verifier voir adapter le gcode en fonction de votre Slicer!** 
+### Important
+Mon choix d'affecter le PETG à Z2 et le PLA à Z1 n'est pas toalement arbitraire. Cette décision est "imposée" par mon slicer IdeaMaker, qui utilise une convention de référencement des têtes/buses de gauche à droite (T0, T1, etc.). Par conséquent, le profil de filament dominant pour imprimer un corps de pièce est la tête la plus à gauche dans IdeaMaker, ce qui correspond à Z2. Si vous n'utilisez pas IdeaMaker et que vous utilisez le logiciel slicer de QIDI (ou un autre), il se peut que vous ne soyez pas concerné par ce cas. Cependant, je ne peux pas en être certain puisque je n'utilise pas ces autres logiciels. Il vous incombe donc de vérifier et d'adapter le G-code en fonction de vos besoins. Si plus tard vous envisagez d'utiliser ideamaker je vous recommande d'adopter les mêmes choix que moi ainsi vous pourrez directement utiliser mes profils Ideamakers.
 
-Récapitulatif pour la procedure de calibration des moteur pas à pas des extrudeurs de ma QIDI IFAST :
+Récapitulatif des paramètres pour la procedure de calibration des moteur pas à pas des extrudeurs de ma QIDI IFAST :
 
 ```markdown
 | Extrudeur situé à main | Gauche | Droite |
@@ -29,9 +30,12 @@ Récapitulatif pour la procedure de calibration des moteur pas à pas des extrud
 | Débit d'écoulement     | 100%   | 100%   |
 | Longueur de calibrage  | 100 mm | 100 mm |
 ```
+Mon fichier gcode de calibrage disponible [23_08_2024 Calibrage 2 extruders 100mm T1_G_Z2_PETG_235 & T0_D_Z1_PLA_205 OK.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/23_08_2024%20Calibrage%202%20extruders%20100mm%20T1_G_Z2_PETG_235%20%26%20T0_D_Z1_PLA_205%20OK.gcode) se chargera d'extruder les deux têtes de 100 mm l'une après l'autre.
 
-Vous pouvez copier et coller ce tableau directement dans votre fichier README.md sur GitHub.
+Si vous voulez calibrer votre imprimente avec deux filaments identiques type PLA / PETG il faudra télécharger le fichier gcode adapté à votre situation sont/seront disponibles [ICI](QIDI/IFAST/CALIBRATION/Etape%2001) ou a defaut l'éditer et adapter les valeurs de temperature attendu par la matiere que vous avez choisi d'extruder. 
 
 
 
-[ici](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/23_08_2024%20Calibrage%202%20extruders%20100mm%20T1_G_Z2_PETG_235%20%26%20T0_D_Z1_PLA_205%20OK.gcode). Ce G-code se chargera d'extruder les deux têtes de 100 mm l'une après l'autre.
+
+
+

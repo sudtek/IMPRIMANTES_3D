@@ -37,7 +37,7 @@ G0 X0 Y0 F3600
 ; ----------------------------------------------------
 ; Fixer la temperature des deux buses
 
-; Buse de gauche Z0 alias T1 pour du PETG à 235°c 
+; Buse de gauche Z2 alias T1 pour du PETG à 235°c 
 M109 T1 S235
 
 ; Buse de droite Z1 alias T0 pour du PLA à 205°c

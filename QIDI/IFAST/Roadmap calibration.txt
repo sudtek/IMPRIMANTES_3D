@@ -12,7 +12,9 @@ M8009 X0.010625 Y0.010625
 ;Bloc 2 : La valeur en mm de chaque pas est calculée à l'aide de la formule suivante : pas (360/18)*16. Le pas est la distance que la plate-forme monte lorsque la vis tourne d'un tour.
 M8010 S0.0025
 
-;Bloc 3 : La valeur en mm de chaque pas est égale à la circonférence de la roue d'entraînement d'extrusion divisée par 3200. Si vous avez un dispositif de réduction, divisez également par le rapport de réduction. Si vous constatez que le filament est extrudé de manière trop lâche, ou... Une nouvelle suggestion est de rendre cette valeur légèrement inférieure à la valeur réelle, l'extrusion sera meilleure.
+;Bloc 3 : La valeur en mm de chaque pas est égale à la circonférence de la roue d'entraînement d'extrusion divisée par 3200.
+;         Si vous avez un dispositif de réduction, divisez également par le rapport de réduction. Si vous constatez que le filament est extrudé de manière trop lâche, ou... 
+          Une nouvelle suggestion est de rendre cette valeur légèrement inférieure à la valeur réelle, l'extrusion sera meilleure.
 ;M8011 S0.0073 P0.0073
 ;M8011 S0.0067 P0.0067
 

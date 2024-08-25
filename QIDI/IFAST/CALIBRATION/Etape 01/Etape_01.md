@@ -99,10 +99,12 @@ G92 E0
 ```
 Si la remise à 0 de l'extrudeur échoue je vous conseille de contacter le suport QIDI avant d'updater votre firmware avec une valeur d'extrusion négative !
 
-~~Etant donné que vous ne pourrez pas mesurer la distance puisque votre trait de référence sera passé sous le collier. C'est la que le second trait trouve toute son utilité, Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le second trait pour Z2 (idem pour Z1).~~
-~~Exemple :~~
-~~- Extrudeur de gauche Z2 PETG 235°C sur-extrusion la longueur de filament restante jusqu'au second trait est de +45 mm soit (45-50) = 5 mm manquant -> (45-50)*0.0073/100 = -0.0036~~
-~~- Extrudeur de droite Z1 PLA 205°C sur-extrusion la longueur de filament restante jusqu'au second trait est de +38.2 mm soit (38.2-50) 11.8 mm manquant -> (38.2-50)*0.0073/100 = -0.0008~~
+<s>
+Etant donné que vous ne pourrez pas mesurer la distance puisque votre trait de référence sera passé sous le collier. C'est la que le second trait trouve toute son utilité, Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le second trait pour Z2 (idem pour Z1).
+Exemple :
+- Extrudeur de gauche Z2 PETG 235°C sur-extrusion la longueur de filament restante jusqu'au second trait est de +45 mm soit (45-50) = 5 mm manquant -> (45-50)*0.0073/100 = -0.0036
+- Extrudeur de droite Z1 PLA 205°C sur-extrusion la longueur de filament restante jusqu'au second trait est de +38.2 mm soit (38.2-50) 11.8 mm manquant -> (38.2-50)*0.0073/100 = -0.0008
+</s>
 
 J'insiste ce cas ne devrait jamais subvenir si c'est le cas alors prendre contact avec le support QIDI et me tenir informer que j'update cette note que tout le monde en profite !
 

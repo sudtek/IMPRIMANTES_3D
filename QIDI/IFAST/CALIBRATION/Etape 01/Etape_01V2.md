@@ -14,7 +14,7 @@ Dans le cas contraire, si un ou les deux extrudeurs présentent une sur-extrusio
 
 Cette procédure doit impérativement être effectuée chaque fois que vous remplacez ou changez la tête de votre QIDI I-Fast. Si vous conservez toujours la même tête, sauf en cas d'usure excessive ou d'autres problèmes, ces réglages ne devraient normalement pas changer dans le temps. En cas de doute, vous pouvez à tout moment revérifier en chargeant le G-code de calibration adapté avec des valeurs de températures adaptées en fonction de la matière de vos filaments.
 
-Par principe, on peut calibrer les pas des moteurs d'extrudeurs avec n'importe quel type de filament basique, peu importe la matière PLA, PETG...
+Par principe, on peut calibrer les pas des moteurs d'extrudeurs avec n'importe quel type de filament, peu importe la matière PLA, PETG...
 
 Dans mon cas, j'utilise du PETG sur la tête de gauche nommée Z2 et du PLA sur la tête Z1. Le PETG me sert pour imprimer les corps de pièces, le PLA lui est utilisé pour les supports, ce qui facilite le retrait des supports après impression.
 
@@ -57,19 +57,19 @@ M109 T0 S205
 
 Note : Pour cette opération, le plateau peut rester en bas, il est donc inutile de le faire chauffer, idem pour l'enceinte !
 
-P1) Charger deux bobines bien sèches et désydratées, prévoir 24 heures de désydratation.
+P1) Charger deux bobines bien sèches et désydratées, prévoir 24 heures de désydratation, dans mon cas : bobine de gauche PETG blanc bobine de droite PLA mauve.
 
 P2) Ne pas installer les tubes de guidage PTFE bleu, au besoin les retirer car ils vous empêcheront de marquer et mesurer les longueurs de filaments.
 
-P3) Via le menu, déplacer la tête au centre du plateau XY, (ATTENTION ne jamais déplacer la tête à la main).
+P3) Via le menu de la QIDI IFAST, déplacer la tête au centre du plateau XY, (ATTENTION ne jamais déplacer la tête à la main).
 
 P4) À l'aide d'un réglé ou d'un pied à coulisse, mesurer précisément 100 mm sur chacun des filaments et dessiner une trace précise avec un feutre, soyez le plus précis possible, cela aura de l'influence. Réaliser une seconde trace à 150 mm de la tête (en cas de sur-extrusion). Je vous mets en garde sur un point important : lorsque vous prendrez appui sur la tête, vous serez appuyé sur un bloc guide tube PTFE qui a tendance à s'enfoncer lorsque vous prendrez appui avec le réglé / pied à coulisse et qui risque de faire varier la mesure de quelques millimètres... Ces millimètres sont cruciaux donc faites attention et soyez le plus précis possible !
 
-P5) Fixer manuellement la température de préchauffage des filaments, dans mon cas Z2 à 235°C et Z1 à 205°C. Bien que mon programme se charge de fixer ces valeurs et d'attendre qu'elles soient atteintes avant d'enchaîner, cette habitude vous évitera un jour d'extruder par erreur à trop basse température et casser une tête...
+P5) Fixer manuellement la température de préchauffage des filaments, dans mon cas Z2 à 235°C et Z1 à 205°C. Bien que mon programme se charge de fixer ces valeurs et d'attendre qu'elles soient atteintes avant d'enchaîner, cette habitude vous évitera un jour d'extruder par erreur à trop basse température et détériorer une tête...
 
 P6) Exécuter le gcode [23_08_2024 Calibrage 2 extruders 100mm T1_G_Z2_PETG_235 & T0_D_Z1_PLA_205 OK.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/23_08_2024%20Calibrage%202%20extruders%20100mm%20T1_G_Z2_PETG_235%20%26%20T0_D_Z1_PLA_205%20OK.gcode). Z2 et Z1 vont monter en température et extruder tour à tour une longueur proche de 100 mm.
 
-P7) Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le trait pour Z2, idem pour Z1.
+P7) Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le 1er trait pour Z2, idem pour Z1.
 
 Exemple de tests réalisés sur ma IFAST avec débit 100% pour 100 mm :
 
@@ -79,16 +79,35 @@ Exemple de tests réalisés sur ma IFAST avec débit 100% pour 100 mm :
 _Attention si vous avez un cas de sur-extrusions, vous ne pourrez pas mesurer la distance puisque votre trait de référence sera passé sous le collier... on traitera ce cas plus tard !_
 
 P8) Appliquer la formule suivante pour calculer les nouveaux E de Z2 et Z1 :
-- Extrudeur de gauche Z2 PETG 235°C sous-extrusion reste de +4 mm -> (100-4)*0.0073/100 = 0.007008
-- Extrudeur de droite Z1 PLA 205°C sous-extrusion reste de +6.2 mm -> (100-6.2)*0.0073/100 = 0.0068474
+- Extrudeur de gauche Z2 PETG 235°C sous-extrusion reste de +4 mm -> (100-4)*0.0073/100 = 0.0070
+- Extrudeur de droite Z1 PLA 205°C sous-extrusion reste de +6.2 mm -> (100-6.2)*0.0073/100 = 0.0068
 
-PX) Remplacer ces valeurs dans le G-code suivant pour définir le pas/mm pour E correspondant à Z1 et Z2 et lancer une impression :
+
+
+Relancer une nouvelle procédure depuis l'étape P4 pour vérifier que l'extrusion des deux buses devrait être au niveau du collier, le 0, ce qui voudrait dire que l'extrusion de votre machine est parfaitement calibrée pour les deux buses et que vous avez validé cette étape.
+
+### Le cas particulier de la sur-extrusion :
+
+SI on se reporte à la phase P7 dans le cadre d'une sur-extrusion vous ne pourrez pas mesurer la distance puisque votre trait de référence sera passé sous le collier.
+C'est la que le second trait trouve toute son utilité
+
+P7b) Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le second trait pour Z2, idem pour Z1.
+
+- Extrudeur de gauche Z2 PETG 235°C sur-extrusion la longueur de filament restante jusqu'au second trait est de +45 mm soit (45-50) = 5 mm manquant -> (45-50)*0.0073/100 = -0.0036
+- Extrudeur de droite Z1 PLA 205°C sur-extrusion la longueur de filament restante jusqu'au second trait est de +38.2 mm soit (38.2-50) 11.8 mm manquant -> (38.2-50)*0.0073/100 = -0.0008
+- Extrudeur de  sur-extrusion reste de +6.2 mm -> (100-6.2)*0.0073/100 = 0.0068474
+
+
+Note :
+
+### Sauvegarder la nouvelle valeur dasn le firmware de la QUIDI IFAST :
+
+Pour remplacer ces valeurs dans le G-code suivant pour définir le pas/mm pour E correspondant à Z1 et Z2 et lancer une impression :
 
 ```gcode
 ; Définir le pas/mm pour E de Z1 = S ? et Z2 = P ? // À vérifier !!
-M8011 S0.0068474 P0.007008
+; S -> Secondary ?
+; P -> Primary ?
+
+M8011 S0.00684 P0.0070
 ```
-
-Relancer une nouvelle procédure depuis l'étape P4 pour vérifier que l'extrusion des deux buses devrait être au niveau du collier, le 0, ce qui voudrait dire que votre machine est parfaitement calibrée pour les deux buses et que vous avez validé cette étape.
-
-### Le cas particulier de la sur-extrusion :

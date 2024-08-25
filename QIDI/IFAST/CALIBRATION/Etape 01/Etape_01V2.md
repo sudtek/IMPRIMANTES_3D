@@ -115,7 +115,7 @@ Pour remplacer et sauvegarder les nouvelles valeurs afin de définir les nouveau
 ; S -> Secondary Z2 ?
 ; P -> Primary Z1 ?
 
-M8011 S0.00684 P0.0070
+M8011 S0.0068 P0.0070
 ```
 ### Vérification de l abonne prise en compte des nouvelle valeur du firmware de la QUIDI IFAST :
 

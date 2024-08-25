@@ -22,4 +22,7 @@ Pour utiliser le logiciel OctoPrint avec l'imprimante Qidi I-Fast, il est néces
 3. **Connecter le Dongle USB** :
    - Branchez le dongle USB au connecteur série identifié.
    - Utilisez une rallonge USB pour faciliter la connexion et l'accessibilité.
+  
+
+Note à propos de l'interfacage entre Octoprint et la QIDI IFAST : Il semble que le firmware de la QIDI IFAST n'est pas totalement pris en charge par Octoprint cela signifie que vous pouvez piloter la QIDI IFAST avec les commandes basiques depuis l'interface web d'Octoprint, exemple : fixer la temperature d'une buse,du beb, bouger la tête, lancer votre impression ... mais certaines fonction de l'imprimante seront désactivés et/ou inutilisables voir sans boucle de retour / rétroaction ... Je trouve dommage que QIDI n'accorde pas plus d'interet à un produit comme Octoprint qui unifie les interfaces de controle des imprimantes 3D ... Je pense que c'est une erreur commerciale qui coutera très cher à long terme à tous les constructeurs qui ont cette politique de segmentation ... 
 

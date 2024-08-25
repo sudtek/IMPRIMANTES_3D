@@ -1,10 +1,16 @@
-**Etape 01 Calibration des deux moteurs d'extrusions Z1 et Z2
+**Etape 01 Calibration des deux moteurs d'extrusions de Z1 et Z2**
 
-Présentation :
-Cette etape consiste à verifier si les extruders de la QIDI IFAST vont consommer une longueur precise de filament conforme à la consigne du gcode en general 100mm. Dans le cas contraire il y a deux cas soit l'imprimante fait de la :
-Sur-extrusion : Exemple elle consome 111mm de filament pour une consigne initiale de 100mm 
-Sous extrusion : Exemple elle consome 97mm de filament pour uen consigne initiale de 100mm
+### Présentation
 
-Ainsi on pourra calculer et definir les pas/mm pour chacun desmoteurs extrudeurs. Cette procédure doit imperativement être effectuée à chaque fois que vous remplacez / changez la tête de votre QIDI IFAST, donc si vous conservez toujours la même tête hormis usure execive ou autre probléme ces réglages ne devrait pas changées dans le temps. En cas de doute vous pourez toujours revérifier en chargeant le gcode de calibration [23_08_2024 Calibrage 2 extruders 100mm T1_G_Z2_PETG_235 & T0_D_Z1_PLA_205 OK.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/23_08_2024%20Calibrage%202%20extruders%20100mm%20T1_G_Z2_PETG_235%20%26%20T0_D_Z1_PLA_205%20OK.gcode)
+Cette étape consiste à vérifier si les extrudeurs de la QIDI I-Fast consomment une longueur précise de filament conforme à la consigne du G-code, généralement 100 mm. Cette vérification nécessite au minimum un pied à coulisse ou une règle métallique de précision.
+
+Si, en exécutant le G-code, chacun de vos extrudeurs consomme exactement 100 mm de filament, vous avez de la chance et n'avez rien à calibrer. Vous pouvez passer à l'étape suivante (LIEN?).
+
+Dans le cas contraire, si un ou les deux extrudeurs présentent une sur-extrusion ou une sous-extrusion, vous devrez calculer et définir les pas/mm pour chacun des moteurs extrudeurs E. Les cas de sur-extrusion et de sous-extrusion sont définis comme suit :
+- **Sur-extrusion** : Extrusion de 111 mm de filament pour une consigne initiale de 100 mm.
+- **Sous-extrusion** : Extrusion de 97 mm de filament pour une consigne initiale de 100 mm.
+
+Cette procédure doit impérativement être effectuée chaque fois que vous remplacez ou changez la tête de votre QIDI I-Fast. Si vous conservez toujours la même tête, sauf en cas d'usure excessive ou d'autres problèmes, ces réglages ne devraient pas changer dans le temps. En cas de doute, vous pouvez à tout moment revérifier en chargeant le G-code de calibration disponible [ici](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/23_08_2024%20Calibrage%202%20extruders%20100mm%20T1_G_Z2_PETG_235%20%26%20T0_D_Z1_PLA_205%20OK.gcode). Ce G-code se chargera d'extruder les deux têtes de 100 mm l'une après l'autre.
+
 
 

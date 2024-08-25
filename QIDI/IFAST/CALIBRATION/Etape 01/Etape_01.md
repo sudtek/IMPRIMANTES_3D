@@ -51,16 +51,41 @@ M109 T0 S205
 ; Note : M109 attend que la temperature de consigne soit atteinte avant de continuer -> ne pas remplacer par M104
 ; ----------------------------------------------------
 ```
+note : Pour cette opération le plateau peut rester en bas il donc est inutile de le faire chauffer, idem pour l'enceinte !
 
+P1) Charger deux bobines bien séches et désydratés prévoir 24 heures de désydration.
 
+P2) Ne pas installer les tubes de guidage PTFE bleu, au besoin les retirer car ils vous empecheront de marquer et mesurer les longeurs de filaments.
 
+P3) Via le menu déplacer la tête au centre du plateau XY , (ATTTENTION ne jamais déplacer la tête à la main) 
 
+P4) A l'aide d'un réglé ou d'un pied à coulisse mesurer precisement 100mm sur chacun des filaments et faite une trace precises avec un feutre soyez le plus précis possibles cela aura de l'influence.Faites une seconde trace à 150mm de la tête ( en cas de sur extrusion). Je vous mets en garde sur un point important lorsque vous prendrez appui sur la tête vous serez appuyé sur un bloque guide tube ptfe qui à tendance à s'enfoncer lorsque vous prendrez appui avec le reglet / pied à coulisse et qui risque de faire varier la mesure de quelques milimetres ... Ces milimetres sont cruciaux donc faites attention et soyez précis ...
 
+P5) Fixer manuellement la temperature de prechaufage des filaments dans mon cas Z2 à 235°c et Z1 à 205°c. Bien que mon programme se charge de fixer ces valeurs et d'attendre quelle soient atteintes avant d'enchainer cette habitude vous evitera un jour d'extruder par erreur à trop basse temperature et casser une tête ...
 
-PX) Gcode Pour définir le pas/mm pour E de Z1 et Z2 :
+P6) Executer le gcode [23_08_2024 Calibrage 2 extruders 100mm T1_G_Z2_PETG_235 & T0_D_Z1_PLA_205 OK.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/23_08_2024%20Calibrage%202%20extruders%20100mm%20T1_G_Z2_PETG_235%20%26%20T0_D_Z1_PLA_205%20OK.gcode) 
+
+La buse Z2 va extruder une longeur proche de 100mm puis ce serra le tour de la buse Z1.
+
+P7) Mesurer la distance entre le 0 de reference (le colier non enfoncé) de la tête et le trait pour Z2 et pour Z1.
+    Exemple de tests realisés sur ma IFAST avec debit 100% pour 100mm
+    Dans mon cas l'extruder :
+    Gauche Z2 PETG 235°c et en sous extrusion il reste +4 mm de filament 
+    Droite Z1 PLA 205°c et en sous extrusion il reste +6.2 mm de filament 
+
+    Note : Attention si vous avez un cas de sur-extrusions vous ne pourrez pas mesurer la distance puisque votre trait de reference serra passé sous le colier ... (on traitera ce cas plus tard !) 
+
+P8) Appliquer la formule suivant pour calculer les nouveau E de Z2 et Z1 :
+    Extruder de gauche Z2 PETG 235°c sous extrusion reste de +4 mm -> (100-4)*0.0073/100 = 0.007008
+    Extruder de droite Z1 PLA 205°c sous extrusion reste de +6.2 mm -> (100-6.2)*0.0073/100 = 0.0068474
+    
+PX) Remplacer ces valeurs dans le Gcode suivant pour définir le pas/mm pour E correspondant à Z1 et Z2 etlancer une impression :
 ;
 ; Définir le pas/mm pour E de Z1 = S ? et Z2 = P ? // A verifier !!
-M8011 S P
+M8011 S0.0068474 P0.007008
+
+P) Lorsque l'extrusion des deux buses sont terminées dans l'ideal le deux traits devraient être au niveau du colier le 0 ce qui voudrait dire que votre machine est parfaitement calibrée pour les deux buses et qu'il ny aurait plus rien à faire ... mais en pratique   
+    sil est encore visible 
 
 
 

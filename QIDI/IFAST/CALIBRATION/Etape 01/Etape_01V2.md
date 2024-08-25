@@ -114,6 +114,7 @@ Pour remplacer et sauvegarder les nouvelles valeurs afin de définir les nouveau
 ; Définir le pas/mm pour E de Z1 = S ? et Z2 = P ? // À vérifier avec QIDI !!
 ; S -> Secondary Z2 ?
 ; P -> Primary Z1 ?
+; precision aprés la virgule acceptée ?
 
 M8011 S0.0068 P0.0070
 ```

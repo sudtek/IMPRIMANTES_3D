@@ -7,6 +7,7 @@ Ce qu'il va falloir faire ....
 ; So the correct e step should be 93*0.0073/100,it is 0.006789
 //FAIT
 </s>
+
 ;Bloc 1 : Pour régler indépendamment les paramètres des moteurs pas-à-pas XY, utilisez cette commande (cochez la case dans le cadre ci-dessus).
 M8009 X0.010625 Y0.010625
 

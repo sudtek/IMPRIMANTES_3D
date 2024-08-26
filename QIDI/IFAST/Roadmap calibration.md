@@ -8,6 +8,7 @@ Ce qu'il va falloir faire ....
 //FAIT
 </s>
 
+
 ;Bloc 1 : Pour régler indépendamment les paramètres des moteurs pas-à-pas XY, utilisez cette commande (cochez la case dans le cadre ci-dessus).
 M8009 X0.010625 Y0.010625
 

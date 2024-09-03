@@ -1,6 +1,6 @@
 ; 23_08_2024 
 ; Ifast QIDI
-; Procedure de calibration des moteur pas à pas des extrudeurs
+; Procedure de calibration des moteur E pas à pas des extrudeurs
 
 ; Extrudeur situé à main gauche Z2 T1 sur QIDI IFAST
 ; - PETG 235°c
@@ -19,7 +19,6 @@
 ; ----------------------------------------------------
 ; ----------------------------------------------------
 ; ----------------------------------------------------
-
 
 ; ----------------------------------------------------
 ; Fixe les Débits d'écoulement à 100% des deux buses

@@ -1,0 +1,14 @@
+; 04_septembre_2024
+; Ifast QIDI
+; Procedure de sauvegarde de la valeur E de chaque moteur pas à pas des extrudeurs Z1 & Z2
+
+; QIDI IFAST : T0 = buse de droite = Z1 = S
+; QIDI IFAST : T1 = buse de gauche = Z2 = P
+
+; Terminer l'étap 01 de calibration : 
+; #1 Changer les valeurs de S et de P avec vos valeurs 
+; #2 Imprimer ce gcode sur la QIDI IFAST pour sauvegarder les valeurs
+; #3 Faites un reboot de la QIDI IFAST
+;
+; Valeurs par defaut de  S0.0073 et  P0.0073
+M8011 S0.0073 P0.0073

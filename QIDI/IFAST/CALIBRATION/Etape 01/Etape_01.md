@@ -113,11 +113,8 @@ J'insiste ce cas ne devrait jamais subvenir si c'est le cas alors prendre contac
 Pour remplacer et sauvegarder les nouvelles valeurs afin de définir les nouveaux pas/mm pour E correspondant à votre Z1 et Z2 il sufit de copier le bout de code suivant,  remplacer par vos valeurs, le sauvegarder sous "JJ_MM_AAAA_QIDI_IFAST_calibration_01_EstepZ1Z2.gcode" et l'executer en l'imprimant sur la QIDI IFAST, cela prendra 1 seconde. 
 
 ```gcode
-; QIDI IFAST : T0 = buse de droite = Z1
-; QIDI IFAST : T1 = buse de gauche = Z2
-; S -> Secondary Z2
-; P -> Primary Z1
-; Quelle précision après la virgule acceptée ?
+; QIDI IFAST : T0 = buse de droite = Z1 = S
+; QIDI IFAST : T1 = buse de gauche = Z2 = P
 
 M8011 S0.0068 P0.0070
 ```

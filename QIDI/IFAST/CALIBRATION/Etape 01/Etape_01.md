@@ -63,7 +63,7 @@ P2) Ne pas installer les tubes de guidage PTFE bleu, au besoin les retirer car i
 
 P3) Via le menu de la QIDI IFAST, déplacer la tête au centre du plateau XY, (ATTENTION ne jamais déplacer la tête à la main).
 
-P4) À l'aide d'un réglé ou d'un pied à coulisse, mesurer précisément 100 mm sur chacun des filaments et dessiner une trace précise avec un feutre, soyez le plus précis possible, cela aura de l'influence. Réaliser une seconde trace à 150 mm de la tête (en cas de sur-extrusion). Je vous mets en garde sur un point important : lorsque vous prendrez appui sur la tête, vous serez appuyé sur un bloc guide tube PTFE qui a tendance à s'enfoncer lorsque vous prendrez appui avec le réglé / pied à coulisse et qui risque de faire varier la mesure de quelques millimètres... Ces millimètres sont cruciaux donc faites attention et soyez le plus précis possible !
+P4) À l'aide d'un réglé ou d'un pied à coulisse, mesurer précisément 100 mm sur chacun des filaments et dessiner une trace précise avec un feutre, soyez le plus précis possible, cela aura de l'influence. Réaliser une seconde trace à 200 mm de la tête. ATTENTION lorsque vous prendrez appui avec le réglé / pied à coulisse et qui risque de faire varier la mesure de quelques millimètres... Ces millimètres sont cruciaux donc faites attention et soyez le plus précis possible !
 
 P5) Fixer manuellement la température de préchauffage des filaments, dans mon cas Z2 à 235°C et Z1 à 205°C. Bien que mon programme se charge de fixer ces valeurs et d'attendre qu'elles soient atteintes avant d'enchaîner, cette habitude vous évitera un jour d'extruder par erreur à trop basse température et détériorer une tête...
 
@@ -79,17 +79,15 @@ Exemple de tests réalisés sur ma IFAST avec débit 100% pour 100 mm :
 S'il reste quelques mm entre le colier et le trait mais que vous n'arrivez pas à mesurer voici l'astuce : Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le second trait pour par exemple Z2 (idem pour Z1).
 Exemple :
 
-- Extrudeur de gauche Z2 PETG 235°C sous-extrusion la longueur de filament restante jusqu'au second trait est de +51.5 mm soit (51.5-50) = +1.5 mm  ... cela vous evitera de galérer et vous contortionner ;)  
+- Extrudeur de gauche Z2 PETG 235°C sous-extrusion la longueur de filament restante jusqu'au second trait est de +101.5 mm soit (200-101.5) = +98.5 mm  ... cela vous evitera de galérer et vous contortionner ;)  
   
-_Attention si vous avez un cas de sur-extrusions, vous ne pourrez pas mesurer la distance puisque votre trait de référence sera passé sous le collier... on discutera ce cas dans la prochaine section _
-
 P8) Appliquer la formule suivante pour calculer les nouveaux E de Z2 et Z1 :
-- Extrudeur de gauche Z2 PETG 235°C sous-extrusion reste de +4 mm -> (100-4)*0.0073/100 = 0.0070
-- Extrudeur de droite Z1 PLA 205°C sous-extrusion reste de +6.2 mm -> (100-6.2)*0.0073/100 = 0.0068
+- Extrudeur de gauche Z2 PETG 235°C sous-extrusion reste de +4 mm -> (200-104)=96mm -> 96*0.0073/100 = 0.0070
+- Extrudeur de droite Z1 PLA 205°C sous-extrusion reste de +6.2 mm -> (200-106.2)= 93.8mm -> 93.8*0.0073/100 = 0.0068
 
 ### Le cas particulier de la sur-extrusion :
 
-Dans ce cas le plus simple est de réinitialiser aus valueurs d'orrigines et vous vous retrouverez à nouveau en sous extrusion. 
+Si le 1er trait à 100mm est sous le colier le plus simple est de réinitialiser aux valueurs d'orrigines et vous vous retrouverez à nouveau en sous extrusion. 
 
 ```gcode
 ; QIDI IFAST : T0 = buse de droite = Z1 = S
@@ -98,6 +96,8 @@ Dans ce cas le plus simple est de réinitialiser aus valueurs d'orrigines et vou
 M8011 S0.0073 P0.0073
 ```
 Télécharger le fichier [03_09_2024_SAVDEFAUT_Pas_E_Z1Z2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/V02/03_09_2024_SAVDEFAUT_Pas_E_Z1Z2.gcode)
+
+Lancer l'impression, faites un reboot de l'imprimante et reprendre à la phase P04).
 
 
 ### Sauvegarder la nouvelle valeur dans le firmware de la QUIDI IFAST :

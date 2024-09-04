@@ -20,7 +20,7 @@ Dans mon cas, j'utilise du PETG sur la tête de gauche nommée Z2 et du PLA sur 
 
 ### Important
 
-Mon choix d'affecter le PETG à Z2 et le PLA à Z1 n'est pas totalement arbitraire : Cette décision est "imposée" par mon slicer IdeaMaker, qui utilise une convention de référencement des têtes/buses particulière. Par conséquent, le profil de filament dominant pour imprimer un corps de pièce est la tête la plus à gauche dans IdeaMaker, ce qui correspond à Z2. Si vous n'utilisez pas IdeaMaker et que vous utilisez le logiciel slicer de QIDI (ou un autre), il se peut que vous ne soyez pas concerné par ce cas. Cependant, je ne peux pas en être certain puisque je n'utilise pas d'autres logiciels de slicing. Il vous incombe donc de vérifier et d'adapter le G-code en fonction de vos besoins.
+Mon choix d'affecter le PETG à Z2 et le PLA à Z1 n'est pas arbitraire : Cette décision est "imposée" par mon slicer IdeaMaker, qui utilise une convention de référencement des têtes/buses particulière. Par conséquent, le profil de filament dominant pour imprimer un corps de pièce est la tête la plus à gauche dans IdeaMaker, ce qui correspond à Z2. Si vous n'utilisez pas IdeaMaker et que vous utilisez le logiciel slicer de QIDI (ou un autre), il se peut que vous ne soyez pas concerné par ce cas. Cependant, je ne peux pas en être certain puisque je n'utilise pas d'autres logiciels de slicing. Il vous incombe donc de vérifier et d'adapter le G-code en fonction de vos besoins.
 
 Note : Si plus tard vous envisagez d'utiliser IdeaMaker, je vous recommande d'adopter les mêmes choix que moi ainsi vous pourrez directement utiliser mes profils IdeaMakers.
 
@@ -89,28 +89,20 @@ P8) Appliquer la formule suivante pour calculer les nouveaux E de Z2 et Z1 :
 
 ### Le cas particulier de la sur-extrusion :
 
-A ma connaisance ce cas ne devrait normalement jamais survenir car dans le gcode "23_08_2024 Calibrage 2 extruders 100mm T1_G_Z2_PETG_235 & T0_D_Z1_PLA_205 OK.gcode" on réinitialise  les deux moteurs en position 0 via "G92 E0" afin que vous soyez toujours dans un cas de sous-extrusion. 
+Dans ce cas le plus simple est de réinitialiser aus valueurs d'orrigines et vous vous retrouverez à nouveau en sous extrusion. 
 
 ```gcode
-;...
-; Fixe la nouvelle position de l'extruder E <pos> E0 = initialisation
-G92 E0
-;...
+; QIDI IFAST : T0 = buse de droite = Z1 = S
+; QIDI IFAST : T1 = buse de gauche = Z2 = P
+
+M8011 S0.0073 P0.0073
 ```
-Si la remise à 0 de l'extrudeur échoue je vous conseille de contacter le suport QIDI avant d'updater votre firmware avec une valeur d'extrusion négative !
+Télécharger le fichier [03_09_2024_SAVDEFAUT_Pas_E_Z1Z2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/V02/03_09_2024_SAVDEFAUT_Pas_E_Z1Z2.gcode)
 
-<s>
-Etant donné que vous ne pourrez pas mesurer la distance puisque votre trait de référence sera passé sous le collier. C'est la que le second trait trouve toute son utilité, Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le second trait pour Z2 (idem pour Z1).
-Exemple :
-- Extrudeur de gauche Z2 PETG 235°C sur-extrusion la longueur de filament restante jusqu'au second trait est de +45 mm soit (45-50) = 5 mm manquant -> (45-50)*0.0073/100 = -0.0036
-- Extrudeur de droite Z1 PLA 205°C sur-extrusion la longueur de filament restante jusqu'au second trait est de +38.2 mm soit (38.2-50) 11.8 mm manquant -> (38.2-50)*0.0073/100 = -0.0008
-</s>
-
-J'insiste ce cas ne devrait jamais subvenir si c'est le cas alors prendre contact avec le support QIDI et me tenir informer que j'update cette note que tout le monde en profite !
 
 ### Sauvegarder la nouvelle valeur dans le firmware de la QUIDI IFAST :
 
-Pour remplacer et sauvegarder les nouvelles valeurs afin de définir les nouveaux pas/mm pour E correspondant à votre Z1 et Z2 il sufit de copier le bout de code suivant,  remplacer par vos valeurs, le sauvegarder sous "JJ_MM_AAAA_QIDI_IFAST_calibration_01_EstepZ1Z2.gcode" et l'executer en l'imprimant sur la QIDI IFAST, cela prendra 1 seconde. 
+Pour remplacer et sauvegarder les nouvelles valeurs afin de définir les nouveaux pas/mm pour E correspondant à votre Z1 et Z2 il sufit de copier le bout de code suivant et remplacer par vos valeurs, le sauvegarder sous un nom de fichier explicite exemple "JJ_MM_AAAA_SAVNEW_Pas_E_Z1Z2.gcode" et l'executer en l'imprimant sur la QIDI IFAST, cela prendra 1 seconde. 
 
 ```gcode
 ; QIDI IFAST : T0 = buse de droite = Z1 = S
@@ -118,9 +110,9 @@ Pour remplacer et sauvegarder les nouvelles valeurs afin de définir les nouveau
 
 M8011 S0.0068 P0.0070
 ```
-Télécharger le fichier [03_09_2024_Sauvegarder_Pas_E_Z1Z2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/03_09_2024_Sauvegarder_Pas_E_Z1Z2.gcode)
+Télécharger le fichier [03_09_2024_SAVNEW_Pas_E_Z1Z2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/V02/03_09_2024_SAVNEW_Pas_E_Z1Z2.gcode)
 
-### Vérification de l abonne prise en compte des nouvelle valeur du firmware de la QUIDI IFAST :
+### Vérification de la bonne prise en compte des nouvelle valeur du firmware de la QUIDI IFAST :
 
 Aprés mise à jour faites : 
 

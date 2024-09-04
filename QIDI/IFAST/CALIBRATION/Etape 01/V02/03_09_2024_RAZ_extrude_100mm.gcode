@@ -84,13 +84,9 @@ G1 E100 F125
 ; Mesurer les sur(-) ou sous(+) extrusions des deux filaments pour calculer la compensation de chacun des extrudeurs.
 ; Appliquer la formule suivant pour calculer le nouveau E :
 ;
-; Exemple : Si on fixe la longueur à extruder à 100mm, mais que seulement 93mm on été extrudés il reste +7mm donc un cas de sous extrusion.
-; 100-93=+7mm
+; Exemple : Si on fixe la longueur consigne à extruder est de 100mm, mais que seulement 93mm on été extrudés il reste +7mm donc un cas de sous extrusion.
 ; le E correct doit être 93*0.0073/100 = 0.006789
 ;
-; Exemple de Tests realisés sur ma IFAST avec debit 100% pour 100mm
-; Extruder de gauche PETG 235°c sous extrusion reste de +4 mm -> (100-4)*0.0073/100 = 0.007008
-; Extruder de droite PLA 205°c sous extrusion reste de +6.2 mm -> (100-6.2)*0.0073/100 = 0.0068474
 ; ------------------------------------------------
 ; ------------------------------------------------
 ; ------------------------------------------------

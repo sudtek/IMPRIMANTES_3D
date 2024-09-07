@@ -14,3 +14,8 @@
 ; P -> Z2 -> T1
 ; S -> Z1 -> T0
 M8011 S0.0069 P0.0069
+
+; [ Sauvegarder les paramètres ]
+; Indispensable, sinon les paramètres ne seront pas sauvegardés sur l'appareil
+; Sauvegarder la configuration
+M8500

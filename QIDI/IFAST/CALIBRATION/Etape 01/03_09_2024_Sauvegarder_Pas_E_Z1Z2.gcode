@@ -16,3 +16,8 @@
 ; #3 Faites un reboot de la QIDI IFAST
 
 M8011 S0.0068 P0.0070
+
+; [ Sauvegarder les paramètres ]
+; Indispensable, sinon les paramètres ne seront pas sauvegardés sur l'appareil
+; Sauvegarder la configuration
+M8500

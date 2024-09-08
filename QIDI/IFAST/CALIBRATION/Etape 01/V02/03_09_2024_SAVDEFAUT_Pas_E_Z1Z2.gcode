@@ -1,4 +1,4 @@
-; 04_septembre_2024
+; 09_septembre_2024
 ; Ifast QIDI
 ; Procedure de sauvegarde de la valeur E de chaque moteur pas à pas des extrudeurs Z1 & Z2
 
@@ -12,3 +12,8 @@
 ;
 ; Valeurs par defaut de  S0.0073 et  P0.0073
 M8011 S0.0073 P0.0073
+
+; [ Sauvegarder les paramètres ]
+; Indispensable, sinon les paramètres ne seront pas sauvegardés sur l'appareil
+; Sauvegarder la configuration
+M8500

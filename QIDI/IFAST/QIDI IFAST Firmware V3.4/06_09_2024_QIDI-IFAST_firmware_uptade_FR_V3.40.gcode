@@ -3,16 +3,13 @@
 ; QIDI-IFAST update firmware V3.40 pour Carte mère ChituSystems basé sur marlin (mais pas 100% marlin)
 ; Fimware update fournir par QIDI
 ; Traduction, adaptation et commentaires par YS 
-;
-;
-;
-M8513 ; Semble être une commande spécifique à un certain type de carte mère ou de firmware d'imprimante 3D, pas standard dans les firmwares open-source comme Marlin
+; Note ce n'est pas un firmware 100% marlin certaines commandes sont spécifiques !
 ;
 ; ==================================
-;
 ; [ Support de sauvegarde  / backup en cas de coupure de courant ]
 ;
-; Le réglage prend effet après redémarrage.
+M8513 ; Support de la sauvegarde en cas de coupure de courant
+;
 ; I1 signifie backup activé (VALEUR PAR DEFAUT)
 ; I0 signifie backup desactivé 
 ;

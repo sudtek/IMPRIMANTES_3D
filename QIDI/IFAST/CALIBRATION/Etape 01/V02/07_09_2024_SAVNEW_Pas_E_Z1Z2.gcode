@@ -1,4 +1,4 @@
-; 04_septembre_2024
+; 07_septembre_2024
 ; Ifast QIDI
 ; Procedure de sauvegarde de la valeur E de chaque moteur pas à pas des extrudeurs Z1 & Z2
 

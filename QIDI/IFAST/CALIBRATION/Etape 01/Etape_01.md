@@ -37,9 +37,9 @@ Récapitulatif des paramètres pour la procédure de calibration des moteurs pas
 | Longueur de calibrage  | 100 mm | 100 mm |
 ```
 
-Mon fichier gcode de calibrage disponible [03_09_2024_RAZ_extrude_100mm.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/572e1f38047cff27d3ebf05762a64709f86ebc43/QIDI/IFAST/CALIBRATION/Etape%2001/gcode/03_09_2024_RAZ_extrude_100mm.gcode) se chargera d'extruder les deux têtes de 100 mm l'une après l'autre à la bonne température.
+Mon fichier gcode de calibrage [03_09_2024_RAZ_extrude_100mm.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/572e1f38047cff27d3ebf05762a64709f86ebc43/QIDI/IFAST/CALIBRATION/Etape%2001/gcode/03_09_2024_RAZ_extrude_100mm.gcode) se chargera d'extruder le filament les deux têtes de 100 mm l'une après l'autre et à aux température adéquates pour du PETG et du PLA.
 
-Si vous voulez calibrer votre imprimante avec deux filaments identiques type PLA, PETG, il faudra télécharger le fichier gcode et l'adapter à votre situation des température attendues par la matière que vous avez choisi d'extruder. Exemple de modification du gcode de mon programme pour avoir du PLA sur Z1 et Z2 à 205°C :
+Si vous voulez calibrer votre imprimante avec d'autres filaments et ou combinaisons (PLA/PLA, PETG/ABS ...),** il faudra télécharger le fichier gcode et l'adapter à votre situation des température attendues par la matière que vous avez choisi d'extruder**. Exemple de modification du gcode de mon programme pour avoir du PLA sur Z1 et Z2 à 205°C :
 
 ```gcode
 ; ----------------------------------------------------
@@ -55,9 +55,9 @@ M109 T0 S205
 ; ----------------------------------------------------
 ```
 
-Note : Pour cette opération, le plateau peut rester en bas, il est donc inutile de le faire chauffer, idem pour l'enceinte !
+Note : Pour cette opération, le plateau doit rester en bas, il est donc inutile de le faire chauffer, idem pour l'enceinte !
 
-P1) Charger deux bobines bien sèches et désydratées, prévoir 24 heures de désydratation, dans mon cas : bobine de gauche PETG blanc bobine de droite PLA mauve.
+P1) Charger deux bobines bien sèches et désydratées, prévoir 24 heures de désydratation, dans mon cas bobine de gauche type PETG blanc, bobine de droite type PLA mauve.
 
 P2) Ne pas installer les tubes de guidage PTFE bleu, au besoin les retirer car ils vous empêcheront de marquer et mesurer les longueurs de filaments.
 
@@ -72,6 +72,7 @@ P6) Exécuter le gcode [03_09_2024_RAZ_extrude_100mm.gcode](https://github.com/s
 P7) Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le 1er trait pour Z2, idem pour Z1.
 
 **// Note : Ajouter une photo !**
+![Simplon.co](http://blabla/maPhoto.png)
 
 Exemple de tests réalisés sur ma IFAST avec débit 100% pour 100 mm :
 
@@ -101,6 +102,7 @@ Télécharger le fichier [09_09_2024_RESTORE_DEFAUT_E_Z1Z2.gcode](https://github
 
 Lancer l'impression du gcode, faites un reboot de l'imprimante et reprendre à la phase P04).
 
+-----------------
 
 ### Sauvegarder la nouvelle valeur dans le firmware de la QUIDI IFAST :
 
@@ -114,6 +116,8 @@ M8011 S0.0068 P0.0070
 ```
 Télécharger le fichier [09_09_2024_SAV_NEW_E_Z1Z2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/572e1f38047cff27d3ebf05762a64709f86ebc43/QIDI/IFAST/CALIBRATION/Etape%2001/gcode/09_09_2024_SAV_NEW_E_Z1Z2.gcode)
 
+-----------------
+
 ### Vérification de la bonne prise en compte des nouvelle valeur du firmware de la QUIDI IFAST :
 
 Aprés mise à jour, 
@@ -123,5 +127,10 @@ Aprés mise à jour,
 - Vérifiez que les nouvelles valeurs de S & P permette l'extrusion conforme de de 100mm sur les des deux buses. [09_09_2024_VERIF_Z1Z2_extruder_100mm.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/572e1f38047cff27d3ebf05762a64709f86ebc43/QIDI/IFAST/CALIBRATION/Etape%2001/gcode/09_09_2024_VERIF_Z1Z2_extruder_100mm.gcode)
 - Si aprées extrusion le 1er trait 100mm est bien au niveau du collier l'extrusion de votre machine est parfaitement calibrée pour les deux buses et avez totalement validé cette étape.
 
+-----------------
 
-_Note importante pour les utilisateurs Ideamaker : Dans le profil de l'imprimante Ideamaker intégre une variable nommée: **step E / mm = 0.00** ; par defaut elle vaut 0.00 si vous changez cette valeur alors Ideamaker ne tiendra pas compte de notre calibrage et appliquera la valeur au deux moteurs d'extrusion ... donc assurez-vous que dans le profil imprimante Ideamaker votre variable nommée vaut 0.00 ! **step E / mm = 0.00**_. Cette variable est un option acceptable si et seulement si vous avez un seul moteur d'extrusion E !
+Tous les gcodes de calibration de E sont disponibles: [Ici](https://github.com/sudtek/IMPRIMANTES_3D/blob/572e1f38047cff27d3ebf05762a64709f86ebc43/QIDI/IFAST/CALIBRATION/Etape%2001/gcode)
+
+_Note #1 Important pour les utilisateurs Ideamaker, dans le profil de l'imprimante Ideamaker intégre une variable nommée: **step E / mm = 0.00** ; par defaut elle vaut 0.00 si vous changez cette valeur alors Ideamaker ne tiendra pas compte de notre calibrage et appliquera la valeur au deux moteurs d'extrusion ... donc assurez-vous que dans le profil imprimante Ideamaker votre variable nommée vaut 0.00 ! **step E / mm = 0.00**_. Cette variable est un option acceptable si et seulement si vous avez un seul moteur d'extrusion E !
+
+

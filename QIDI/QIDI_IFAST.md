@@ -11,7 +11,8 @@ Exemple : Si la tête arrive en buté gauche la tête Z2 situé à main gauche e
 J'utilise uniquement le sclicer Ideamaker pour convertir mes fichiers STL. Celui-ci identifie les têtes de gauche à droite comme T0,T1 ... ce qui n'est pas sans posser des pb avec la numerotation de QUIDI.
 
 
-**QUIDI IFAST avec Firmware Marlin**
+**QUIDI IFAST avec Firmware Marlin modifié par QIDI; certaines fonctions gcodes sont diferentes voir la section [Firmware de la QUIDI IFAST ](https://github.com/sudtek/IMPRIMANTES_3D/tree/235f8ea74b5f1439434741d732e151d05a6209f9/QIDI/IFAST/Firmware)**
+
 | Localisation Extrudeur | Gauche | Droite |
 |------------------------|--------|--------|
 | Identification QIDI    | Z2     | Z1     |
@@ -23,7 +24,7 @@ J'utilise uniquement le sclicer Ideamaker pour convertir mes fichiers STL. Celui
 | Température Bed (°C)    | 70   | 70      |
 | Température enceinte (°C) | 55     | 55       |
 
-- Localisation  : par convention lorsque l'on fait face à l'imprimante.
+- Localisation  : Par convention lorsque l'on fait face à l'imprimante.
 - Température extrudeurs (°C) : Par defaut ces températures donneront un bon resultat mais il faudra toujours calibrer vos bobines.
 - Température Bed (°C)  : Toujours prevoir un filme de colle blanche pour assurer l'hadérence et limiter le warp et faciliter le retrait par spatulage.
 - Température enceinte (°C) : Ne pas dépasser les 55°c sinon les supports / radeaux / jupes en PLA vont fondre et se deformer l'idéal est d'utiliser un pla+ 

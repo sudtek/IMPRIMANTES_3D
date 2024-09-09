@@ -1,6 +1,6 @@
-; 04_09_2024 
-; Ifast QIDI
-; Procedure de verification des moteur pas à pas des extrudeurs
+; 09_09_2024 
+; QIDI IFAST
+; Procedure de verification de la valeur E des moteurs pas à pas des extrudeurs
 
 ; Extrudeur situé à main gauche Z2 T1 sur QIDI IFAST
 ; - PETG 235°c

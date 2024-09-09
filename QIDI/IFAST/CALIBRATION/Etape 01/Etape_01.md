@@ -37,9 +37,9 @@ Récapitulatif des paramètres pour la procédure de calibration des moteurs pas
 | Longueur de calibrage  | 100 mm | 100 mm |
 ```
 
-Mon fichier gcode de calibrage disponible [23_08_2024 Calibrage 2 extruders 100mm T1_G_Z2_PETG_235 & T0_D_Z1_PLA_205 OK.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/23_08_2024_calibrage_%20extruders_100mm_T1_G_Z2_PETG_235_T0_D_Z1_PLA_205_OK.gcode) se chargera d'extruder les deux têtes de 100 mm l'une après l'autre à la bonne température.
+Mon fichier gcode de calibrage disponible [03_09_2024_RAZ_extrude_100mm.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/572e1f38047cff27d3ebf05762a64709f86ebc43/QIDI/IFAST/CALIBRATION/Etape%2001/gcode/03_09_2024_RAZ_extrude_100mm.gcode) se chargera d'extruder les deux têtes de 100 mm l'une après l'autre à la bonne température.
 
-Si vous voulez calibrer votre imprimante avec deux filaments identiques type PLA / PETG, il faudra télécharger le fichier gcode adapté à votre situation sont/seront disponibles [ICI](QIDI/IFAST/CALIBRATION/Etape%2001) ou à défaut l'éditer et adapter les valeurs de température attendues par la matière que vous avez choisi d'extruder. Exemple de modification du gcode de mon programme pour avoir du PLA sur Z1 et Z2 à 205°C :
+Si vous voulez calibrer votre imprimante avec deux filaments identiques type PLA, PETG, il faudra télécharger le fichier gcode et l'adapter à votre situation des température attendues par la matière que vous avez choisi d'extruder. Exemple de modification du gcode de mon programme pour avoir du PLA sur Z1 et Z2 à 205°C :
 
 ```gcode
 ; ----------------------------------------------------
@@ -67,9 +67,11 @@ P4) À l'aide d'un réglé ou d'un pied à coulisse, mesurer précisément 100 m
 
 P5) Fixer manuellement la température de préchauffage des filaments, dans mon cas Z2 à 235°C et Z1 à 205°C. Bien que mon programme se charge de fixer ces valeurs et d'attendre qu'elles soient atteintes avant d'enchaîner, cette habitude vous évitera un jour d'extruder par erreur à trop basse température et détériorer une tête...
 
-P6) Exécuter le gcode [23_08_2024 Calibrage 2 extruders 100mm T1_G_Z2_PETG_235 & T0_D_Z1_PLA_205 OK.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/23_08_2024_calibrage_%20extruders_100mm_T1_G_Z2_PETG_235_T0_D_Z1_PLA_205_OK.gcode). Z2 et Z1 vont monter en température et extruder tour à tour une longueur proche de 100 mm.
+P6) Exécuter le gcode [03_09_2024_RAZ_extrude_100mm.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/572e1f38047cff27d3ebf05762a64709f86ebc43/QIDI/IFAST/CALIBRATION/Etape%2001/gcode/03_09_2024_RAZ_extrude_100mm.gcode) . Z2 et Z1 vont monter en température et extruder tour à tour une longueur proche de 100 mm.
 
 P7) Mesurer la distance entre le 0 de référence (le collier non enfoncé) de la tête et le 1er trait pour Z2, idem pour Z1.
+
+**// Note : Ajouter une photo !**
 
 Exemple de tests réalisés sur ma IFAST avec débit 100% pour 100 mm :
 
@@ -95,9 +97,9 @@ Si le 1er trait à 100mm est sous le colier le plus simple est de réinitialiser
 
 M8011 S0.0073 P0.0073
 ```
-Télécharger le fichier [03_09_2024_SAVDEFAUT_Pas_E_Z1Z2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/V02/03_09_2024_SAVDEFAUT_Pas_E_Z1Z2.gcode)
+Télécharger le fichier [09_09_2024_RESTORE_DEFAUT_E_Z1Z2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/572e1f38047cff27d3ebf05762a64709f86ebc43/QIDI/IFAST/CALIBRATION/Etape%2001/gcode/09_09_2024_RESTORE_DEFAUT_E_Z1Z2.gcode)
 
-Lancer l'impression, faites un reboot de l'imprimante et reprendre à la phase P04).
+Lancer l'impression du gcode, faites un reboot de l'imprimante et reprendre à la phase P04).
 
 
 ### Sauvegarder la nouvelle valeur dans le firmware de la QUIDI IFAST :
@@ -110,17 +112,16 @@ Pour remplacer et sauvegarder les nouvelles valeurs afin de définir les nouveau
 
 M8011 S0.0068 P0.0070
 ```
-Télécharger le fichier [03_09_2024_SAVNEW_Pas_E_Z1Z2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/V02/03_09_2024_SAVNEW_Pas_E_Z1Z2.gcode)
+Télécharger le fichier [09_09_2024_SAV_NEW_E_Z1Z2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/572e1f38047cff27d3ebf05762a64709f86ebc43/QIDI/IFAST/CALIBRATION/Etape%2001/gcode/09_09_2024_SAV_NEW_E_Z1Z2.gcode)
 
 ### Vérification de la bonne prise en compte des nouvelle valeur du firmware de la QUIDI IFAST :
 
-Aprés mise à jour faites : 
+Aprés mise à jour, 
 
-- Redémarer / rebooter votre IFAST.
+- Redémarez / rebootez votre IFAST.
 
-- Faites un fast Leveling.
-
-Relancer une nouvelle procédure depuis l'étape P4 pour vérifier que l'extrusion de 100mm sur les des deux buses soit bien au niveau du collier !  Si c'est bien le cas alors l'extrusion de votre machine est parfaitement calibrée pour les deux buses et avez totalement validé cette étape.
+- Vérifiez que les nouvelles valeurs de S & P permette l'extrusion conforme de de 100mm sur les des deux buses. [09_09_2024_VERIF_Z1Z2_extruder_100mm.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/572e1f38047cff27d3ebf05762a64709f86ebc43/QIDI/IFAST/CALIBRATION/Etape%2001/gcode/09_09_2024_VERIF_Z1Z2_extruder_100mm.gcode)
+- Si aprées extrusion le 1er trait 100mm est bien au niveau du collier l'extrusion de votre machine est parfaitement calibrée pour les deux buses et avez totalement validé cette étape.
 
 
 _Note importante pour les utilisateurs Ideamaker : Dans le profil de l'imprimante Ideamaker intégre une variable nommée: **step E / mm = 0.00** ; par defaut elle vaut 0.00 si vous changez cette valeur alors Ideamaker ne tiendra pas compte de notre calibrage et appliquera la valeur au deux moteurs d'extrusion ... donc assurez-vous que dans le profil imprimante Ideamaker votre variable nommée vaut 0.00 ! **step E / mm = 0.00**_. Cette variable est un option acceptable si et seulement si vous avez un seul moteur d'extrusion E !

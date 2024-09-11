@@ -1,6 +1,6 @@
 **Étape 01 : Calibration des deux moteurs d'extrusion de Z1 et Z2**
 
-Prérequis : Vous devez avoir validé [l'étape 00](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/Etape_00.md) avant de continuer !
+Prérequis avant de continuer : Vous devez avoir validé [l'étape 00 Réglage de l'alignement des deux buses / calibrage XY](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/Etape_00.md)
 
 ### Présentation
 

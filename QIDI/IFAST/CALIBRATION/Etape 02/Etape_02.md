@@ -1,4 +1,4 @@
-**Étape 02 : Calibration Mise à niveau du plateau par 5 points**
+**Étape 02 : Calibration Mise à niveau du plateau par 3 points ou 5 points**
 
 Prérequis avant de continuer : 
 - Vous devez avoir validé [l'étape 00 Réglage de l'alignement des deux buses / calibrage XY](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2000/Etape_00.md)

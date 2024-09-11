@@ -12,7 +12,7 @@
 ; - 100% de debit
 ; - Longueur de calibrage 100mm
 
-; Firmware: Marlin
+; Firmware: Basé sur Marlin (ce n'est pas un pur Marlin)
 ; Custom Toolhead: T1 T0
 
 ; ----------------------------------------------------

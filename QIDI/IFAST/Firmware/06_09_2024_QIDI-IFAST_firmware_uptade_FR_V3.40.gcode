@@ -816,9 +816,7 @@ M8530  I1
 M8500
 ;
 ; ==================================
-; [ ?????? Fonction ?????? ]
-;
-; Note YS 06_09_2024 : Semble être une commande spécifique à un certain type de carte mère ou de firmware d'imprimante 3D, pas standard dans les firmwares open-source comme Marlin
+; [ RAZ de l'inprimante aux valeurs d'usine ]
 ;
 M7507 I1 T0
 ; 

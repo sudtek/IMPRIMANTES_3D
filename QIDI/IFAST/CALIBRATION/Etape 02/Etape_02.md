@@ -18,6 +18,8 @@ L'idéal est donc de trouver le juste milieu. Pour ma part, en impression 3D FDM
 
 ## Deux types de mise à niveau nommés "Levelling" sur la QIDI IFAST :
 
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/349c9b5b93062e623338f2681f15292e31eb9a76/QIDI/IFAST/CALIBRATION/Etape%2002/media/Menu_Fast_normal_levelling.jpg)
+
 Le **"normal Leveling"** est primordial et doit être effectué au moins une fois à la réception de l'imprimante avant toute impression de test. Il permet de régler correctement la distance entre les buses et le plateau pour éviter d'être :
 - Ni trop haut par rapport au plateau, car la matière extrudée n'adhérera pas au plateau et ne sera pas suffisamment serrée/écrasée contre le plateau. (Avec la matière en fusion qui est visqueuse pendant la phase d'extrusion, on peut faire une analogie avec les mortiers que l'on serre pour aider à l'adhérence sur un support.)
 - Ni trop bas pour ne pas endommager le plateau (moins grave), les têtes (grave), voire endommager le système de déplacement vis sans fin et/ou cramer un moteur/driver (le drame...).
@@ -34,6 +36,7 @@ Lorsque j'imprime sur la QIDI IFAST, je fixe systématiquement mes températures
 - Plateau température située entre 60°C / 70°C Max si les supports PLA sont en contact avec le plateau. 80°C Max si uniquement du PETG en contact avec le plateau. Note : La couche d'interface en glue permet d'abaisser de 10°C la température du plateau sans perte d'adhérence et/ou de risque de warping sur les premières couches.
 - Enceinte chauffante 50°C max car les supports en PLA ne supportent pas une température supérieure et le but ici est de limiter le warping (déformation) du PETG pendant l'impression. Note : En fin d'impression de l'objet, penser à faire redescendre progressivement la température de l'enceinte avec un bout de gcode pour limiter le warping via le slicer.
 
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/349c9b5b93062e623338f2681f15292e31eb9a76/QIDI/IFAST/CALIBRATION/Etape%2002/media/Temperature_%20pr%C3%A9chauffages.jpg)
 _Note 1 : Bien sûr, ces températures sont données à titre indicatif pour mes besoins et doivent être adaptées aux vôtres en fonction des matières que vous allez imprimer._
 _Note 2 : QIDI recommande d'ouvrir le capot supérieur transparent lorsque l'on imprime certaines matières. Si, comme moi, vous imprimez un corps de pièces en PETG, je vous conseille de maintenir le capot fermé pour limiter le warping. De plus, si l'enceinte est ouverte, cela fausse la calibration globale._
 

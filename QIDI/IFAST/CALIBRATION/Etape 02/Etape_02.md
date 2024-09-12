@@ -21,8 +21,6 @@ L'idéal est donc de trouver le juste milieu. Pour ma part, en impression 3D FDM
 Pour accéder aux menus de leveling de la QIDI IFAST -> Icone Engrenage -> menu leveling.
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/1b44282f20c2ab513edb47a70c626f3488f8c479/QIDI/IFAST/CALIBRATION/Etape%2002/media/menu_leveling.jpg)
 
-![](https://github.com/sudtek/IMPRIMANTES_3D/blob/c6af5173c09b3a0ddf0b94d4a86707a78f4ec835/QIDI/IFAST/CALIBRATION/Etape%2002/media/Fast%20leveling%20VS%20normal%20leveling.jpg)
-
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/349c9b5b93062e623338f2681f15292e31eb9a76/QIDI/IFAST/CALIBRATION/Etape%2002/media/Menu_Fast_normal_levelling.jpg)
 
 Le **"normal Leveling"** est primordial et doit être effectué au moins une fois à la réception de l'imprimante avant toute impression de test. Il permet de régler correctement la distance entre les buses et le plateau pour éviter d'être :

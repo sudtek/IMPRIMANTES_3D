@@ -91,9 +91,8 @@ QIDI fournit une carte plastique de 0.2 mm d'épaisseur de 10x15 cm de couleur n
 - Ce n'est pas un thermoplastique, donc en calibrant à chaud, celui-ci va fondre au contact de la buse, se coller et salir la buse et le plateau.
 - Si, comme moi, vous travaillez en enceinte close sans ouverture du capot supérieur (ou que votre imprimante est en hauteur), il vous sera impossible d'utiliser cette jauge plastique pour calibrer. Elle n'est pas assez longue et ce n'est pas pratique, il faut se contorsionner.
 
-// INSÉRER PHOTO gauge plastic
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2002/media/Gauge_plastique_livr%C3%A9e_par_QIDI.jpg)
 
 Je vous recommande de remplacer cette jauge par une feuille bristol A4 à petits carreaux de 5 mm d'épaisseur 0.2 mm. C'est le plus simple et le moins coûteux.
 
 ---
-```

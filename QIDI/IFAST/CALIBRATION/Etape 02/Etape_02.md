@@ -41,12 +41,13 @@ Quidi fourni une carte plastique de 0.2mm épaisseur de 10xmx15cm couleur  noire
 
 //INSERER PHOTO gauge plastic
 
-Je vous recommande de la rempalcer par une feuille bristrol A4 à petit carreaux 5mm epaisseur 0.2mm c'est le plus simple et le moins couteux.
+Je vous recommande de remplacer cette gauge par une feuille bristrol A4 à petit carreaux 5mm epaisseur 0.2mm c'est le plus simple et le moins couteux.
 
 
 
 
 
 
+---------
 
 Par defaut la QIDI IFAST offre une methode integrée qui releve 4 points  

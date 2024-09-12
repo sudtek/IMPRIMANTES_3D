@@ -45,3 +45,4 @@ QIDI fournit une carte plastique de 0.2 mm d'épaisseur de 10x15 cm de couleur n
 
 Je vous recommande de remplacer cette jauge par une feuille bristol A4 à petits carreaux de 5 mm d'épaisseur 0.2 mm. C'est le plus simple et le moins coûteux.
 
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4367d96d8e8fbc38b2ab900d8a624da749ba79bd/QIDI/IFAST/CALIBRATION/Etape%2002/media/Feuille_A4_Bristol_0%2C02mm.jpg)

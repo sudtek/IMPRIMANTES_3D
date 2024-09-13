@@ -77,17 +77,19 @@ Le réglage est succéssifs pour chaque écrous afin de régler la distance exce
   - Vous tirez sur le bristol il ne bouge pas. 
 --> Tourner la molette dans le sens antihoraire (vers la droite) pour augmenter la distance entre la buse et le plateau en faisant descendre le plateau et libére la pression exercée sur la feuille Bristol.
 
-- La pression exercée sur la feuille est insufisante lorsque vous (poussez / tirez / deplacez latéralement de droite à gauche) la feuille A4 Bristol et vous ne percevez aucun frotemment, votre buse est beaucoup trop haut elle n'est pas en contact.
+- La pression exercée sur la feuille est insufisante lorsque vous (poussez / tirez / deplacez latéralement de droite à gauche) la feuille A4 Bristol mais que vous ne percevez aucun frotemment, votre buse est beaucoup trop haut elle n'est pas en contact avec le Bristol.
 -->  Tourner la molette dans le sens horaire (vers la gauche) pour réduire la distance entre la buse et le plateau en faisant monter le plateau afin de pincer trés légèrement la feuille.
   
 - La pression exercé sur la feuille est correcte lorsque :
   - Vous pouvez pousser, tirer et deplacer latéralement la feuille Bristl en resentant une légére resistance, vous devez faire ne sorte de sentir le même niveau de resistance pour tous points de contrôles.
   - Vous pouvez tirer la feuille et parvenir à la réinserer entre la buse et le plateau sans déterriorer la feuille. 
 --> Il vous faut sérer fermement l'écrou oreille pour bloquer la molette en postion.
-    
-Note : J'ai remarqué qu'aprés avoir serré l'écrou on peut être trop proche du plateau et ne plus pouvoir renfiler la feuille entre la buse et le plateau. Ce probléme est lié au jeux des filets du systéme de sérage ...  Si vous faites le même constat pas de panique il vous faut desserer l'écrou oreille et tournez la molette dans le sens antihoraire (vers la droite) de moins de 1/8 de tour puis revisser fermement l'écrou oreille pour bloquer en position. Essayer à nouveau de renfiler la feuille A4 Bristol entre la buse et le palteau. Il faut parfois si reprendre à plusieurs fois, 2 ou 3 iterations maximum. Ce qui ne faut surtout pas faire dans ce cas c'est faire des aller / retour en devissant trop puis en revissant car avec ce type de visserie et blocage vous induirez des decalages et des jeux et votre plateau n'aura plus une bonne assiète paralléle par rapport au plan de déplacement de la tête.
 
-Cette technique est à repetée pour chacun des écrous ! Lorsque vous avez fait votre premier tout premier "Normal Leveling" n'hesitez pas à le recontroler aprés avoir laissé l'imprimante en témpérature 1/2 et au besoin à réajuster cela vous garantira une base de départ parfaite pou vos futurs "Fast Leveling".
+Astuce : Pour trouver le bon compromis sans y passer trop longtemps je mets le bristol en mouvement simultanément en faisant des cercles tout en réglant la molette.
+
+Note : J'ai remarqué qu'aprés avoir serré l'écrou on peut être trop proche du plateau et ne plus pouvoir renfiler la feuille entre la buse et le plateau alors que l'on avait trouvé une postion optimale. Ce probléme est lié au jeux des filets du systéme de sérrage / blocage ...  Si vous faites le même constat pas de panique il vous faut desserer l'écrou oreille et tournez la molette dans le sens antihoraire (vers la droite) de moins de 1/8 de tour puis revisser fermement l'écrou oreille pour bloquer en position. Essayer à nouveau de renfiler la feuille A4 Bristol entre la buse et le palteau. Il faut parfois si reprendre à plusieurs fois, 2 ou 3 iterations maximum. Ce qui ne faut surtout pas faire dans ce cas c'est faire des aller / retour en devissant trop puis en revissant car avec ce type de visserie et blocage vous induirez des decalages et des jeux et votre plateau n'aura plus une bonne assiète paralléle par rapport au plan de déplacement de la tête; autrement dit la distance palteau buse ne sera plus identique à tous les points de controle.
+
+Bien sur cette technique est à repetée pour chacun des écrous ! Lorsque vous avez fait votre premier tout premier "Normal Leveling" n'hesitez pas à le recontroler aprés avoir laissé l'imprimante en température de travail 1/2 heure **mais il vous faut imperativement penser à laisser le plateau à une distance minimum 50 mm des têtes pour ne pas faire une zone d'affectation thermique ! **. Au besoin relancer un "Normal leveling" pour réajuster cela vous garantira une base de départ parfaite pour vos futurs "Fast Leveling".
 
 [Sur ce lien vous trouverez une vidéo explicant ma technique de Normal Leveling à chaud].()
 

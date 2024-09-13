@@ -31,7 +31,7 @@ Le **"normal Leveling"** est primordial et doit être effectué au moins une foi
 
 ## Prérequis
 
-Quel que soit le type de leveling **"normal Leveling" ou "fast leveling"**, ils doivent impérativement être effectués à chaud dans les conditions de températures d'impression. Si vous faites vos leveling à froid, la machine ne sera pas correctement dilatée et vous perdrez en précision pour la suite des réglages. Cela doit devenir une habitude, un réflexe.
+Quel que soit le type de leveling **"normal Leveling" ou "fast leveling"**, ils doivent impérativement être effectués à chaud dans les conditions de températures d'impression avec des buses propres. Pour netoyer les buses j'utilise un chifon de lin épais ainsi on ne se crame pas et cela resite trés bien à une temperature de 250°c. Si vous faites vos leveling à froid comme le préconise les constructeurs alors la machine ne sera pas correctement dilatée et vous perdrez en précision pour la suite des réglages. Cela doit devenir une habitude, un réflexe de toujours faire vos leveling à chaud !
 
 Lorsque j'imprime sur la QIDI IFAST, je fixe systématiquement mes températures en amont pour préchauffer avant de calibrer, par exemple :
 - Buse Z1 à 205°C pour imprimer les supports en PLA.
@@ -40,12 +40,12 @@ Lorsque j'imprime sur la QIDI IFAST, je fixe systématiquement mes températures
 - Enceinte chauffante 50°C max car les supports en PLA ne supportent pas une température supérieure et le but ici est de limiter le warping (déformation) du PETG pendant l'impression. Note : En fin d'impression de l'objet, penser à faire redescendre progressivement la température de l'enceinte avec un bout de gcode pour limiter le warping via le slicer.
 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/349c9b5b93062e623338f2681f15292e31eb9a76/QIDI/IFAST/CALIBRATION/Etape%2002/media/Temperature_%20pr%C3%A9chauffages.jpg)
-_Note 1 : Bien sûr, ces températures sont données à titre indicatif pour mes besoins et doivent être adaptées aux vôtres en fonction des matières que vous allez imprimer._
-_Note 2 : QIDI recommande d'ouvrir le capot supérieur transparent lorsque l'on imprime certaines matières. Si, comme moi, vous imprimez un corps de pièces en PETG, je vous conseille de maintenir le capot fermé pour limiter le warping. De plus, si l'enceinte est ouverte, cela fausse la calibration globale._
+_Note 1 : Bien sûr, ces températures sont données à titre indicatif pour mes besoins et doivent être adaptées aux vôtres en fonction des matières que vous allez imprimer ..._
+_Note 2 : QIDI recommande d'ouvrir le capot supérieur transparent lorsque l'on imprime certaines matières. Si, comme moi, vous imprimez un corps de pièces en PETG, je vous conseille de maintenir le capot fermé pour limiter le warping. De plus, si l'enceinte est ouverte par le haut l'effet cheminé fausse la calibration globale._
 
 QIDI fournit une carte plastique de 0.2 mm d'épaisseur de 10x15 cm de couleur noire/marron dans le but de servir de cale étalon pour faire vos "normal Leveling" ou "fast leveling". Cependant, il y a plusieurs problèmes avec cette jauge d'épaisseur :
-- Ce n'est pas un thermoplastique, donc en calibrant à chaud, celui-ci va fondre au contact de la buse, se coller et salir la buse et le plateau.
-- Si, comme moi, vous travaillez en enceinte close sans ouverture du capot supérieur (ou que votre imprimante est en hauteur), il vous sera impossible d'utiliser cette jauge plastique pour calibrer. Elle n'est pas assez longue et ce n'est pas pratique, il faut se contorsionner.
+- Ce n'est pas un thermoplastique, donc en calibrant à chaud, celui-ci va fondre au contact de la buse, se coller et salir la buse et le plateau -> donc utilisable uniquemnt en calibration à froid qui selon moi ne devrait être effectuée qu'une fois à la 1er mise en service au cas ou la tête aurait bougée pendant le transport.
+- Si, comme moi, vous travaillez en enceinte close sans ouverture du capot supérieur (ou que votre imprimante est positionnée en hauteur), il vous sera impossible d'utiliser cette jauge plastique pour calibrer car elle n'est pas assez longue et ce n'est pas franchement pratique, il faut se contorsionner ...
 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2002/media/Gauge_plastique_livr%C3%A9e_par_QIDI.jpg)
 
@@ -60,7 +60,38 @@ Accéder au menu de **Normal leveling**.
 Le menu de **Normal leveling**.
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/338277bc2f0e9f8761f7f410eed4766f0eccd72d/QIDI/IFAST/CALIBRATION/Etape%2002/media/Menu_Ajustement_normal_levelling.jpg)
 
-Il est impératif de régler la distance du plateau en désérant les écrous oreilles et tournant les 3 écrous pour ajuster la distance en ayant insérer la feuille A4 entre le plateau et la buse.
+Il est impératif de régler la distance du plateau en désérant les écrous oreilles et tournant les 3 écrous pour ajuster la distance ...
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/e1d85f24cb858a651019100818edc7928fb74bdb/QIDI/IFAST/CALIBRATION/Etape%2002/media/Les_3_noix.jpg)
 
+... en ayant impérativement positioné une feuille A4 entre le plateau et la buse afin de proteger plateau et buses d'un éventuel crash (contact direct entre plateau et buse) mais également dans le but de protéger le plateau d'un contact thermique direct pendant le réglage succéssifs des trois écrous. Le fait de rester en position au même endroit pendant trop longtemps lorsque l'on tatone va irémédiablement affecter thermiquement votre plateau. Le bristol est un excelent isolant il va vous permetre de protéger thermiquement la zone de travail sans risquer la moindre déterrioration thermique ou crash.
+La calibration à chaud requier un minimu de pratique et peut poser de spb de crash ou déterioration thermique si l'utilisateur se rate ... principales raisons qui font que les constructeurs ne vous font pas faire des calibrages aux temperatures de travail / à chaud ... et favorisent le normal leveling à froid.
+
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/e1d85f24cb858a651019100818edc7928fb74bdb/QIDI/IFAST/CALIBRATION/Etape%2002/media/Positionement_Buse.jpg)
+
+Petit rappel : Sur la QUID IFAST la postion en Z de la tête et des buses sont fixes c'est le plateau que l'on ajuste qui monte / descent  !
+
+Le réglage est succéssifs pour chaque écrous afin de régler la distance excercé entre la feuille situé et le plateau. Le but ici est de régler correctement la pression excercer sur la feuille sans bloquer la feuille ou quelle soit trop lâche afin d'obtenir la bonne distance. Cela requier de la pratique et un peu de doigté mais ce n'est pas insurmontable avec un peu de pratique :
+
+- La pression exercé sur la feuille est trop élevée lorsque :
+  - Vous poussez sur le bristol il se gondole, se deforme et ne recule pas.
+  - Vous tirez sur le bristol il ne bouge pas. 
+--> Tourner la molette dans le sens antihoraire (vers la droite) pour augmenter la distance entre la buse et le plateau en faisant descendre le plateau et libére la pression exercée sur la feuille Bristol.
+
+- La pression exercée sur la feuille est insufisante lorsque vous (poussez / tirez / deplacez latéralement de droite à gauche) la feuille A4 Bristol et vous ne percevez aucun frotemment, votre buse est beaucoup trop haut elle n'est pas en contact.
+-->  Tourner la molette dans le sens horaire (vers la gauche) pour réduire la distance entre la buse et le plateau en faisant monter le plateau afin de pincer trés légèrement la feuille.
+  
+- La pression exercé sur la feuille est correcte lorsque :
+  - Vous pouvez pousser, tirer et deplacer latéralement la feuille Bristl en resentant une légére resistance, vous devez faire ne sorte de sentir le même niveau de resistance pour tous points de contrôles.
+  - Vous pouvez tirer la feuille et parvenir à la réinserer entre la buse et le plateau sans déterriorer la feuille. 
+--> Il vous faut sérer fermement l'écrou oreille pour bloquer la molette en postion.
+    
+Note : J'ai remarqué qu'aprés avoir serré l'écrou on peut être trop proche du plateau et ne plus pouvoir renfiler la feuille entre la buse et le plateau. Ce probléme est lié au jeux des filets du systéme de sérage ...  Si vous faites le même constat pas de panique il vous faut desserer l'écrou oreille et tournez la molette dans le sens antihoraire (vers la droite) de moins de 1/8 de tour puis revisser fermement l'écrou oreille pour bloquer en position. Essayer à nouveau de renfiler la feuille A4 Bristol entre la buse et le palteau. Il faut parfois si reprendre à plusieurs fois, 2 ou 3 iterations maximum. Ce qui ne faut surtout pas faire dans ce cas c'est faire des aller / retour en devissant trop puis en revissant car avec ce type de visserie et blocage vous induirez des decalages et des jeux et votre plateau n'aura plus une bonne assiète paralléle par rapport au plan de déplacement de la tête.
+
+Cette technique est à repetée pour chacun des écrous ! Lorsque vous avez fait votre premier tout premier "Normal Leveling" n'hesitez pas à le recontroler aprés avoir laissé l'imprimante en témpérature 1/2 et au besoin à réajuster cela vous garantira une base de départ parfaite pou vos futurs "Fast Leveling".
+
+[Sur ce lien vous trouverez une vidéo explicant ma technique de Normal Leveling à chaud].()
+
+
+
+
+

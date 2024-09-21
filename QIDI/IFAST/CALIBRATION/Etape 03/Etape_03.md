@@ -14,9 +14,10 @@ Ces changement dans les couches ne sont pas purements esthétiques il sont liée
 
 _* Il existe aussi des bobines avec filament de 3mm de diamètre mais c'est moins répandu sur les imprimantes grand public._
 
-En résumé pour **chaque nouvelle bobine déshydratées doit d'être caractérisée avant utilisation** afin de définir au minimum deux facteurs propres à cette seule bobine :
+En résumé, **chaque nouvelle bobine déshydratées doit d'être caractérisée avant utilisation** afin de définir au minimum deux facteurs propres à cette seule bobine :
 1) Le diamètre moyen du filament sur 1 metre de longeur -> ce sera le but de ce tutoriel !
 2) Calculer le facteur d'écoulement / debit de la bobine en fonction du diamètre moyen, la méthode sera détailée dans un tutoriel dédié.
+_Note : Je vous conseille de coller une étiquette indiquant ces deux facteurs sur le support bobine avant stockage._
 
   
 

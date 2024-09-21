@@ -44,7 +44,9 @@ Lorsque j'imprime sur la QIDI IFAST, je fixe systématiquement mes températures
   Note : En fin d'impression de l'objet, penser à faire redescendre progressivement la température de l'enceinte avec un bout de gcode pour limiter le warping via le slicer.
 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/349c9b5b93062e623338f2681f15292e31eb9a76/QIDI/IFAST/CALIBRATION/Etape%2002/media/Temperature_%20pr%C3%A9chauffages.jpg)
+
 _Note 1 : Bien sûr, ces températures sont données à titre indicatif pour mes besoins et doivent être adaptées aux vôtres en fonction des matières que vous allez imprimer ..._
+
 _Note 2 : QIDI recommande d'ouvrir le capot supérieur transparent lorsque l'on imprimme certaines matières. Si comme moi vous imprimez un corps de pièces en PETG, je vous conseille vivement de maintenir le capot fermé pour limiter le warping. De plus, si l'enceinte est ouverte par le haut l'effet cheminé fausse la calibration globale._
 
 QIDI fournit une carte plastique de 0.2 mm d'épaisseur, dimensions 10cm x 15cm de couleur noire / marron dans le but de servir de cale étalon pour faire vos "normal Leveling" ou "fast leveling". Cependant, il y a plusieurs problèmes avec cette jauge d'épaisseur :
@@ -93,9 +95,11 @@ Astuce : Pour trouver le bon compromis sans y passer trop longtemps je mets le b
 
 Note : J'ai remarqué qu'aprés avoir serré l'écrou on peut être trop proche du plateau et ne plus pouvoir renfiler la feuille entre la buse et le plateau alors que l'on avait trouvé une postion optimale. Ce probléme est lié au jeux des filets du systéme de sérrage / blocage ...  Si vous faites le même constat pas de panique il vous faut desserer l'écrou oreille et tournez la molette dans le sens antihoraire (vers la droite) de moins de 1/8 de tour puis revisser fermement l'écrou oreille pour bloquer en position. Essayer à nouveau de renfiler la feuille A4 Bristol entre la buse et le palteau. Il faut parfois si reprendre à plusieurs fois, 2 ou 3 iterations maximum. Ce qui ne faut surtout pas faire dans ce cas c'est faire des allers et retours en devissant trop puis en revissant car avec ce type de visserie et blocage vous induirez des decalages et des jeux et votre plateau n'aura plus une bonne assiète paralléle par rapport au plan de déplacement de la tête; autrement dit la distance plateau buse ne sera plus identique à tous les points de controle.
 
-Bien sur cette technique est à repetée pour chacun des écrous ! Lorsque vous avez fait votre premier tout premier "Normal Leveling" à chaud n'hesitez pas à le recontroler aprés avoir laissé l'imprimante en température de travail 1/2 heure ** parcontre il vous faut imperativement penser à laisser le plateau à une distance minimum 50 mm des têtes pour ne pas faire une zone d'affectation thermique ! **. Au besoin relancer un "Normal leveling" pour réajuster cela vous garantira une base de départ parfaite pour vos futurs "Fast Leveling".
+Bien sur cette technique est à repetée pour chacun des écrous ! Lorsque vous avez fait votre premier tout premier "Normal Leveling" à chaud n'hesitez pas à le recontroler aprés avoir laissé l'imprimante en température de travail 1/2 heure parcontre **il vous faut imperativement penser à laisser le plateau à une distance minimum 50 mm des têtes pour ne pas faire une zone d'affectation thermique !**. Au besoin relancer un "Normal leveling" pour réajuster cela vous garantira une base de départ parfaite pour vos futurs "Fast Leveling".
 
-[Sur ce lien vous trouverez une vidéo explicant ma technique de Normal Leveling à chaud].()
+[Sur ce lien vous trouverez une vidéo tutoriel de ma technique de "Normal Leveling" à chaud pour la QIDI IFAST](https://youtu.be/BVSv9q84bSc)
+
+[Sur ce lien vous trouverez une vidéo tutoriel de ma technique de "Fast Leveling" à chaud pour la QIDI IFAST](https://youtu.be/96jHqoTtK9o)
 
 
 

@@ -15,7 +15,7 @@ _* Il existe aussi des bobines avec filament de 3mm de diamètre mais c'est moin
 
 En résumé pour chaque nouvelle bobine avant son utilisation doit être déshydratée avant d'être caractérisée afin de pouvoir définir au minimum deux facteurs propres à cette seule bobine :
 1) Le diamétre moyen du filament sur 1 metre de longeur -> ce sera le but de ce tutoriel !
-2) Calculer le facteur d'écoulement / debit de la bobine en fonction du diamètre moyen, la méthode sera détailée dans un tutoriel dédié car il ya plusieurs étapes.
+2) Calculer le facteur d'écoulement / debit de la bobine en fonction du diamètre moyen, la méthode sera détailée dans un tutoriel dédié car il y a plusieurs étapes.
 
   
 

@@ -2,12 +2,13 @@
 
 ## Prérequis avant de continuer
 - Ce tutoriel doit être effectué avec des bobines qui sont parfaitements désidratées.
-- Un appareil de mesure de précision type pied à coulisse ou un palper et nécessaire.
+- Un appareil de mesure de précision type pied à coulisse ou un palper et nécessaire pour mesurer le diamétre.
+- Une régle de minimum 20cm ou un métre ruban de 2m maximum pour positioner 10 points de mesures. 
 
 ## Présentation
 Le diamètre standard le plus répandu et commun pour les bobines de filaments de nos imprimates 3D FDM est de 1.75mm* néanmoins à matiére équivalente (PETG, PLA, ABS ...) chaque bobine de filament est différente voir "unique"; même si vous achetez plusieurs lot de bobines chez un même fournisseur il y a fort à parier qu'il y aura des differences entre leurs diametres de filament respectifs ... le pire cas est lorsque au sein d'une même bobine le diametre varie énormenent du début à la fin de la bobine. Si vous imprimez des objets de décoration ce n'est généralement pas critique / problématique mais si faites des objets mécaniques et avez besoin d'un minimum de precision dimensionnelle à respecter cela peut devenir un trés gros probléme ... Les variations de "diamètres moyens" de chaque filament impacte systématiquement le facteur d'écoulement / débit de la buse (exprimée en % dans les logiciels slicers ); donc si vous imprimez des objets de + de 1Kg qui nécèsittent forcément un changement de filament, oubien imprimez avec des bobines non caractérisées vous constaterez irrémédiablement :
 
-- Une changement de densité qui va affecter les couches, cela se traduit par des couches d'aprence plus translucide / opaques que les couches precedentes avant changement de bobine.
+- Une changement de densité qui va affecter les couches, cela se traduit par des couches d'aprence plus translucide / opaques que les couches précédentes avant changement de bobine.
   
 - Des variations dimensionnelles importantes dans la structure entrainant des risques de ruptures.
 
@@ -26,11 +27,24 @@ Je vous conseille de coller une étiquette indiquant ces 3 paramètres bien visi
 
 ## Méthode de calcul du diamètre moyen
 
-La méthode de calcul du diamètre moyen est rélativement simple il suffit de dérouler 1,1 mètre de filament et de mesurer tout les 10 cms le diametre du filament, consigner la valeur et faire une simple moyenne arithmétique pour trouver le diamètre moyen. Au besoin vous pouvez vous aider de ce fichier tableur qui effectuera la moyenne pour vous aprées avoir saisi vos valeurs [Calcul_Diamètres_Moyens_Filaments_Z1&Z2](https://github.com/sudtek/IMPRIMANTES_3D/blob/0d3eb917c344bd84f99bd5797aadb5fb99b3cbc7/QIDI/IFAST/CALIBRATION/Etape%2003/Calcul_Diam%C3%A8tres_Moyens_Filaments_Z1%26Z2.ods)
+La méthode de calcul du diamètre moyen est rélativement simple :
 
-La 1er mesure doit être faite à 5 cm du debut de la bobine puis tous les 10cm au besoin utilisé un marqueur feutre de couleur pour repérer les 10 zones à mesurer. 
+E1) Dérouler 1,1 mètre de filament.
 
-A propos des instruments de mesures : L'idéal pour mesurer le diamètre d'un filament est d'utiliser un instrument de mesure adapté type pied à coulisse au 1/50mm en utilisant la partie dite du "bec large" (en vert) du pied à coulisse ou un palper au 1/100.
+E2) Important toujours bloquer le filament avec une épingle pour éviter que la bobine se déroule et s'en mêle.
+
+E3) Si le début du fil est pincé ou endomagé, suprpimmer la longueur endomagée puis à l'aide d'un double decimètre ou d'un double mètre ruban marquer un 1er trait à 5 cm du debut de la bobine avec un feutre suivi de autres 9 points. Les points doivent être bien visibles et contrastés sur le filament. 
+
+E4) A l'aide de votre pied à coulisse, palper ... mesurer le diamètre des 10 points.   
+
+faire une simple moyenne arithmétique pour trouver le diamètre moyen. Au besoin vous pouvez vous aider de ce fichier tableur qui effectuera la moyenne pour vous aprées avoir saisi vos valeurs [Calcul_Diamètres_Moyens_Filaments_Z1&Z2](https://github.com/sudtek/IMPRIMANTES_3D/blob/0d3eb917c344bd84f99bd5797aadb5fb99b3cbc7/QIDI/IFAST/CALIBRATION/Etape%2003/Calcul_Diam%C3%A8tres_Moyens_Filaments_Z1%26Z2.ods)
+
+La 1er mesure doit être faite à 5 cm du debut de la bobine puis tous les 10cm au besoin utilisé un marqueur feutre de couleur pour repérer vos 10 zones à mesurerla répartition de ces 10 points ne requier pas une haut precision vous pouvez utiliser une régle de minimum 20cm ou un métre ruban. 
+
+Si nécessaire je ferais une vidéo explicative ...
+
+## A propos des instruments de mesures
+L'idéal pour mesurer le diamètre d'un filament est d'utiliser un instrument de mesure adapté type pied à coulisse au 1/50mm en utilisant la partie dite du "bec large" (en vert) du pied à coulisse ou un palper au 1/100.
 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/e99904c9acdcf9f56b102b82c60a71e22e481a74/QIDI/IFAST/CALIBRATION/Etape%2003/media/pied_coulisse_manuel_bec_etroit.png)
 
@@ -41,10 +55,7 @@ Le "bec large" (en vert) est une zone rectifiée de quelque mm² du pied à coul
 Mon preferé reste de loin le "palper" qui permet des mesures moyennes précises au 1/100, ils sont tous équipées d'une vis limitant le couple de serrage du vernier (la bague gradué mobile) ainsi lorsque vous mesurez le filament vous appliquez toujours un effort constant donc plus de risque de fausser vos mesures en écrasant le filament ! Celui sur l'image ci-dessous à des becs plats cylindriques (il existe d'autres modéles de becs). Le tarrif de la version manuelle est un peu plus cher qu'un bon pied à coulisse mais bien plus pratique. La version numérique de qualité coute une véritable fortune, ce n'est pas indispensable ... mais tellement pratique lorsque en viellisant la vue baisse ;)  
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/427b35bd2aba677db02372aaf2093f94eb496b77/QIDI/IFAST/CALIBRATION/Etape%2003/media/palper.png)
 
-Note : comme tous ces outils de précision ils n'aiment pas être mal traités ou utilisés ... s'ils sont bien entretenus, utilisés et rangés ils font plusieurs générations ! 
-
-
-
+_Note : Comme tous outils de précision ils n'aiment pas être ni mal traités, ni mal utilisés ... s'ils sont bien entretenus, utilisés et rangés ils feront plusieurs générations !_
 
 
 

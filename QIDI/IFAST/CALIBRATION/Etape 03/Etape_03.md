@@ -25,7 +25,11 @@ Je vous conseille de coller une étiquette indiquant ces 3 paramètres sur le su
 
 ## Méthode de calcul du diamètre moyen
 
-La méthode de calcul du diamètre moyen est rélativement simple il suffit de prendre 1m de filament et de mesurer tout les 10 cms le diametre du filament et faire une simple moyenne arithmétique pour trouver le diamètre moyen;  au besoin vous pouvez vous aider de ce fichier tableur [Calcul_Diamètres_Moyens_Filaments_Z1&Z2](https://github.com/sudtek/IMPRIMANTES_3D/blob/0d3eb917c344bd84f99bd5797aadb5fb99b3cbc7/QIDI/IFAST/CALIBRATION/Etape%2003/Calcul_Diam%C3%A8tres_Moyens_Filaments_Z1%26Z2.ods)
+La méthode de calcul du diamètre moyen est rélativement simple il suffit de dérouler 1,1 mètre de filament et de mesurer tout les 10 cms le diametre du filament, consigner la valeur et faire une simple moyenne arithmétique pour trouver le diamètre moyen. Au besoin vous pouvez vous aider de ce fichier tableur qui effectuera la moyenne pour vous aprées avoir saisi vos valeurs [Calcul_Diamètres_Moyens_Filaments_Z1&Z2](https://github.com/sudtek/IMPRIMANTES_3D/blob/0d3eb917c344bd84f99bd5797aadb5fb99b3cbc7/QIDI/IFAST/CALIBRATION/Etape%2003/Calcul_Diam%C3%A8tres_Moyens_Filaments_Z1%26Z2.ods)
+
+La 1er mesure doit être faite à 5 cm du debut de la bobine.
+
+
 
 
   

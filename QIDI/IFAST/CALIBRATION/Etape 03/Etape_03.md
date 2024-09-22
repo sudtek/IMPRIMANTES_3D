@@ -2,7 +2,7 @@
 
 ## Prérequis avant de continuer
 - Ce tutoriel doit être effectué avec des bobines qui sont parfaitements d'hésidratées.
-- Un appareil de mesure de type ped à coulisse si possible à bec large ou un palper de précision.
+- Un appareil de mesure de type pied à coulisse ou un palper de précision.
 
 ## Présentation
 Le diamètre standard le plus répandu et commun pour les bobines de filaments de nos imprimates 3D fdm est de 1.75mm* néanmoins à matiére équivalente (PETG, PLA, ABS ...) par nature chaque bobine de filament est différente voir "unique" du fait même si vous achetez plusieurs lot de bobines chez un même fournisseur il y a fort à parier qu'il y aura des differences entre leurs diametres respectifs ... le pire cas est lorsque certain filament manque de constance au sein d'une même bobine et que le diametre varie énormenent du début à la fin de la bobine. Si vous imprimez des objets de décoration ce n'est généralement pas trés problématique mais si faites des objets mécaniques et avez besoin d'un minimum de precision dimensionnelle cela peut devenir un trés gros probléme ... Les variations de "diamètres moyens" de chaque filament impacte systématiquement le facteur d'écoulement / débit de la buse (exprimée en % dans les logiciels slicers ); donc si vous imprimez des objets de + de 1Kg qui nécèsittent forcément un changement de filament vous constaterez irrémédiablement :
@@ -28,7 +28,15 @@ Je vous conseille de coller une étiquette indiquant ces 3 paramètres sur le su
 
 La méthode de calcul du diamètre moyen est rélativement simple il suffit de dérouler 1,1 mètre de filament et de mesurer tout les 10 cms le diametre du filament, consigner la valeur et faire une simple moyenne arithmétique pour trouver le diamètre moyen. Au besoin vous pouvez vous aider de ce fichier tableur qui effectuera la moyenne pour vous aprées avoir saisi vos valeurs [Calcul_Diamètres_Moyens_Filaments_Z1&Z2](https://github.com/sudtek/IMPRIMANTES_3D/blob/0d3eb917c344bd84f99bd5797aadb5fb99b3cbc7/QIDI/IFAST/CALIBRATION/Etape%2003/Calcul_Diam%C3%A8tres_Moyens_Filaments_Z1%26Z2.ods)
 
-La 1er mesure doit être faite à 5 cm du debut de la bobine.
+La 1er mesure doit être faite à 5 cm du debut de la bobine puis tous les 10cm au besoin utilisé un marqueur feutre de couleur pour repérer les 10 zones à mesurer. 
+
+A propos de l'instrument de mesure : L'idéal pour mesurer le diametre d'un filament est d'utiliser un instrument de mesure adapté type pied à coulisse en utilisant la partie dite du "bec large" (en vert) du pied à coulisse.
+
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/e99904c9acdcf9f56b102b82c60a71e22e481a74/QIDI/IFAST/CALIBRATION/Etape%2003/media/pied_coulisse_manuel_bec_etroit.png)
+
+
+Le "bec large" (en vert) est une zone rectifiée de quelque mm² du pied à coulisse situé aprés le bec fin (en rouge) , le bec large permet une meilleur mesure moyenne que si vous utilisiez le bec fin.
+
 
 
 

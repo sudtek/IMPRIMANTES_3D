@@ -47,9 +47,11 @@ PETG Sunlu diamètre théorique donné pour 1,75mm +-0,2mm mesuré avec le bec p
 
 VS
 
-PETG Sunlu diamètre théorique donné pour 1,75mm +-0,2mm mesuré avec le bec plat = 1,724mm
+PETG Sunlu diamètre théorique donné pour 1,75mm +-0,2mm mesuré avec le bec plat = 1,744mm
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/1949d0320007ef1ac88599cf782de5bff678bacf/QIDI/IFAST/CALIBRATION/Etape%2003/media/Exemple_Mes_mesures_Diametre_filament_PETG_Z2_bec_Fin_NOK.png)
 
+
+Je vais retenir la 1er série avec Dmoyen = 1,724mm dans le but de calculer le % du facteur du débit d'écoulement.
 
 Note : Si nécessaire je ferais une vidéo explicative si nécessaire.
 

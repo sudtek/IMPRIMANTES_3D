@@ -62,7 +62,7 @@ Il faut impérativement outrepasser les parametres de tranchages dans les profil
 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/9c71bebcd73ebe26cbfa5ed9e6e1c0c3ab731e08/QIDI/IFAST/CALIBRATION/Etape%2003/media/IDEAMAKER_Fixer_Diametre_moyen_filament.png)
 
-Vous pouvez télécharger sur ce lien le récapitulatif des (Prérequis_Calibration_Filament_Z2.ods)[https://github.com/sudtek/IMPRIMANTES_3D/blob/76d8e661b3302f08bcbbb2e3dc6a70d64314f03e/QIDI/IFAST/CALIBRATION/Etape%2003/media/IDEAMAKER_Pr%C3%A9requis_Calibration_Filament_Z2.ods]
+Vous pouvez télécharger sur ce lien le récapitulatif des [IDEAMAKER_Prérequis_Calibration_Filament_Z2.ods](https://github.com/sudtek/IMPRIMANTES_3D/blob/76d8e661b3302f08bcbbb2e3dc6a70d64314f03e/QIDI/IFAST/CALIBRATION/Etape%2003/media/IDEAMAKER_Pr%C3%A9requis_Calibration_Filament_Z2.ods)
 
 Note : Si nécessaire je ferais une vidéo explicative de la procédure.
 

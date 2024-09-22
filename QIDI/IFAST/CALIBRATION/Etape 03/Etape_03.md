@@ -34,7 +34,7 @@ E1) Dérouler 1,1 mètre de filament.
 
 E2) Bloquer le filament avec une épingle pour éviter que la bobine se déroule et s'en mêle.
 
-E3) Si le début du fil est pincé, endommagé ... supprimer la parti endomagée puis à l'aide d'un double decimètre ou d'un double mètre ruban réaliser un 1er trait à 5 cm du debut de la bobine avec un feutre indélibile suivi de 9 autres points. Les points doivent être bien visibles et contrastés sur le filament. La précision entre les points est de +- 5 mm. 
+E3) Si le début du fil est pincé, endommagé ... supprimer la parti endomagée puis à l'aide d'un double decimètre ou d'un double mètre ruban réaliser un 1er trait à 5 cm du debut de la bobine avec un feutre indélébile suivi de 9 autres points. Les points doivent être bien visibles et contrastés sur le filament. La précision entre les points est de +- 5 mm. 
 
 E4) A l'aide de votre pied à coulisse, palper ... mesurer successivement le diamètre des 10 points et consigner les valeurs.
 

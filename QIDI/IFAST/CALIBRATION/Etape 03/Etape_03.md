@@ -50,8 +50,21 @@ VS
 PETG Sunlu diamètre théorique donné pour 1,75mm +-0,2mm mesuré avec le bec plat = 1,744mm
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/1949d0320007ef1ac88599cf782de5bff678bacf/QIDI/IFAST/CALIBRATION/Etape%2003/media/Exemple_Mes_mesures_Diametre_filament_PETG_Z2_bec_Fin_NOK.png)
 
+Nous allons retenir la 1er série avec Dmoyen = 1,724mm dans le but de Calculer le % du facteur du débit d'écoulement  il faut fixer cette valeur dans le slicer.
 
-Je vais retenir la 1er série avec Dmoyen = 1,724mm dans le but de calculer le % du facteur du débit d'écoulement.
+## Configuration IDEAMAKER
+
+Dans Ideamaker vous devez modifier les parametres des materiaux de L (Z2 gauche) "PETG blanc sunlu materiel principal" (note perso ajouter lien vers mes profils) :
+
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/1151c046e6eaba0448710aa8e8df1bc154476951/QIDI/IFAST/CALIBRATION/Etape%2003/media/IDEAMAKER_configurer_extrudeur_gauche.png)
+
+Il faut impérativement outrepasser les parametres de tranchages dans les profils liés au materiau (Cocher cette case permet de configurer et calibrer chaque buse independament en fonction du matériau en écrasant les « parametres de l’imprimante » -> On fixe le Diamétre du filament à 1,724 mm
+
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/9a2d135f35d81ae6fbfefde6c2adb7f7bf023a11/QIDI/IFAST/CALIBRATION/Etape%2003/media/IDEAMAKER_Fixer_Diametre_moyen_filament.png)
+
+
+
+
 
 Note : Si nécessaire je ferais une vidéo explicative si nécessaire.
 

@@ -30,12 +30,22 @@ La méthode de calcul du diamètre moyen est rélativement simple il suffit de d
 
 La 1er mesure doit être faite à 5 cm du debut de la bobine puis tous les 10cm au besoin utilisé un marqueur feutre de couleur pour repérer les 10 zones à mesurer. 
 
-A propos de l'instrument de mesure : L'idéal pour mesurer le diametre d'un filament est d'utiliser un instrument de mesure adapté type pied à coulisse en utilisant la partie dite du "bec large" (en vert) du pied à coulisse.
+A propos des instruments de mesures : L'idéal pour mesurer le diamètre d'un filament est d'utiliser un instrument de mesure adapté type pied à coulisse au 1/50mm en utilisant la partie dite du "bec large" (en vert) du pied à coulisse ou un palper au 1/100.
 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/e99904c9acdcf9f56b102b82c60a71e22e481a74/QIDI/IFAST/CALIBRATION/Etape%2003/media/pied_coulisse_manuel_bec_etroit.png)
 
 
-Le "bec large" (en vert) est une zone rectifiée de quelque mm² du pied à coulisse situé aprés le bec fin (en rouge) , le bec large permet une meilleur mesure moyenne que si vous utilisiez le bec fin.
+Le "bec large" (en vert) est une zone rectifiée de quelque mm² du pied à coulisse situé aprés le bec fin (en rouge). Le bec large formé de 2 palns rectifiées permet une meilleur mesure moyenne que si vous utilisiez le bec fin car lorsque vous poussez sur la molette (jaune) avec trop d'effort avoir tendance à deformer le filament et fausser votre mesure ... bien sur utiliser un pied à coulisse manuel necesite un apprentissage pour savoir lire correctement une valeur.   
+Il existe une alternative, le pied à coulisse dit numérique mais c'est selon moi une fausse bonne idée car pour avoir un bon pied à coulisse numerique de qualité il faut investir plusieurs centaines d'euros (entre 500€ et 1000€) sinon ils sont trop imprécis dans les mesures des valeurs au point d'être inutiles.
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/427b35bd2aba677db02372aaf2093f94eb496b77/QIDI/IFAST/CALIBRATION/Etape%2003/media/pied_coulisse_numerique.png)
+
+Mon preferé reste de loin le "palper" qui permet des mesures moyennes précises au 1/100, ils sont équipées d'une vis limitant le couple de serrage du vernier (bague gradué mobile) ainsi lorsque vous mesurez le filament vous apliquez toujours un effort constant donc plus de risque de fausser vos mesures en écrasant le filament ! Celui ci-dessous à des becs plats cylindriques (il existe d'autres modéles de becs). Le tarrif de la version manuelle est un peu plus cher qu'un bon pied à coulisse mais bien plus pratique. La version numerique de qualité coute une véritable fortune, ce n'est pas indispensable ... mais tellement pratique lorsque en viellisant la vue baisse ;)  
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/427b35bd2aba677db02372aaf2093f94eb496b77/QIDI/IFAST/CALIBRATION/Etape%2003/media/palper.png)
+
+
+
+
+
 
 
 

@@ -2,7 +2,7 @@
 
 ## Prérequis avant de continuer
 - Ce tutoriel doit être effectué avec des bobines qui sont parfaitements désidratées.
-- Un appareil de mesure de précision type pied à coulisse ou un palper et nécessaire pour mesurer le diamétre.
+- Un appareil de mesure de précision type pied à coulisse ou un palper et nécessaire pour correctement mesurer le diamétre, vous reporter à la section [A propos des instruments de mesures](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md#a-propos-des-instruments-de-mesures) pour plus de détails.
 - Une régle de minimum 20cm ou un métre ruban de 2m maximum pour positioner 10 points de mesures.
 - Un marqueur indélibile dont la couleur contraste avec le filament. 
 

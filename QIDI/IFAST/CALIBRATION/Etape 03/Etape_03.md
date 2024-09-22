@@ -28,21 +28,32 @@ Je vous conseille de coller une étiquette indiquant ces 3 paramètres bien visi
 
 ## Méthode de calcul du diamètre moyen
 
-La méthode de calcul du diamètre moyen est rélativement simple :
+La procédure de calcul du diamètre moyen est simple :
 
 E1) Dérouler 1,1 mètre de filament.
 
-E2) Important toujours bloquer le filament avec une épingle pour éviter que la bobine se déroule et s'en mêle.
+E2) Bloquer le filament avec une épingle pour éviter que la bobine se déroule et s'en mêle.
 
-E3) Si le début du fil est pincé ou endomagé, suprpimmer la longueur endomagée puis à l'aide d'un double decimètre ou d'un double mètre ruban marquer un 1er trait à 5 cm du debut de la bobine avec un feutre suivi de autres 9 points. Les points doivent être bien visibles et contrastés sur le filament. 
+E3) Si le début du fil est pincé, endommagé ... supprimer la parti endomagée puis à l'aide d'un double decimètre ou d'un double mètre ruban réaliser un 1er trait à 5 cm du debut de la bobine avec un feutre indélibile suivi de 9 autres points. Les points doivent être bien visibles et contrastés sur le filament. La précision entre les points est de +- 5 mm. 
 
-E4) A l'aide de votre pied à coulisse, palper ... mesurer le diamètre des 10 points.   
+E4) A l'aide de votre pied à coulisse, palper ... mesurer successivement le diamètre des 10 points et consigner les valeurs.
 
-faire une simple moyenne arithmétique pour trouver le diamètre moyen. Au besoin vous pouvez vous aider de ce fichier tableur qui effectuera la moyenne pour vous aprées avoir saisi vos valeurs [Calcul_Diamètres_Moyens_Filaments_Z1&Z2](https://github.com/sudtek/IMPRIMANTES_3D/blob/0d3eb917c344bd84f99bd5797aadb5fb99b3cbc7/QIDI/IFAST/CALIBRATION/Etape%2003/Calcul_Diam%C3%A8tres_Moyens_Filaments_Z1%26Z2.ods)
+E5) Faites une simple moyenne arithmétique pour trouver le diamètre moyen. Au besoin vous pouvez vous aider de ce fichier tableur qui effectuera la moyenne pour vous aprés avoir saisi vos valeurs [Calcul_Diamètres_Moyens_Filaments_Z1&Z2](https://github.com/sudtek/IMPRIMANTES_3D/blob/0d3eb917c344bd84f99bd5797aadb5fb99b3cbc7/QIDI/IFAST/CALIBRATION/Etape%2003/Calcul_Diam%C3%A8tres_Moyens_Filaments_Z1%26Z2.ods)
 
-La 1er mesure doit être faite à 5 cm du debut de la bobine puis tous les 10cm au besoin utilisé un marqueur feutre de couleur pour repérer vos 10 zones à mesurerla répartition de ces 10 points ne requier pas une haut precision vous pouvez utiliser une régle de minimum 20cm ou un métre ruban. 
+Exemple 
 
-Si nécessaire je ferais une vidéo explicative ...
+PETG Sunlu diamètre théorique donné pour 1,75mm +-0,2mm mesuré avec le bec plat = 1,724mm
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/1949d0320007ef1ac88599cf782de5bff678bacf/QIDI/IFAST/CALIBRATION/Etape%2003/media/Exemple_Mes_mesures_Diametre_filament_PETG_Z2_bec_large_OK.png)
+
+VS
+
+PETG Sunlu diamètre théorique donné pour 1,75mm +-0,2mm mesuré avec le bec plat = 1,724mm
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/1949d0320007ef1ac88599cf782de5bff678bacf/QIDI/IFAST/CALIBRATION/Etape%2003/media/Exemple_Mes_mesures_Diametre_filament_PETG_Z2_bec_Fin_NOK.png)
+
+
+Note : Si nécessaire je ferais une vidéo explicative si nécessaire.
+
+---------
 
 ## A propos des instruments de mesures
 L'idéal pour mesurer le diamètre d'un filament est d'utiliser un instrument de mesure adapté type pied à coulisse au 1/50mm en utilisant la partie dite du "bec large" (en vert) du pied à coulisse ou un palper au 1/100.

@@ -1,0 +1,191 @@
+# 23 octobre 2024 
+# yannick SUDRIE
+#
+# But : Retravailler le GCODE de calibration du debit/flow de la buse gauche Z2 / T1 de la QIDI-IFAST 
+# pour generer des serie de cubes de calibration automatiques à partir d'un fichier gcode existant
+
+# Valeur à demander / saisir / renseigner par l'utilisateur :
+
+# Exemple PLA
+Filament_Z1_T1_Droite_Diametre = 1.75 # Obligatoire 
+Filament_Z1_T1_Droite_Temperature = 205
+Filament_Z1_T1_Droite_Compensation = 100
+Filament_Z1_T1_Droite_Type = "PLA"
+Filament_Z1_T1_Droite_Name = "QIDI-IFAST PLA Mauve"
+
+# Exemple PETG
+Filament_Z2_T0_Gauche_Diametre = 1.724 # Obligatoire
+Filament_Z2_T0_Gauche_Temperature = 235
+Filament_Z2_T0_Gauche_Compensation = 100
+Filament_Z2_T0_Gauche_Type = "PETG"
+Filament_Z2_T0_Gauche_Name = "QIDI-IFAST PETG Blanc"
+
+# On part du principe qu'il y n'y a toujours 11 cubes 20x20x20 creux disposés sur 1 ligne selon l'axe X (format 11C x 1L)
+# les cubes sont ordonnées de gauche à droite par ordre decroissant la legende etant amenée à varier il est plus judicieux 
+# d'utiliser des lettres invariantes pour ordonnée la serie que des chiffres qui varient.
+#
+# Exemple d'une série de 11 cubes compris entre 91 et 90 par pas de 0.1 :
+# BOX_A=91.0 ; BOX_B=90.9 ; BOX_C=90.8 ... BOX_K=90.0
+
+Borne_Superieure = 90 # Débit du cube situé le plus à gauche etiquette A
+Borne_Inferieur = 80 # Débit du cube situé le plus à droite etiquette K
+Pas = 1  # pas intercube ne peut prendre que deux valeurs 0.1 ou 1
+
+
+"""
+25_10_2024
+101% -> cube A
+103% -> Lettres A à K legende du plateau 
+105% -> tour de purge
+"""
+
+# ------ Relever des BLOCS de séquences de GCODES uniques à modifiers --------
+
+
+# BLOC_INFORMATION_FILAMENT
+# Bloc_7_16
+# NBoccurence = 1
+"""
+;Filament Diameter #1: 1.724
+;Filament Diameter #2: 1.740
+;Filament Compensation #1: 100.00
+;Filament Compensation #2: 100.00
+;Filament Type #1: PETG blanc
+;Filament Type #2: PLA
+;Filament Name #1: IFAST PETG BLANC SUNLU calibration Dimensions + Epaisseur
+;Filament Name #2: IFAST PLA ROUGE
+"""
+
+
+# BLOC_TEMPERATURE_PLATEAU
+# LIGNE_15_15
+# NBoccurence = 1
+"""
+M190 S65
+"""
+
+
+# BLOC_TEMPERATURE_FILAMENTS
+# LIGNE_25_27
+# NBoccurence = 1
+"""
+M104 T0 S205
+M109 T1 S235
+M109 T0 S205
+"""
+
+# BLOC_TEMPERATURE_ENCEINTE
+# LIGNE_40_41
+# NBoccurence = 1
+"""
+; On fixe la temperature de l'enceinte à 40°C
+M141 S40
+"""
+
+# BLOC_TEMPERATURE_FILAMENT_GAUCHE
+# Bloc_50 
+# NBoccurence = 13
+"""
+M104 T1 S235
+"""
+
+# BLOC_DEBIT_CUBE_A_FILAMENT_GAUCHE
+# Bloc_BOX_A.3mf
+# NBoccurence = 100
+"""
+M221 T1 S101.00
+"""
+
+# BLOC_DEBIT_CUBE_B_FILAMENT_GAUCHE
+# Bloc_BOX_B.3mf
+# NBoccurence = 100
+"""
+M221 T1 S99.00
+"""
+
+# BLOC_DEBIT_CUBE_C_FILAMENT_GAUCHE
+# Bloc_BOX_C.3mf
+# NBoccurence = 100
+"""
+M221 T1 S98.00
+"""
+
+# BLOC_DEBIT_CUBE_D_FILAMENT_GAUCHE
+# Bloc_BOX_D.3mf
+# NBoccurence = 100
+"""
+M221 T1 S97.00
+"""
+
+# BLOC_DEBIT_CUBE_E_FILAMENT_GAUCHE
+# Bloc_BOX_E.3mf
+# NBoccurence = 100
+"""
+M221 T1 S96.00
+"""
+
+# BLOC_DEBIT_CUBE_F_FILAMENT_GAUCHE
+# Bloc_BOX_F.3mf
+# NBoccurence = 100
+"""
+M221 T1 S95.00
+"""
+
+# BLOC_DEBIT_CUBE_G_FILAMENT_GAUCHE
+# Bloc_BOX_G.3mf
+# NBoccurence = 100
+"""
+M221 T1 S94.00
+"""
+
+# BLOC_DEBIT_CUBE_H_FILAMENT_GAUCHE
+# Bloc_BOX_H.3mf
+# NBoccurence = 100
+"""
+M221 T1 S93.00
+"""
+
+# BLOC_DEBIT_CUBE_I_FILAMENT_GAUCHE
+# Bloc_BOX_I.3mf
+# NBoccurence = 100
+"""
+M221 T1 S92.00
+"""
+
+# BLOC_DEBIT_CUBE_J_FILAMENT_GAUCHE
+# Bloc_BOX_J.3mf
+# NBoccurence = 100
+"""
+M221 T1 S91.00
+"""
+
+# BLOC_DEBIT_CUBE_K_FILAMENT_GAUCHE
+# Bloc_BOX_K.3mf
+# NBoccurence = 100
+"""
+M221 T1 S90.00
+"""
+
+
+# BLOC_DEBIT_LEGENDE_FILAMENT_GAUCHE
+# Bloc_serie_de_lettres_A_??_K.stl
+# NBoccurence = 10
+"""
+M221 T1 S103.00
+"""
+
+# BLOC_DEBIT_TOURDEPURGE_FILAMENT_GAUCHE
+# Bloc_TOUR_DE_PURGE.3mf
+# NBoccurence = 10
+"""
+M221 T1 S105.00
+"""
+
+
+# ------ ATTENTION les blocs de GCODE suivants ne doivent pas être modifiés !! ------
+
+# Bloc_20_21
+""" 
+;Custom Toolhead: T1 T0
+M221 T1 S100.00
+"""

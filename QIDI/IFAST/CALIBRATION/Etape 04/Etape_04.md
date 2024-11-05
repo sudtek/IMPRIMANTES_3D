@@ -7,21 +7,39 @@ Vous devez impérativement avoir effectué les étapes suivantes pour la QIDI IF
 - [Etape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md)
 
 ### Présentation
-Dans ce processus détaillé de caractérisation du débit de filament pour une imprimante 3D QIDI-IFAST je vais montrer pas à pas comment trouver / encadrer le % débit de filament pour obtenir des impressions de précision et de haute qualité. Le processus implique l'utilisation d'un fichier sources qui slice des cubes de test avec des débits variables, la mesure précise des parois des cubes, et l'analyse des données pour déterminer le débit optimal. Au moment ou j'écris ce tuto 05/10/2024 j'utilise une autre solution via un script python qui génère un gcode customisé pour caractériser les filaments sur Z2 qui est dérivé de celle-ci. Les deux methodes seront inclues dans ce tutoriel à terme.
+Dans ce processus de caractérisation du débit de filament pour une imprimante 3D QIDI-IFAST je vais montrer pas à pas comment trouver / encadrer le % débit de filament pour obtenir des impressions de précision et de haute qualité. Le processus implique l'utilisation d'un fichier sources qui slice des cubes de test avec des débits variables, la mesure précise des parois des cubes, et l'analyse des données pour déterminer le débit optimal. Au moment ou j'écris ce tuto 05/10/2024 j'utilise une autre solution qui ne requier plus le IDEAMAKER via un script python qui génère un gcode customisé pour caractériser les filaments sur Z2. Les deux methodes seront inclues dans ce tutoriel à terme.
 
 #### Objectif
-L'objectif principal est de caractériser le débit en % d'un filament PETG SUNLU sur la buse Z2 (gauche) de la QIDI-IFAST en utilisant une série de cubes de tests avec des débits variables décroisant. Le processus vise à trouver la valeur de débit en % optimale qui permet d'obtenir des parois de cube avec une épaisseur le pus proche de la valeur théorique de 1.6mm (0.4x4).
+L'objectif principal est de caractériser le débit en % du filament PETG SUNLU sur la buse Z2 (buse gauche) de la QIDI-IFAST en utilisant une série de cubes de tests avec des débits variables décroisant et trouver la valeur de débit en % optimale qui permet d'obtenir des parois de cube avec une épaisseur le pus proche de la valeur théorique de 1.6mm (0.4x4).
 
 #### Méthode 01 Étapes du Processus avec les cubes de [100% .. 90%] par pas de 1%
 
 e1. **Chargement de Fichiers**
    Il y a deux cas : 
-   Cas 1 : Vous avez la même configuration que moi sur votre QIDI IFAST du PETG sur Z2 et du PLA sur Z1 -> vous pouvez directement imprimer la serie de 11 cubes depuis le fichier [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode) et passer à l'étape e5. **Mesure des Parois des Cubes**
-   - Si vous désirez éditer et modififer le fichier sources 17_10_2024_Calibration_[100%..90%]_V2.idea Charger les fichiers contenant les profils de l'imprimante et les paramètres des cubes de test disponibles [Etape 04
+   **Cas 1** : Vous avez la même configuration que moi sur votre QIDI IFAST du PETG sur Z2 et du PLA sur Z1 -> vous pouvez directement imprimer la serie de 11 cubes depuis le fichier [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode) et passer à l'étape e5. **Mesure des Parois des Cubes**
+   
+   **Cas 2 :** Vous n'avez pas la même configuration que moi et/ou vous désirez pouvoir éditer / modififer / adapter le fichier sources [17_10_2024_Calibration_[100%..90%]_V2.idea](https://github.com/sudtek/IMPRIMANTES_3D/blob/b954e0fb5198141b21f86ee10baec49635fdae2a/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.idea) à vos besoins :
+  - Lancer le logiciel IDEAMAKER (V>5.0.6).
+  - Charger le fichier [17_10_2024_Calibration_[100%..90%]_V2.idea](https://github.com/sudtek/IMPRIMANTES_3D/blob/b954e0fb5198141b21f86ee10baec49635fdae2a/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.idea)
+    ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/dd77a2579ed883ef5e8eff893bc009ba6bb62ccd/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_Chargement_Fichier_11cubes%5B100%25...90%25%5D1%25.png)
+    
+ - Depuis le menu de tranchage simplifié appuyer sur le stilo rouge ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/0894b3a91323984d481de2000f3e4227fd0351bc/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_niveau_0.png)
+
+   pour acceder au menu de tranchage detaillé qui devrait être vierge :
+   ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/5e340b0a7590bee1af5fe61316c21f14138fffa1/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Vierge_niveau_1.png)
+   
+ - Charger les profils liés à l'imprimante QIDI-IFAST, aux filaments, au template ... en cliauant sur PLUS :
+ ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/0894b3a91323984d481de2000f3e4227fd0351bc/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_niveau_1.png)
+
+
+
+
+
+
+
+ 
+ -  l'imprimante et les paramètres des cubes de test disponibles [Etape 04
 /Z2_Calibration_PETG_235°c](https://github.com/sudtek/IMPRIMANTES_3D/tree/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c)
-
-
-   - Utilisation des profils d'Ida Maker pour l'imprimante.
 
 2. **Configuration de l'Imprimante**
    - Vérification de la taille du plateau de l'imprimante (330 mm sur l'axe X et 250 mm sur l'axe Y).

@@ -1,4 +1,5 @@
 05_11_2024
+Pour QIDI-IFAST
 
 Generateur de serie d'une série de 11 Cubes à pas décroissants constants de 1% / 0.1% pour calibration et encadrement du débit de Z2 (buse de gauche) sur QIDI-IFAST 
 

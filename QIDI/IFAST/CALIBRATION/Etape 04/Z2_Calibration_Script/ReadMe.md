@@ -32,4 +32,13 @@ La légende de A à K -> 103%.
 
 [01_11_2024_Z2_Calibration_[92.0%..91.0%]_Pas_-0.1%_PETG_Blanc_SUNLU_235°c_1.724mm](https://github.com/sudtek/IMPRIMANTES_3D/blob/7fcbe4567642c7eb1b9e53f8b73f05a81d9aab80/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_Script/Exemples/01_11_2024_Z2_Calibration_%5B100.0%25..90.0%25%5D_Pas_-1.0%25_PETG_Blanc_SUNLU_235%C2%B0c_1.724mm.gcode).
 
-Si vous desirez tester un gcode de calibration généré pour la IFAST-QIDI vous pouvez télécharger un des deux fichiers ci-dessus mais *Attention* ils ont été généré pour imprimer avec du PETG sur Z2 (et du PLA sur Z1) si vous êtes dans cette configuration vous pouvez les lancer direct sur votre IFAST mais si ce n'est pas le cas il vous faudra générer votre série en invoquant [Z2_generate.py](https://github.com/sudtek/IMPRIMANTES_3D/blob/b0ba36f662e1e2850cdf81203b2ab84ad15976f0/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_Script/Z2_generate.py). Je placerai mes nouvelles séries (les plus courantes) au fur et à mesure dans ce répertoire ainsi vous pourrez en profiter.  
+Si vous desirez tester un gcode de calibration généré pour la IFAST-QIDI vous pouvez télécharger un des deux fichiers ci-dessus mais *Attention* ils ont été généré pour imprimer avec du PETG sur Z2 (et du PLA sur Z1) si vous êtes dans cette configuration vous pouvez les lancer direct sur votre IFAST mais si ce n'est pas le cas il vous faudra générer votre série en invoquant [Z2_generate.py](https://github.com/sudtek/IMPRIMANTES_3D/blob/b0ba36f662e1e2850cdf81203b2ab84ad15976f0/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_Script/Z2_generate.py). Je placerai mes nouvelles séries (les plus courantes) au fur et à mesure dans ce répertoire ainsi vous pourrez en profiter mais il vous faudra veuiller à toujours remplacer la valeur **Filament Diameter #2** par celle de votre filament [Etape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md) :
+
+```
+;_DEBUT_[informations des filaments]
+...
+;Filament Diameter #2: 1.724
+...
+;_FIN_[informations des filaments]
+```
+Fixer ce diametre est impératif pour trouver votre débit en % !

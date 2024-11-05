@@ -8,10 +8,8 @@ Vous devez impérativement avoir effectué les étapes suivantes pour la QIDI IF
 
 ## Présentation
 
+A faire ...
 
+## Détail, explications et méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90%
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=[YOUTUBE_VIDEO_ID_HERE](https://youtu.be/gn3A1lFX0vc?si=RjfHDFoegoFpW7tH)
-" target="_blank"><img src="[http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg](https://i9.ytimg.com/vi_webp/gn3A1lFX0vc/mq2.webp?sqp=COirprkG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD0gVChlMA8=&rs=AOn4CLAkej0COVnXFqI_hiDXwUg99ymBUw)" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gn3A1lFX0vc?si=K3hQyMZG6foy8fmi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Détail, explications et méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90%](https://i9.ytimg.com/vi_webp/gn3A1lFX0vc/mq2.webp?sqp=COirprkG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD0gVChlMA8=&rs=AOn4CLAkej0COVnXFqI_hiDXwUg99ymBUw)](https://www.youtube.com/watch?v=gn3A1lFX0vc?si=RjfHDFoegoFpW7tH)

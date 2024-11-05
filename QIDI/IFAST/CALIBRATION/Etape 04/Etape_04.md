@@ -14,12 +14,16 @@ L'objectif principal est de caractériser le débit en % du filament PETG SUNLU 
 
 #### Méthode 01 Étapes du Processus avec les cubes de [100% .. 90%] par pas de 1%
 
-e1. **Chargement de Fichiers**
-   Il y a deux cas : 
-   **Cas 1** : Vous avez la même configuration que moi sur votre QIDI IFAST du PETG sur Z2 et du PLA sur Z1 -> vous pouvez directement imprimer la serie de 11 cubes depuis le fichier [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode) et passer à l'étape e5. **Mesure des Parois des Cubes**
+**Chargement de Fichiers**
    
-   **Cas 2 :** Vous n'avez pas la même configuration que moi et/ou vous désirez pouvoir éditer / modififer / adapter le fichier sources [17_10_2024_Calibration_[100%..90%]_V2.idea](https://github.com/sudtek/IMPRIMANTES_3D/blob/b954e0fb5198141b21f86ee10baec49635fdae2a/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.idea) à vos besoins :
+   Il existe deux deux cas : 
+   
+   **Cas 1** : Vous avez la même configuration que moi sur votre QIDI IFAST du PETG sur Z2 et du PLA sur Z1 -> vous pouvez directement imprimer depuis la QIDI-IFAST la serie de 11 cubes depuis le fichier [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode) et passer à l'étape e5. **Mesure des Parois des Cubes**
+   
+   **Cas 2 :** Vous n'avez pas la même configuration que moi et/ou vous désirez pouvoir (éditer / modififer / adapter) le fichier sources [17_10_2024_Calibration_[100%..90%]_V2.idea](https://github.com/sudtek/IMPRIMANTES_3D/blob/b954e0fb5198141b21f86ee10baec49635fdae2a/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.idea) à vos besoins :
+  
   - Lancer le logiciel IDEAMAKER (V>5.0.6).
+    
   - Charger le fichier [17_10_2024_Calibration_[100%..90%]_V2.idea](https://github.com/sudtek/IMPRIMANTES_3D/blob/b954e0fb5198141b21f86ee10baec49635fdae2a/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.idea)
     ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/dd77a2579ed883ef5e8eff893bc009ba6bb62ccd/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_Chargement_Fichier_11cubes%5B100%25...90%25%5D1%25.png)
     
@@ -28,11 +32,36 @@ e1. **Chargement de Fichiers**
    pour acceder au menu de tranchage detaillé qui devrait être vierge :
    ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/5e340b0a7590bee1af5fe61316c21f14138fffa1/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Vierge_niveau_1.png)
    
- - Charger les profils liés à l'imprimante QIDI-IFAST, aux filaments, au template ... en cliauant sur PLUS :
+ - Charger de haut en bas les profils liés à l'imprimante QIDI-IFAST, au filament de gauche et de droite,  au template ... via les boutons "Plus"
  ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/0894b3a91323984d481de2000f3e4227fd0351bc/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_niveau_1.png)
+ 
+ De haut en bas :
+
+ #1 Charger le profil de l'imprimante 
+ [17_10_2024_IFAST-export.printer](https://github.com/sudtek/IMPRIMANTES_3D/blob/667637b22536c230eb82010f8e05996019708a51/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_IFAST-export.printer)
+dans la 1er ligne en appuyant sur Plus :
+ ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Ligne1_IMPRIMANTE.png)
+
+ #2 Charger le profil du matériaux sur la buse de gauche Z2 située à gauche (L) pour Left
+ [17_10_2024_QIDI_IFAT_PETG blanc_export_Gauche.filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_QIDI_IFAT_PETG%20blanc_export_Gauche.filament)
+dans la seconde ligne en appuyant sur Plus :
+ ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Ligne2_PETG.png)
+
+ #3 Charger le profil du matériaux sur la buse de gauche Z1 située à droite (R) pour RIGHT
+ [17_10_2024_QIDI_IFAT_PLA_Rouge_export_Droite.filament](https://github.com/sudtek/IMPRIMANTES_3D/tree/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c)
+dans la troisième ligne en appuyant sur Plus :
+ ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Ligne4_TEMPLATEMATERIAUX.png)
+
+ #4 Charger le profil du template* matériaux
+ [Etape 04/Z2_Calibration_PETG_235°c/17_10_2024_Template PETG Principal GAUCHE_QIDI_Z2T0 VS PLA supports DROITE_QIDI_Z1_T1 SAVE_17_octobre_2024_nonPOST_Tout-Support_OK_export.bin](https://github.com/sudtek/IMPRIMANTES_3D/tree/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c)
+dans la seconde ligne en appuyant sur Plus :
+ ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Ligne3_PLA.png)
+
+_*(Note : ATTENTION risque de confusion plus tard avec mon template de la méthode #2 ils n'ont rien en commun !)
 
 
 
+xxxxxx
 
 
 

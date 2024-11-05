@@ -7,10 +7,10 @@ Vous devez impérativement avoir effectué les étapes suivantes pour la QIDI IF
 - [Etape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md)
 
 ### Présentation
-Processus détaillé de caractérisation du débit de filament pour une imprimante 3D QIDI-IFAST. Il s'agit de mesurer et d'ajuster le débit de filament pour obtenir des impressions de précision et de haute qualité. Le processus implique l'utilisation de cubes de test avec des débits variables, la mesure précise des parois des cubes, et l'analyse des données pour déterminer le débit optimal.
+Dans ce processus détaillé de caractérisation du débit de filament pour une imprimante 3D QIDI-IFAST je vais montrer pas à pas comment ajuster le débit de filament pour obtenir des impressions de précision et de haute qualité. Le processus implique l'utilisation de cubes de test avec des débits variables, la mesure précise des parois des cubes, et l'analyse des données pour déterminer le débit optimal. L'objectif ici est de presenter et d'expliquer la méthode simplement. Au moment ou j'écris ce tuto 05/10/2024 j'utilise une autre solution via un script pour caractériser mes filaments sur Z2 qui découle de celle-ci. Les deux methodes seront inclues dans ce tutoriel.
 
 #### Objectif
-L'objectif principal est de caractériser le débit en % d'un filament PETG sur la buse Z2 de la QIDI-IFAST en utilisant une série de cubes de tests avec des débits variables allant de 100% à 90 % par pas de -1%. Le processus vise à trouver la valeur de débit optimale qui permet d'obtenir des parois de cube avec une épaisseur le pus proche de la valeur théorique de 1.6mm (0.4x4).
+L'objectif principal ici est d'expliquer comment on caractérise le débit en % d'un filament PETG sur la buse Z2 de la QIDI-IFAST en utilisant une série de cubes de tests avec des débits variables allant de 100% à 90 % par pas de -1% et un fichier idoine. Le processus vise à trouver la valeur de débit optimale qui permet d'obtenir des parois de cube avec une épaisseur le pus proche de la valeur théorique de 1.6mm (0.4x4).
 
 #### Étapes du Processus
 

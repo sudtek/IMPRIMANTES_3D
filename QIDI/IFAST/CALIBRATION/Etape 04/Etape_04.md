@@ -93,15 +93,27 @@ La tour de purge 10x10x20mm elle n'integre pas cette option et donc posséde un 
 Les **Paramètres de couches** sont également customisés avec des options qui concernent uniquement la témpérature des extrudeurs dans le but de faciliter la réutilisation et modification de ce plateau pour caracteriser d'autres types de filaments necesitant d'autres températures, il faut donc modifier ces valeurs dans chaqcun des groupes et vérifier la visualisation avant d'imprimer un gcode.
 
 buse Z2 située à gauche (L) 235°c pour le PETG
-buse Z1 située à droite (R) 205°c pour le PLA -> Attention même si ce plateau imprime du petg la QIDI-IFAST au départ de chaque impression fait un trait de purge de 100mm de Z1 si la température de Z1 n'est pas adéquate avec la température du filament présent il y a un risque de casser / endomager la tête. 
+buse Z1 située à droite (R) 205°c pour le PLA -> Attention même si ce plateau imprime du petg la QIDI-IFAST au départ de chaque impression fait un trait de purge de 100mm de Z1 si la température de Z1 n'est pas adéquate avec la température du filament présent il y a un risque de casser / endommager la tête. 
 
+**sliccing du plateau**
 xxxxxx -> ICI !!!!!
 
-Penser à l'explication sur le choix de la temperature de l'enceinte !!
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/6f4cdd068f3487245cee3358175c3eef3447ab7e/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/Vue_01.png)
+
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/6f4cdd068f3487245cee3358175c3eef3447ab7e/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/Vue_02.png)
+
+
+**Impression des Cubes**
+   - Impression des cubes de test avec les paramètres spécifiés.
+   - Vérification visuelle des cubes imprimés pour s'assurer qu'ils sont corrects.
+   
 
 
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+ 
+ Penser à l'explication sur le choix de la temperature de l'enceinte !!
  
  -  l'imprimante et les paramètres des cubes de test disponibles [Etape 04
 /Z2_Calibration_PETG_235°c](https://github.com/sudtek/IMPRIMANTES_3D/tree/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c)

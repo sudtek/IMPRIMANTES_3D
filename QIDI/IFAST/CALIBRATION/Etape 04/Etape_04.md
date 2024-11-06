@@ -21,7 +21,7 @@ L'objectif principal de ce tuto est de vous expliquer comment j'ai caractérisé
 
 **Chargement de Fichiers**
    
-   **Cas 1** : Vous avez la même configuration que moi sur votre QIDI-IFAST du PETG sur Z2 et du PLA sur Z1 -> vous pouvez directement imprimer depuis la QIDI-IFAST la serie de 11 cubes depuis le fichier [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode) et passer à l'étape 5. **Mesure des Parois des Cubes**
+   **Cas 1** : Vous avez la même configuration que moi sur votre QIDI-IFAST du PETG sur Z2 et du PLA sur Z1 -> vous pouvez directement imprimer depuis la QIDI-IFAST la série de 11 cubes depuis le fichier [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode) et passer à l'étape 5. **Mesure des Parois des Cubes**
    
    **Cas 2 :** Vous n'avez pas la même configuration que moi et/ou vous désirez pouvoir (éditer / modififer / adapter) le fichier sources [17_10_2024_Calibration_[100%..90%]_V2.idea](https://github.com/sudtek/IMPRIMANTES_3D/blob/b954e0fb5198141b21f86ee10baec49635fdae2a/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.idea) à vos besoins :
   
@@ -63,9 +63,22 @@ _*(Note : ATTENTION risque de confusion plus tard avec mon template de la métho
 Vous devriez avoir cette présentation : 
  ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/0894b3a91323984d481de2000f3e4227fd0351bc/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_niveau_1.png)
 
-Il vous faut maintenant importer le fichier paramétrage des "**Paramètres de groupes et couches**" -> "**Importer et Exporter**" -> "**Importer d'un disque Local**" Choisir le fichier [17_10_2024_Calibration_[100%..90%]_V2_export.settinggroup](https://github.com/sudtek/IMPRIMANTES_3D/blob/7cd00734a7899714554ef4374b111f3f644160e2/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2_export.settinggroup). Ce fichier contient toutes les modifications qui **SURPASSENT (ECRASENT)** les paramétres du profil maériaux PETG sur Z2 afin de créeer des groupes posédant chacun un % de débit propre / unique. Ainsi dasn IDEAMKER chaque élement sur le plateau peut avoir ses propres spécifités par groupe et / ou couche.  
+Importer le fichier paramétrage des 11 cubes "**Paramètres de groupes et couches**" -> "**Importer et Exporter**" -> "**Importer d'un disque Local**" 
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/3f0e0337d4df9fc1193c668eef40fb1c53a33e74/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER__menu_ParametresGroupesCouches_Vierge.png)
 
-xxxxxx
+Choisir le fichier [17_10_2024_Calibration_[100%..90%]_V2_export.settinggroup](https://github.com/sudtek/IMPRIMANTES_3D/blob/7cd00734a7899714554ef4374b111f3f644160e2/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2_export.settinggroup). Ce fichier contient toutes les paramètres qui **SURPASSENT (ECRASENT)** les paramètres du profil matériaux PETG sur Z2 afin de créeer des groupes possédant chacun un % de débit propre / unique qui ne dépend plus du profil du matériaux sur la buse Z2 située à gauche. Ainsi dans IDEAMKER chaque élement sur le plateau peut être customisé et avoir ses propres spécifités par groupe et / ou couche. 
+
+Note : Les fichiers avec l'extension ".settinggroup" n'ont en général de sens qu'avec le fichier le fichier ".idea" au quel ils sont associées et sont pas nature que "peut" transposables / associables à d'autres items hormis pour récupérer des configurations particulières.
+
+Si l'import des paramètres c'est bien passé vous devriez pouvoir parcourir les caractéristiques de chacun des éléments :
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/c1b234019d060fd0832e5eb9d003cb621b1c3000/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER__menu_ParametresGroupesCouches_Final.png)
+
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/c1b234019d060fd0832e5eb9d003cb621b1c3000/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER__menu_ParametresGroupesCouches_CUBE_B.png)
+
+
+
+
+xxxxxx -> ICI !!!!!
 
 
 
@@ -112,7 +125,7 @@ Le processus de caractérisation du débit de filament est crucial pour obtenir 
 
 #### Remarques Finales
 Importance de la précision et de l'analyse des données dans le processus de caractérisation du débit de filament.l'utilité des outils de mesure précis et des méthodes d'analyse rigoureuses pour obtenir des résultats fiables. 
-La méthode de dichotomie est efficace pour converger rapidement vers la valeur de débit optimale mais elle implique l'impression succésive de serie de cubes visant à encadrer la solution et donc de devoir attendre que les cubes ce stabilisent à température anbiante -> c'est donc un processus plus long, plus fastideux.
+La méthode de dichotomie est efficace pour converger rapidement vers la valeur de débit optimale mais elle implique l'impression succésive de série de cubes visant à encadrer la solution et donc de devoir attendre que les cubes ce stabilisent à température anbiante -> c'est donc un processus plus long, plus fastideux.
 
 
 

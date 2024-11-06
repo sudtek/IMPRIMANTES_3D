@@ -14,7 +14,7 @@ Dans ce processus de caractérisation du % de débit d'un filament pour une impr
 Exemple pour le logiciel sliccer IDEAMAKER c'est la valeur exacte du % débit propre à un filament donné que l'on cherche à définir (encadrée en rouge) dans ce tuto; le diamétre du filament (ex 1,724mm encadré en orange) doit impérativement avoir été defini avant de continuer ce tuto; à defaut se reporter à [Etape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md)    : 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/7cd00734a7899714554ef4374b111f3f644160e2/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_profil_petg_01.png)
 
-_Note : Toutes les méethode mises en oeuvres dasn ce tuto consistent à imprimer couche par couches les elemenst du plateaux sans avoire recours à l'impression séquentielle car elle ne permet pas d'imprimer 11 cubes cotes à cotes (distance 5mm intercubes) sans risquer de colisions._ 
+_Note : Toutes les méthode mises en oeuvres dans ce tuto consistent à imprimer couche par couches les elemenst du plateaux sans avoire recours à l'impression séquentielle car elle ne permet pas d'imprimer 11 cubes cotes à cotes (distance 5mm intercubes) sans risquer de colisions._ 
 
 #### Objectif
 L'objectif principal de ce tuto est de vous expliquer comment j'ai caractérisé pas à pas le débit en % de mon filament PETG SUNLU sur la buse Z2 (buse gauche) de ma QIDI-IFAST en utilisant une série de cubes de tests à des débits variables décroisants et trouver la valeur optimale de débit en % qui permet d'obtenir des parois de cube avec une épaisseur le pus proche de la valeur théorique de 1.6mm (0.4x4). Quel que soit votre slicer (IDEAMKER dans mon cas) il vous faudra toujours définir avec précision cette valeur (ainsi que le daimetre nominal)  afin de tirer le meilleur de votre imprimante ! Chaque filament est unique et doit être caracterisé une fois et avant d'en avoir besoin ... Par expérience je vous conseille de noter ces deux valeurs sur la bobine cela vous facilitera grandement la vie ! 
@@ -79,7 +79,7 @@ ET pouvoir parcourir les caractéristiques de chacun des éléments exemple pour
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/c1b234019d060fd0832e5eb9d003cb621b1c3000/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER__menu_ParametresGroupesCouches_CUBE_B.png)
 
 L'**ordre d'impression*** des cubes n'est pas le même les objets du plateau; le cube du groupe B à ses parois imprimés dans un ordre précis #1 la parois / coques externe, #2 la parois / coques interne et finalement #3 le remplissage entre les deux coques, ce choix assure un positionement plus précis et une précision de l'épaisseur finale des parois en limitant les effets liés à des poussés latérales.
-* Note : Attention le terme Ordre d'impression dasn cette option n'a rien avoir avec la possibilité d'impression séquentiel qui consiste elle à imprimer intégralement un cube de la première couche z=0mm à la derniere couche z=20mm avant de passer au prochain cube.
+* Note : Attention le terme Ordre d'impression dans cette option n'a rien avoir avec la possibilité d'impression séquentiel qui consiste elle à imprimer intégralement un cube de la première couche z=0mm à la derniere couche z=20mm avant de passer au prochain cube.
 
 La **Densité du remplissage** ne concerne que l'intérieur du cube, ce paramètre est fixé à 0% afin que notre cube soit vide pour pouvoir mesurer la parois avec un micromètre 1/100.
 
@@ -87,10 +87,10 @@ La **couche de remplissage solide** c'est le nombre de couches en contact avec l
 
 Le **Débit du matériaux gauche (Ecrase les réglages du materiaux)** Chaque cube a un débit customisé unique qui est propre à son groupe, le cube du groupe B est imprimé à 99%; le cube suivant du groupe C est imprimé à 98% ... écrasant les réglages des matériaux.
 
-**Activer le mur de netoyage** est inclus mais désactivé, par défaut cette option est toujours activée dans mon "profil du matériaux" pour le PETG car j'imprime avec deux filaments, mais dasn le cadre de lacalibration afin de pouvoir imprimer les cubes sur une seule et unique ligne j'ai préféré désactive cette option ce qui à pour avantages de ne pas avoir à (re)modifier mon profil matériaux, éviter des colisions entre les murs de purges etant donné que la distance intercubes est de 5mm, accélérer l'impression.  
+**Activer le mur de netoyage** est inclus mais désactivé, par défaut cette option est toujours activée dans mon "profil du matériaux" pour le PETG car j'imprime avec deux filaments, mais dans le cadre de lacalibration afin de pouvoir imprimer les cubes sur une seule et unique ligne j'ai préféré désactive cette option ce qui à pour avantages de ne pas avoir à (re)modifier mon profil matériaux, éviter des colisions entre les murs de purges etant donné que la distance intercubes est de 5mm, accélérer l'impression.  
 La tour de purge 10x10x20mm elle n'integre pas cette option et donc posséde un mur de netoyage.
 
-Les **Paramètres de couches** sont également customisés avec des options qui concernent uniquement la témpérature des extrudeurs dans le but de faciliter la réutilisation et modification de ce plateau pour caracteriser d'autres types de filaments necesitant d'autres températures, il faut donc modifier ces valeurs dasn chaqcun des groupes et vérifier la visualisation avant d'imprimer un gcode.
+Les **Paramètres de couches** sont également customisés avec des options qui concernent uniquement la témpérature des extrudeurs dans le but de faciliter la réutilisation et modification de ce plateau pour caracteriser d'autres types de filaments necesitant d'autres températures, il faut donc modifier ces valeurs dans chaqcun des groupes et vérifier la visualisation avant d'imprimer un gcode.
 
 buse Z2 située à gauche (L) 235°c pour le PETG
 buse Z1 située à droite (R) 205°c pour le PLA -> Attention même si ce plateau imprime du petg la QIDI-IFAST au départ de chaque impression fait un trait de purge de 100mm de Z1 si la température de Z1 n'est pas adéquate avec la température du filament présent il y a un risque de casser / endomager la tête. 

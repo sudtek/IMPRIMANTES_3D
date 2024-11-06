@@ -43,21 +43,21 @@ L'objectif principal de ce tuto est de vous expliquer comment j'ai caractérisé
 dans la 1er ligne en appuyant sur Plus :
  ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Ligne1_IMPRIMANTE.png)
 
- #2 Importer le profil du matériaux sur la buse de gauche Z2 située à gauche (L) pour Left
+ #2 Importer le profil du matériaux sur la buse Z2 située à gauche (L) pour LEFT (en)
  [17_10_2024_QIDI_IFAT_PETG blanc_export_Gauche.filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_QIDI_IFAT_PETG%20blanc_export_Gauche.filament)
 dans la seconde ligne en appuyant sur Plus :
  ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Ligne2_PETG.png)
 
- #3 Importer le profil du matériaux sur la buse de gauche Z1 située à droite (R) pour RIGHT
- [17_10_2024_QIDI_IFAT_PLA_Rouge_export_Droite.filament](https://github.com/sudtek/IMPRIMANTES_3D/tree/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c)
+ #3 Importer le profil du matériaux sur la buse Z1 située à droite (R) pour RIGHT (en)
+ [17_10_2024_QIDI_IFAT_PLA_Rouge_export_Droite.filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/3f0e0337d4df9fc1193c668eef40fb1c53a33e74/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_QIDI_IFAT_PLA_Rouge_export_Droite.filament)
 dans la troisième ligne en appuyant sur Plus :
- ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Ligne4_TEMPLATEMATERIAUX.png)
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Ligne3_PLA.png)
 
  #4 Importer le profil du template* matériaux
  [Etape 04/Z2_Calibration_PETG_235°c/17_10_2024_Template PETG Principal GAUCHE_QIDI_Z2T0 VS PLA supports DROITE_QIDI_Z1_T1 SAVE_17_octobre_2024_nonPOST_Tout-Support_OK_export.bin](https://github.com/sudtek/IMPRIMANTES_3D/tree/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c)
 dans la seconde ligne en appuyant sur Plus :
- ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Ligne3_PLA.png)
-
+ ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Ligne4_TEMPLATEMATERIAUX.png)
+ 
 _*(Note : ATTENTION risque de confusion plus tard avec mon template de la méthode #2 qui utilise aussi le terme template mais ils n'ont rien en commun !)_
 
 Vous devriez avoir cette présentation : 

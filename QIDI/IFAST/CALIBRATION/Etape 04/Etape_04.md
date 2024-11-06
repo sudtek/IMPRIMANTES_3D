@@ -9,10 +9,12 @@ Vous devez impérativement avoir effectué les étapes suivantes pour la QIDI IF
 _Note 05/10/2024 : Au moment ou j'écris ce tuto j'utilise une autre solution qui ne requier plus le IDEAMAKER via un script python qui génère un gcode customisé pour caractériser les filaments sur Z2. Les deux methodes seront inclues dans ce tutoriel à terme._
 
 ### Présentation
-Dans ce processus de caractérisation du % de débit d'un filament pour une imprimante 3D QIDI-IFAST je vais montrer pas à pas comment trouver / encadrer le % débit pour obtenir des impressions de précision et de haute qualité. Le processus implique l'utilisation d'un fichier source qui slice des cubes éprouvettes à des débits variables, la mesure précise des parois des cubes et l'analyse des données permetra de déterminer le débit optimal d'un filament donné.
+Dans ce processus de caractérisation du % de débit d'un filament pour une imprimante 3D QIDI-IFAST je vais montrer pas à pas comment trouver / encadrer le % débit pour obtenir des impressions de précision et de haute qualité. Le processus implique l'utilisation d'un fichier source qui slice des cubes éprouvettes à des débits variables, la mesure précise des parois des cubes et l'analyse des données permetra de déterminer le débit optimal d'un filament donné. 
 
 Exemple pour le logiciel sliccer IDEAMAKER c'est la valeur exacte du % débit propre à un filament donné que l'on cherche à définir (encadrée en rouge) dans ce tuto; le diamétre du filament (ex 1,724mm encadré en orange) doit impérativement avoir été defini avant de continuer ce tuto; à defaut se reporter à [Etape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md)    : 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/7cd00734a7899714554ef4374b111f3f644160e2/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_profil_petg_01.png)
+
+_Note : Toutes les méethode mises en oeuvres dasn ce tuto consistent à imprimer couche par couches les elemenst du plateaux sans avoire recours à l'impression séquentielle car elle ne permet pas d'imprimer 11 cubes cotes à cotes (distance 5mm intercubes) sans risquer de colisions._ 
 
 #### Objectif
 L'objectif principal de ce tuto est de vous expliquer comment j'ai caractérisé pas à pas le débit en % de mon filament PETG SUNLU sur la buse Z2 (buse gauche) de ma QIDI-IFAST en utilisant une série de cubes de tests à des débits variables décroisants et trouver la valeur optimale de débit en % qui permet d'obtenir des parois de cube avec une épaisseur le pus proche de la valeur théorique de 1.6mm (0.4x4). Quel que soit votre slicer (IDEAMKER dans mon cas) il vous faudra toujours définir avec précision cette valeur (ainsi que le daimetre nominal)  afin de tirer le meilleur de votre imprimante ! Chaque filament est unique et doit être caracterisé une fois et avant d'en avoir besoin ... Par expérience je vous conseille de noter ces deux valeurs sur la bobine cela vous facilitera grandement la vie ! 
@@ -73,11 +75,15 @@ Note : Les fichiers avec l'extension ".settinggroup" n'ont en général de sens 
 Si l'import des paramètres c'est bien déroulé vous devriez voir une liste de groupes correspondats aux éléments (Cubes, légende et tour de purge) :
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/c1b234019d060fd0832e5eb9d003cb621b1c3000/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER__menu_ParametresGroupesCouches_Final.png)
 
-ET pouvoir parcourir les caractéristiques de chacun des éléments exemple pour le Cube B : 
+ET pouvoir parcourir les caractéristiques de chacun des éléments exemple pour le Cube B ou les paramètres propres et uniques à chaque groupe : 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/c1b234019d060fd0832e5eb9d003cb621b1c3000/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER__menu_ParametresGroupesCouches_CUBE_B.png)
 
+L'**ordre d'impression*** des cubes n'est pas le même les objets du plateau; le cube B (et les autres vubes) ont leurs parois imprimés dans un ordre précis #1 la parois / coques externe, #2 la parois / coques interne et finalement #3 le remplissage entre ce choix garanti une plus grande précision de l'épaisseur finale des parois en limitant les effets de liés à des poussés latérales.
+* Note : Attention le terme Ordre d'impression dasn cet option n'a rien avoir avec l'odre séquentiel d'impression qui consiste à imprimer succésivement chaque cubes.
 
+La **Densité du remplissage** ne concerne que l'intérieur du cube, ce paramètre est fixé à 0% afin que notre cube soit vide pour pouvoir mesurer la parois avec un micromètre 1/100.
 
+La **couche de remplissage solide** c'est le nombre de couches en contact avec le plateau / bed. De prime à bord on aurait pu se contenter de la valeur par défaut contenu dans le profil du matériaux PETG buse Z2 située à gauche mais je désirais avoir un nombre de coques uniforme sur toutes l'éprouvette pour eviter des déformations 
 
 xxxxxx -> ICI !!!!!
 
@@ -116,7 +122,7 @@ xxxxxx -> ICI !!!!!
    - Utilisation d'une méthode de dichotomie pour converger vers la valeur de débit optimale.
    - Conclusion que la valeur de 92,3 est la plus appropriée pour le PETG.
 
-## Détail, explications de cette méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90%
+## Détail, explications de cette méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90% en vidéo 
 
 [![Détail, explications et méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90%](https://i9.ytimg.com/vi_webp/gn3A1lFX0vc/mq2.webp?sqp=COirprkG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD0gVChlMA8=&rs=AOn4CLAkej0COVnXFqI_hiDXwUg99ymBUw)](https://www.youtube.com/watch?v=gn3A1lFX0vc?si=RjfHDFoegoFpW7tH)
 

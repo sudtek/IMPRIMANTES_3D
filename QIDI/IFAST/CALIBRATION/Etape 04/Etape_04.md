@@ -75,17 +75,29 @@ Note : Les fichiers avec l'extension ".settinggroup" n'ont en général de sens 
 Si l'import des paramètres c'est bien déroulé vous devriez voir une liste de groupes correspondats aux éléments (Cubes, légende et tour de purge) :
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/c1b234019d060fd0832e5eb9d003cb621b1c3000/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER__menu_ParametresGroupesCouches_Final.png)
 
-ET pouvoir parcourir les caractéristiques de chacun des éléments exemple pour le Cube B ou les paramètres propres et uniques à chaque groupe : 
+ET pouvoir parcourir les caractéristiques de chacun des éléments exemple pour le Cube 90 ou les paramètres propres et uniques à chaque groupe : 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/c1b234019d060fd0832e5eb9d003cb621b1c3000/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER__menu_ParametresGroupesCouches_CUBE_B.png)
 
-L'**ordre d'impression*** des cubes n'est pas le même les objets du plateau; le cube B (et les autres vubes) ont leurs parois imprimés dans un ordre précis #1 la parois / coques externe, #2 la parois / coques interne et finalement #3 le remplissage entre ce choix garanti une plus grande précision de l'épaisseur finale des parois en limitant les effets de liés à des poussés latérales.
-* Note : Attention le terme Ordre d'impression dasn cet option n'a rien avoir avec l'odre séquentiel d'impression qui consiste à imprimer succésivement chaque cubes.
+L'**ordre d'impression*** des cubes n'est pas le même les objets du plateau; le cube du groupe B à ses parois imprimés dans un ordre précis #1 la parois / coques externe, #2 la parois / coques interne et finalement #3 le remplissage entre les deux coques, ce choix assure un positionement plus précis et une précision de l'épaisseur finale des parois en limitant les effets liés à des poussés latérales.
+* Note : Attention le terme Ordre d'impression dasn cette option n'a rien avoir avec la possibilité d'impression séquentiel qui consiste elle à imprimer intégralement un cube de la première couche z=0mm à la derniere couche z=20mm avant de passer au prochain cube.
 
 La **Densité du remplissage** ne concerne que l'intérieur du cube, ce paramètre est fixé à 0% afin que notre cube soit vide pour pouvoir mesurer la parois avec un micromètre 1/100.
 
-La **couche de remplissage solide** c'est le nombre de couches en contact avec le plateau / bed. De prime à bord on aurait pu se contenter de la valeur par défaut contenu dans le profil du matériaux PETG buse Z2 située à gauche mais je désirais avoir un nombre de coques uniforme sur toutes l'éprouvette pour eviter des déformations 
+La **couche de remplissage solide** c'est le nombre de couches en contact avec le plateau / bed. De prime à bord on aurait pu se contenter de la valeur par défaut contenu dans le profil du matériaux PETG buse Z2 située à gauche mais je désirais avoir un nombre de coques uniforme sur toutes l'éprouvette pour éliminer / limiter les déformations des éprouvettes mais également pouvoir les recyler en récipients ...  
+
+Le **Débit du matériaux gauche (Ecrase les réglages du materiaux)** Chaque cube a un débit customisé unique qui est propre à son groupe, le cube du groupe B est imprimé à 99%; le cube suivant du groupe C est imprimé à 98% ... écrasant les réglages des matériaux.
+
+**Activer le mur de netoyage** est inclus mais désactivé, par défaut cette option est toujours activée dans mon "profil du matériaux" pour le PETG car j'imprime avec deux filaments, mais dasn le cadre de lacalibration afin de pouvoir imprimer les cubes sur une seule et unique ligne j'ai préféré désactive cette option ce qui à pour avantages de ne pas avoir à (re)modifier mon profil matériaux, éviter des colisions entre les murs de purges etant donné que la distance intercubes est de 5mm, accélérer l'impression.  
+La tour de purge 10x10x20mm elle n'integre pas cette option et donc posséde un mur de netoyage.
+
+Les **Paramètres de couches** sont également customisés avec des options qui concernent uniquement la témpérature des extrudeurs dans le but de faciliter la réutilisation et modification de ce plateau pour caracteriser d'autres types de filaments necesitant d'autres températures, il faut donc modifier ces valeurs dasn chaqcun des groupes et vérifier la visualisation avant d'imprimer un gcode.
+
+buse Z2 située à gauche (L) 235°c pour le PETG
+buse Z1 située à droite (R) 205°c pour le PLA -> Attention même si ce plateau imprime du petg la QIDI-IFAST au départ de chaque impression fait un trait de purge de 100mm de Z1 si la température de Z1 n'est pas adéquate avec la température du filament présent il y a un risque de casser / endomager la tête. 
 
 xxxxxx -> ICI !!!!!
+
+Penser à l'explication sur le choix de la temperature de l'enceinte !!
 
 
 

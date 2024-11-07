@@ -118,18 +118,14 @@ Faites un fast Leveling à chaud de l'imprimante au besoin se reporter à l'[Ét
 L'impression va durer environ 4 heures 1/4 et consommer 37g de filament.
 
 Chaque couche de cube est imprimmée avec un débit d'écoulement unique 100.0%; 99% ... 90% mais la QIDI-IFAST a un bug* d'affichage; ll'écran de l'imprimante n'est jamais mis à jour avec la valeur du débit courant et il faut forcer le rafraichissement de cette valeur en basculant entre l'écran 1/2 et 2/2 pour verifier que les bon paramètres de debit sont appliqué à chacun des cubes; c'est à faire uniquement pour la 1er couche des 11 cubes.
+
 _* Note : Bug de màj d'affichage signalé au support de QIDI mais à ce jour aucun correctif en vue ..._
 
 Laisser les cubes refroidir sur le plateau le temps qu'ils reviennent à temperature ambiante cela limitera le risque de déformation.
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/0c5fa474c00300508d8980d77553aec96af0cd91/QIDI/IFAST/CALIBRATION/Etape%2004/media/PRINTCUBE_01.png)
 
 Proceder à une inspection visuelle des cubes imprimés pour s'assurer qu'ils sont correctements imprimés et conformes.
-
-
-
-
-
-
-
+![]()
 
 
 ### Mesure des Parois des Cubes

@@ -125,13 +125,23 @@ Laisser les cubes refroidir sur le plateau le temps qu'ils reviennent à tempera
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/0c5fa474c00300508d8980d77553aec96af0cd91/QIDI/IFAST/CALIBRATION/Etape%2004/media/PRINTCUBE_01.png)
 
 Proceder à une inspection visuelle des cubes imprimés pour s'assurer qu'ils sont correctements imprimés et conformes.
-![]()
-
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/5a3fb5728029d8960e37ff5dc597c570d68dc350/QIDI/IFAST/CALIBRATION/Etape%2004/media/PRINTCUBE_02.png)
 
 ### Mesure des Parois des Cubes
-   - Utilisation d'un outil précis avec une molette pour mesurer les parois X1, X2, Y1 et Y2 de chaque cube.
-   - Enregistrement des mesures dans un tableur
-     [17_10_2024_Calibration_filament_Débit_Ecoulement.ods](https://github.com/sudtek/IMPRIMANTES_3D/blob/e164b41cd4a32ed06201bcb55994184bbe3e5474/QIDI/IFAST/CALIBRATION/Etape%2004/17_10_2024_Calibration_filament_D%C3%A9bit_Ecoulement.ods)
+
+Pour mesurer avec precision les parois X1, X2, Y1 et Y2 de chaque cube je vous conseill d'avoir recours à un micrometre precision 1/100mm.
+
+
+
+
+
+ici-----
+
+
+
+
+
+vous pouvez saisir vos mesures dans un tableur [17_10_2024_Calibration_filament_Débit_Ecoulement.ods](https://github.com/sudtek/IMPRIMANTES_3D/blob/e164b41cd4a32ed06201bcb55994184bbe3e5474/QIDI/IFAST/CALIBRATION/Etape%2004/17_10_2024_Calibration_filament_D%C3%A9bit_Ecoulement.ods)
 
 ### Analyse des Données
    - Calcul des valeurs moyennes des épaisseurs des parois pour chaque cube.

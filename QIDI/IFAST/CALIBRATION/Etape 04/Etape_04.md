@@ -117,7 +117,7 @@ Faites un fast Leveling à chaud de l'imprimante au besoin se reporter à l'[Ét
 ### Impression des Cubes
 L'impression va durer environ 4 heures 1/4 et consommer 37g de filament.
 
-Chaque couche de cube est imprimmée avec un débit d'écoulement unique 100.0%; 99% ... 90% mais la QIDI-IFAST a un bug* d'affichage; ll'écran de l'imprimante n'est jamais mis à jour avec la valeur du débit courant et il faut forcer le rafraichissement de cette valeur en basculant entre l'écran 1/2 et 2/2 pour verifier que les bon paramètres de debit sont appliqué à chacun des cubes; c'est à faire uniquement pour la 1er couche des 11 cubes.
+Chaque couche de cube est imprimée avec un débit d'écoulement unique décroissant 100.0%; 99.0% ... 90.0% mais la QIDI-IFAST a un bug* d'affichage; l'écran de l'imprimante n'est jamais mis à jour avec la valeur du débit courant et il faut forcer manuelement le rafraichissement de cette valeur en basculant entre l'écran 1/2 et 2/2 pour verifier que les bon paramètres de debit sont appliqué à chacun des cubes. Cette verification est à faire uniquement pour la 1er couche des 11 cubes.
 
 _* Note : Bug de màj d'affichage signalé au support de QIDI mais à ce jour aucun correctif en vue ..._
 
@@ -129,24 +129,24 @@ Proceder à une inspection visuelle des cubes imprimés pour s'assurer qu'ils so
 
 ### Mesure des Parois des Cubes
 
-Pour mesurer avec precision les parois X1, X2, Y1 et Y2 de chaque cube je vous conseill d'avoir recours à un micrometre precision 1/100mm.
+Mesurer avec precision les parois X1, X2, Y1 et Y2 de chacuns des cubes à l'aide d'un micrometre precision 1/100mm.
 
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/f1941dd6f5dbcfc983f447e04092b3a1cd396673/QIDI/IFAST/CALIBRATION/Etape%2004/media/MESURE_00.png)
 
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/f1941dd6f5dbcfc983f447e04092b3a1cd396673/QIDI/IFAST/CALIBRATION/Etape%2004/media/MESURE_02.png)
 
-
-
-ici-----
-
-
-
-
-
-vous pouvez saisir vos mesures dans un tableur [17_10_2024_Calibration_filament_Débit_Ecoulement.ods](https://github.com/sudtek/IMPRIMANTES_3D/blob/e164b41cd4a32ed06201bcb55994184bbe3e5474/QIDI/IFAST/CALIBRATION/Etape%2004/17_10_2024_Calibration_filament_D%C3%A9bit_Ecoulement.ods)
+Saisir vos mesures dans un tableur [17_10_2024_Calibration_filament_Débit_Ecoulement.ods](https://github.com/sudtek/IMPRIMANTES_3D/blob/e164b41cd4a32ed06201bcb55994184bbe3e5474/QIDI/IFAST/CALIBRATION/Etape%2004/17_10_2024_Calibration_filament_D%C3%A9bit_Ecoulement.ods) dans l'onglet proformat. 
 
 ### Analyse des Données
-   - Calcul des valeurs moyennes des épaisseurs des parois pour chaque cube.
+
+Calcul des valeurs moyennes des épaisseurs des parois pour chaque cube.
+
    - Création d'un diagramme pour visualiser les données.
    - Analyse des clusters de points pour déterminer la meilleure valeur de débit.
+
+ICI -----
+
+
 
 ### Détermination du Débit Optimal
    - Utilisation d'une méthode de dichotomie pour converger vers la valeur de débit optimale.

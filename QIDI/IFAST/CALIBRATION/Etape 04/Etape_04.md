@@ -84,8 +84,8 @@ Les paramètres propres et uniques à chaque groupe, exemple groupe B :
 Paramètres du Cube débit 99.0% :
 
 **Ordre d'impression*** : N'est pas le même que les autres objets du plateau; le cube du groupe B à ses parois imprimés dans un ordre précis #1 la parois / coque périphérie externe, #2 la parois / coque coque périphérie interne et finalement #3 le remplissage entre les deux coques, ce choix assure un positionement plus précis et une précision de l'épaisseur finale des parois en limitant les effets liés à des poussés latérales.
-* Note : Attention le terme Ordre d'impression dans cette option n'a rien avoir avec la possibilité d'impression séquentiel qui consiste elle à imprimer intégralement un cube de la première couche z=0mm à la derniere couche z=20mm avant de passer au prochain cube.
-
+_Note : Attention le terme Ordre d'impression dans cette option n'a rien avoir avec la possibilité d'impression séquentiel qui consiste elle à imprimer intégralement un cube de la première couche z=0mm à la derniere couche z=20mm avant de passer au prochain cube.
+_
 **Densité du remplissage** : Ne concerne que l'intérieur du cube, ce paramètre est fixé à 0% afin que notre cube soit vide pour pouvoir mesurer la parois avec un micromètre 1/100.
 
 **Couche de remplissage solide** : C'est le nombre de couches en contact avec le plateau / bed. On aurait pu se contenter de la valeur par défaut contenu dans le profil du matériaux PETG buse Z2 mais je désirais avoir un nombre de coques uniforme sur toutes l'éprouvette pour éliminer / limiter les déformations des éprouvettes mais également pouvoir les recyler en récipients ...  

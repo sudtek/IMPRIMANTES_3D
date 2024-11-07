@@ -8,22 +8,22 @@ Vous devez impérativement avoir effectué les étapes suivantes pour la QIDI IF
 
 _Note 05/10/2024 : Au moment ou j'écris ce tuto j'utilise une autre solution qui ne requier plus l'utilisation d'IDEAMAKER via un script python qui génère un gcode customisé pour caractériser les filaments sur Z2. Les deux methodes seront inclues dans ce tutoriel à terme._
 
-### Présentation
+## Présentation
 Dans ce processus de caractérisation du % de débit d'un filament pour une imprimante 3D QIDI-IFAST je vais montrer pas à pas comment trouver / encadrer le % débit pour obtenir des impressions de précision et de haute qualité. Le processus implique l'utilisation d'un fichier source qui slice des cubes éprouvettes à des débits variables, la mesure précise des parois des cubes et l'analyse des données permetra de déterminer le débit optimal d'un filament donné. 
 
 Exemple pour le logiciel sliccer IDEAMAKER c'est la valeur exacte du % débit propre à un filament donné que l'on cherche à définir (encadrée en rouge) dans ce tuto; le diamétre du filament (ex 1,724mm encadré en orange) doit impérativement avoir été defini avant de continuer ce tuto; à defaut se reporter à [Etape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md)    : 
 
 _Note : Toutes les méthode mises en oeuvres dans ce tuto consistent à imprimer couche par couches les elemenst du plateaux sans avoire recours à l'impression séquentielle car elle ne permet pas d'imprimer 11 cubes cotes à cotes (distance 5mm intercubes) sans risquer de colisions._ 
 
-#### Objectif
+## Objectif
 L'objectif principal de ce tutoriel est de vous expliquer comment j'ai caractérisé pas à pas le débit en % de mon filament PETG SUNLU sur la buse Z2 (buse gauche) de ma QIDI-IFAST en utilisant une série de cubes de tests à des débits variables décroisants. Le but est de trouver la valeur optimale de débit en % qui permet d'obtenir des parois de cube avec une épaisseur le pus proche de la valeur théorique de 1.6mm (0.4x4). Quel que soit votre slicer (IDEAMKER dans mon cas) il vous faudra toujours définir avec précision cette valeur (ainsi que le diamètre nominal)  afin de tirer le meilleur de votre imprimante ! Chaque filament est unique et doit être caracterisé une fois et avant d'en avoir besoin ... Par expérience je vous conseille de noter ces deux valeurs sur la bobine cela vous facilitera grandement la vie ! 
 
 ![image](https://github.com/user-attachments/assets/1195653a-5a88-4350-ae09-b2b6b5d9bc97)# Étape 04 : Calibration du pourcentage de débit d'écoulement de la buse Z1/Z2 en fonction du diamètre du filament
-#### Méthode 01 Étapes du Processus avec les cubes de [100% .. 90%] par pas de 1%
+## Méthode 01 Étapes du Processus avec les cubes de [100% .. 90%] par pas de 1%
 
 **Chargement de Fichiers**
    
-   **Cas 1** : Vous avez la même configuration que moi sur votre QIDI-IFAST du PETG sur Z2 et du PLA sur Z1 -> vous pouvez directement imprimer depuis la QIDI-IFAST la série de 11 cubes depuis le fichier [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode) et passer à l'étape 5. **Mesure des Parois des Cubes**
+   **Cas 1** : Vous avez la même configuration que moi sur votre QIDI-IFAST du PETG sur Z2 et du PLA sur Z1 -> vous pouvez directement imprimer depuis la QIDI-IFAST la série de 11 cubes depuis le fichier [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode) et passer à l'étape d'[Impression des Cubes](https://github.com/sudtek/IMPRIMANTES_3D/edit/main/QIDI/IFAST/CALIBRATION/Etape%2004/Etape_04.md#pr%C3%A9paration-de-limprimante-avant-dimprimer-le-gcode).
    ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/6f4cdd068f3487245cee3358175c3eef3447ab7e/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/Vue_01.png)
    
    
@@ -109,12 +109,12 @@ Rendu de la serie de cubes de calibrage de 100% à 90% à débit decroissant par
 
 Faites un export du fichier .gcode [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/8bae97a4e72fbc0f8e1de0a924a69d353455d964/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode) vers une clef USB.
 
-2. **Préparation de l'imprimante avant d'imprimer le gcode**
+### Préparation de l'imprimante avant d'imprimer le gcode
 Fixer manuellement les températures des materiaux, du plateau et de l'enceinte via le menu de l'imprimante et laisser l'imprimante se dilater et stabiliser au moins 15 minutes avant de lancer votre impression. Je vous invite à vous reporter aux explications détaillés sur ce point l'[Etape 2 Calibration Mise à niveau / hauteur du plateau](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2002/Etape_02.md#pr%C3%A9requis)
 
 Faites un fast Leveling à chaud de l'imprimante au besoin se reporter à l'[Étape 02 : Calibration Mise à niveau / hauteur du plateau](https://github.com/sudtek/IMPRIMANTES_3D/blob/8bae97a4e72fbc0f8e1de0a924a69d353455d964/QIDI/IFAST/CALIBRATION/Etape%2002/Etape_02.md#pr%C3%A9requis)
 
-5. **Impression des Cubes**
+### Impression des Cubes
 L'impression va durer environ 4 heures 1/4 et consommer 37g de filament.
 
 Chaque couche de cube est imprimmée avec un débit d'écoulement unique 100.0%; 99% ... 90% mais la QIDI-IFAST a un bug* d'affichage; ll'écran de l'imprimante n'est jamais mis à jour avec la valeur du débit courant et il faut forcer le rafraichissement de cette valeur en basculant entre l'écran 1/2 et 2/2 pour verifier que les bon paramètres de debit sont appliqué à chacun des cubes; c'est à faire uniquement pour la 1er couche des 11 cubes.
@@ -132,17 +132,17 @@ Proceder à une inspection visuelle des cubes imprimés pour s'assurer qu'ils so
 
 
 
-7. **Mesure des Parois des Cubes**
+### Mesure des Parois des Cubes
    - Utilisation d'un outil précis avec une molette pour mesurer les parois X1, X2, Y1 et Y2 de chaque cube.
    - Enregistrement des mesures dans un tableur
      [17_10_2024_Calibration_filament_Débit_Ecoulement.ods](https://github.com/sudtek/IMPRIMANTES_3D/blob/e164b41cd4a32ed06201bcb55994184bbe3e5474/QIDI/IFAST/CALIBRATION/Etape%2004/17_10_2024_Calibration_filament_D%C3%A9bit_Ecoulement.ods)
 
-8. **Analyse des Données**
+### Analyse des Données
    - Calcul des valeurs moyennes des épaisseurs des parois pour chaque cube.
    - Création d'un diagramme pour visualiser les données.
    - Analyse des clusters de points pour déterminer la meilleure valeur de débit.
 
-9. **Détermination du Débit Optimal**
+### Détermination du Débit Optimal
    - Utilisation d'une méthode de dichotomie pour converger vers la valeur de débit optimale.
    - Conclusion que la valeur de 92,3 est la plus appropriée pour le PETG.
 
@@ -151,10 +151,10 @@ Proceder à une inspection visuelle des cubes imprimés pour s'assurer qu'ils so
 [![Détail, explications et méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90%](https://i9.ytimg.com/vi_webp/gn3A1lFX0vc/mq2.webp?sqp=COirprkG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD0gVChlMA8=&rs=AOn4CLAkej0COVnXFqI_hiDXwUg99ymBUw)](https://www.youtube.com/watch?v=gn3A1lFX0vc?si=RjfHDFoegoFpW7tH)
 
 
-#### Conclusion
+## Conclusion
 Le processus de caractérisation du débit de filament est crucial pour obtenir des impressions 3D de haute qualité. Il nécessite une série de mesures précises et une analyse rigoureuse des données pour déterminer la valeur de débit optimale. En suivant ce processus, il est possible de trouver la valeur de débit qui permet d'obtenir des parois de cube avec une épaisseur proche de la valeur théorique, garantissant ainsi des impressions de qualité.
 
-#### Remarques Finales
+### Remarques Finales
 Importance de la précision et de l'analyse des données dans le processus de caractérisation du débit de filament.l'utilité des outils de mesure précis et des méthodes d'analyse rigoureuses pour obtenir des résultats fiables. 
 La méthode de dichotomie est efficace pour converger rapidement vers la valeur de débit optimale mais elle implique l'impression succésive de série de cubes visant à encadrer la solution et donc de devoir attendre que les cubes ce stabilisent à température anbiante -> c'est donc un processus plus long, plus fastideux.
 

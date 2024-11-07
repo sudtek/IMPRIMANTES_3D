@@ -6,7 +6,7 @@ Vous devez impérativement avoir effectué les étapes suivantes pour la QIDI IF
 - [Etape 01 : Calibration des deux moteurs d'extrusion de Z1 / Z2](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/Etape_01.md)
 - [Etape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md)
 
-_Note 05/10/2024 : Au moment ou j'écris ce tuto j'utilise une autre solution qui ne requier plus le IDEAMAKER via un script python qui génère un gcode customisé pour caractériser les filaments sur Z2. Les deux methodes seront inclues dans ce tutoriel à terme._
+_Note 05/10/2024 : Au moment ou j'écris ce tuto j'utilise une autre solution qui ne requier plus l'utilisation d'IDEAMAKER via un script python qui génère un gcode customisé pour caractériser les filaments sur Z2. Les deux methodes seront inclues dans ce tutoriel à terme._
 
 ### Présentation
 Dans ce processus de caractérisation du % de débit d'un filament pour une imprimante 3D QIDI-IFAST je vais montrer pas à pas comment trouver / encadrer le % débit pour obtenir des impressions de précision et de haute qualité. Le processus implique l'utilisation d'un fichier source qui slice des cubes éprouvettes à des débits variables, la mesure précise des parois des cubes et l'analyse des données permetra de déterminer le débit optimal d'un filament donné. 

@@ -23,7 +23,7 @@ L'objectif principal de ce tutoriel est de vous expliquer comment j'ai caractér
 
 **Chargement de Fichiers**
    
-   **Cas 1** : Vous avez la même configuration que moi sur votre QIDI-IFAST du PETG sur Z2 et du PLA sur Z1 -> vous pouvez directement imprimer depuis la QIDI-IFAST la série de 11 cubes depuis le fichier [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode) et passer à l'étape d'[Impression des Cubes](https://github.com/sudtek/IMPRIMANTES_3D/edit/main/QIDI/IFAST/CALIBRATION/Etape%2004/Etape_04.md#pr%C3%A9paration-de-limprimante-avant-dimprimer-le-gcode).
+   **Cas 1** : Vous avez la même configuration que moi sur votre QIDI-IFAST du PETG sur Z2 et du PLA sur Z1 -> vous pouvez lancer l'[Impression des Cubes](https://github.com/sudtek/IMPRIMANTES_3D/edit/main/QIDI/IFAST/CALIBRATION/Etape%2004/Etape_04.md#pr%C3%A9paration-de-limprimante-avant-dimprimer-le-gcode) de la série de 11 cubes du fichier [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode).
    ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/6f4cdd068f3487245cee3358175c3eef3447ab7e/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/Vue_01.png)
    
    

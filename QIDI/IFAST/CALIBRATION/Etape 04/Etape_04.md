@@ -163,14 +163,8 @@ Avant de réaliser ce petit tutoriel dans le but de déterminer le % débit opti
 
 Pour les plus curieux reportez-vous à cette vidéeo qui reprend tout le modus operandis de la recherche du % débit pour cette intervale 100% à 90% presenté dans le tutoriel ci-dessus :  [![Détail, explications et méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90%](https://i9.ytimg.com/vi_webp/gn3A1lFX0vc/mq2.webp?sqp=COirprkG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD0gVChlMA8=&rs=AOn4CLAkej0COVnXFqI_hiDXwUg99ymBUw)](https://www.youtube.com/watch?v=gn3A1lFX0vc?si=RjfHDFoegoFpW7tH)
 
-### Script de generation de .gcode
-
-Le processus de caractérisation du % débit de filament est crucial pour obtenir des impressions 3D de haute qualité. Il nécessite une ou deux séries de cubes, des  mesures précises et une analyse rigoureuse des données pour déterminer la valeur de débit optimale. Pour accéletrer et faciliter ce travail fastidieux et ingrats j'ai réalisé un script pyhon interactif qui permet de générer directement un fichier gcode pour un intervalle de travail donné [Xmax% .. Ymin%] et un pas de 1% ou 0.1%. 
-
-
-
-### Remarques Finales
-
+## conclusion
+Le processus de caractérisation du % débit de filament est crucial pour obtenir des impressions 3D de haute qualité. Il nécessite une ou deux séries de cubes, plusieurs mesures précises et une analyse rigoureuse des données pour déterminer la valeur de débit optimale. Sachant que l'on doit caractériser chaque nouveau filament et que ce travail et fastidieux, ingrat et chronopahe j'ai réalisé un script python interactif qui permet de générer directement un fichier gcode pour un intervalle de travail donné [Xmax% .. Ymin%] avec un pas de 1% / 0.1% sans avoir besoin d'un slicer. pour l'instant il ne fonctionne que pour la buse Z2. Afin de ne pas alourdir ce tutoriel j'ai séparé les explications et je vous invite à vous y reporter : [Génerateur de séries de cubes à débit variable par pas décroissants constants de 1% / 0.1% pour calibration et encadrement du débit de Z2 (buse de gauche) sur imprimante 3D QIDI-IFAST](https://github.com/sudtek/IMPRIMANTES_3D/tree/787a158a1ccf9bd3e518755a8b3c06576e8295ef/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_Script).
 
 -------------------------
 

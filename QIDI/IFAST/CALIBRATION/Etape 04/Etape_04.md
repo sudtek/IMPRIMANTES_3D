@@ -135,11 +135,20 @@ Mesurer avec precision les parois X1, X2, Y1 et Y2 de chacuns des cubes à l'aid
 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/f1941dd6f5dbcfc983f447e04092b3a1cd396673/QIDI/IFAST/CALIBRATION/Etape%2004/media/MESURE_02.png)
 
-Saisir vos mesures dans un tableur [17_10_2024_Calibration_filament_Débit_Ecoulement.ods](https://github.com/sudtek/IMPRIMANTES_3D/blob/e164b41cd4a32ed06201bcb55994184bbe3e5474/QIDI/IFAST/CALIBRATION/Etape%2004/17_10_2024_Calibration_filament_D%C3%A9bit_Ecoulement.ods) dans l'onglet proformat. 
+Télécharger le fichier tableur [17_10_2024_Calibration_filament_Débit_Ecoulement.ods](https://github.com/sudtek/IMPRIMANTES_3D/blob/e164b41cd4a32ed06201bcb55994184bbe3e5474/QIDI/IFAST/CALIBRATION/Etape%2004/17_10_2024_Calibration_filament_D%C3%A9bit_Ecoulement.ods)
+
+Dupliquer l'onglet **PROFORMAT_Debit_Filament_Matrice_Cubes_10C_x_1L_Y%..Z%_Pas_N%** pour y saisir les valeurs des parois X1,X2,Y1,Y2 de vos cubes.
 
 ### Analyse des Données
 
-Calcul des valeurs moyennes des épaisseurs des parois pour chaque cube.
+Le tableur calculera les valeurs moyennes arithmétiques (x1+x2+y1+y2)/4 de chaque cube et dessinera automatiquement un graphe polyligne. J'attire votre attention sur le fait que ce graphe a juste pour but de vous aider à localiser un intervale solution ou vous pourrez trouver à minima une solution. Un intervale solution c'est une ligne entre deux points Mn et Mm qui qui coupe l'axe absices X pour une valeur d'épaisseur 1,6mm. 1.
+
+
+Si vous ne trouvez pas d'intervale solution compris entre [100% .. 90%] de ébit il doit se situer à proximité immédiate de la bornes inférieure ou supérieure, si ce n'est pas le cas il y a forte à parier que vous avez mal caractérisé le diamétre principal de votre filament reportez-vous à l'[Étape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/8ec18aae8171912256d8da4de497ad06e5ea1aaa/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md).
+
+
+
+
 
    - Création d'un diagramme pour visualiser les données.
    - Analyse des clusters de points pour déterminer la meilleure valeur de débit.

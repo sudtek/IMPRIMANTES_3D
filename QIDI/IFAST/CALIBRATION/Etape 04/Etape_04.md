@@ -137,12 +137,13 @@ Mesurer avec precision les parois X1, X2, Y1 et Y2 de chacuns des cubes à l'aid
 
 Télécharger le fichier tableur [17_10_2024_Calibration_filament_Débit_Ecoulement.ods](https://github.com/sudtek/IMPRIMANTES_3D/blob/e164b41cd4a32ed06201bcb55994184bbe3e5474/QIDI/IFAST/CALIBRATION/Etape%2004/17_10_2024_Calibration_filament_D%C3%A9bit_Ecoulement.ods)
 
-Dupliquer l'onglet **PROFORMAT_Debit_Filament_Matrice_Cubes_10C_x_1L_Y%..Z%_Pas_N%** pour y saisir les valeurs des parois X1,X2,Y1,Y2 de vos cubes.
+Dupliquer l'onglet **PROFORMAT_Debit_Filament_Matrice_Cubes_10C_x_1L_Y%..Z%_Pas_N%** pour y saisir les valeurs des parois X1,X2,Y1,Y2 de chacun de vos cubes.
+
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/69b40453d07beb1fe1b0a7f14bf69deeda3c96fa/QIDI/IFAST/CALIBRATION/Etape%2004/media/PROFORMAT_Vierge.png)
 
 ### Analyse des Données
 
-Le tableur calculera les valeurs moyennes arithmétiques (x1+x2+y1+y2)/4 de chaque cube et dessinera automatiquement un graphe polyligne. J'attire votre attention sur le fait que ce graphe a juste pour but de vous aider à localiser un intervale solution ou vous pourrez trouver à minima une solution. Un intervale solution c'est une ligne entre deux points Mn et Mm qui qui coupe l'axe absices X pour une valeur d'épaisseur 1,6mm. 1.
-
+Le tableur calculera les valeurs moyennes arithmétiques (x1+x2+y1+y2)/4 de chaque cube et dessinera automatiquement un graphe polyligne. J'attire votre attention sur le fait que ce graphe a juste pour but de vous aider à localiser un intervale solution ou vous pourrez trouver à minima une solution. Un intervale solution c'est une ligne entre deux points Mn et Mm qui qui coupe l'axe absices X pour une valeur d'épaisseur 1,6mm. Cette valeur correspond à : Epaisseur d'une coque * nombre de coques qui compose une paroi -> 0,4mm*4=1,6mm.
 
 Si vous ne trouvez pas d'intervale solution compris entre [100% .. 90%] de ébit il doit se situer à proximité immédiate de la bornes inférieure ou supérieure, si ce n'est pas le cas il y a forte à parier que vous avez mal caractérisé le diamétre principal de votre filament reportez-vous à l'[Étape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/8ec18aae8171912256d8da4de497ad06e5ea1aaa/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md).
 

@@ -19,7 +19,8 @@ _Note : Toutes les méthode mises en oeuvres dans ce tuto consistent à imprimer
 L'objectif principal de ce tutoriel est de vous expliquer comment j'ai caractérisé pas à pas le débit en % de mon filament PETG SUNLU sur la buse Z2 (buse gauche) de ma QIDI-IFAST en utilisant une série de cubes de tests à des débits variables décroisants. Le but est de trouver la valeur optimale de débit en % qui permet d'obtenir des parois de cube avec une épaisseur le pus proche de la valeur théorique de 1.6mm (0.4x4). Quel que soit votre slicer (IDEAMKER dans mon cas) il vous faudra toujours définir avec précision cette valeur (ainsi que le diamètre nominal)  afin de tirer le meilleur de votre imprimante ! Chaque filament est unique et doit être caracterisé une fois et avant d'en avoir besoin ... Par expérience je vous conseille de noter ces deux valeurs sur la bobine cela vous facilitera grandement la vie ! 
 
 ![image](https://github.com/user-attachments/assets/1195653a-5a88-4350-ae09-b2b6b5d9bc97)# Étape 04 : Calibration du pourcentage de débit d'écoulement de la buse Z1/Z2 en fonction du diamètre du filament
-## Méthode 01 Étapes du Processus avec les cubes de [100% .. 90%] par pas de 1%
+
+## Méthodologie de principe : Étapes du Processus avec les cubes de [100% .. 90%] par pas de 1%
 
 **Chargement de Fichiers**
    
@@ -143,66 +144,35 @@ Dupliquer l'onglet **PROFORMAT_Debit_Filament_Matrice_Cubes_10C_x_1L_Y%..Z%_Pas_
 
 ### Analyse des Données
 
-Le tableur calculera les valeurs moyennes arithmétiques (x1+x2+y1+y2)/4 de chaque cube et dessinera automatiquement un graphe polyligne. J'attire votre attention sur le fait que ce graphe a juste pour but de vous aider à localiser un intervale solution ou vous pourrez trouver à minima une solution. Un intervale solution c'est une ligne entre deux points Mn et Mm qui qui coupe l'axe absices X pour une valeur d'épaisseur 1,6mm. Cette valeur correspond à : Epaisseur d'une coque * nombre de coques qui compose une paroi -> 0,4mm*4=1,6mm.
+Le tableur calculera les valeurs moyennes arithmétiques (x1+x2+y1+y2)/4 de chaque cube et dessinera automatiquement un graphe composé d'une polyligne. Ce graphe a pour but de vous aider à localiser un intervale solution ou vous pourrez trouver à minima une solution. Un intervale solution c'est une ligne entre deux points Moyn et Moym qui coupe pour une valeur d'épaisseur 1,6mm. Cette valeur correspond à lépaisseur d'une coque * nombre de coques qui compose une paroi -> 0,4mm*4=1,6mm. Dans le fichier tableur vous trouverez un onglet intitulé :"Exemple_Test_Debit_Filament_Matrice_Cubes_10C_x_1L_100%..90%_Pas_1%" qui correspond à une serie réélle suite à la caractérisation d'une de mes bobines de PETG qui me servira référentiel pour la suite de mes explications. 
 
-Si vous ne trouvez pas d'intervale solution compris entre [100% .. 90%] de ébit il doit se situer à proximité immédiate de la bornes inférieure ou supérieure, si ce n'est pas le cas il y a forte à parier que vous avez mal caractérisé le diamétre principal de votre filament reportez-vous à l'[Étape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/8ec18aae8171912256d8da4de497ad06e5ea1aaa/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md).
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/3bf69e476241725de97882081f60ca12b5b21d91/QIDI/IFAST/CALIBRATION/Etape%2004/media/TABLEUR_Exemple_Moyenne_01.png)
 
+_Note : Si vous ne trouvez pas d'intervale solution compris dans l'intervale inital [100% .. 90%]% de débit il doit se situer à proximité immédiate de la borne inférieure ou supérieure, si ce n'est pas le cas il y a fort à parier que vous avez mal caractérisé le diamétre principal de votre filament reportez-vous à l'[Étape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/8ec18aae8171912256d8da4de497ad06e5ea1aaa/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md) et reprendre ce tuto depuis le début._
 
+Cette polyligne composée de segments coupe pour une valeur d'épaisseur 1,6mm entre les cubes de débit de [92.0% 91.0%] il y a bien une solution dans cet intervale sachant que graphiquement on constate que ces deux bornes ne sont pas solutions. Le % débit solution est donc compris dans l'intervale ]92% ..91%[ entre le cube 92% et le cube 91%. Sachant que la précision de saisi dans le sliccer IDEAMAKER pour le % de débit est 1/10 (0.1)
 
+Vous pouvez au choix :
 
+- Vous arreter ici et "couper la poire en deux" en choisisant une valeur intermédiare; en observant soigneusement le graphique on comprend intuitivementque la solution est située dans le demi intervale de gauche compris entre ]92% .. 91.5%[ soit au choix {91.6%;91.7%;91.8%} avec une erreur de maximum de +- 0.2% c'est trois points sont acceptable.
 
-   - Création d'un diagramme pour visualiser les données.
-   - Analyse des clusters de points pour déterminer la meilleure valeur de débit.
-
-ICI -----
-
-
+- Rechercher la valeur exacte à 0,1% ce qui implique d'imprimer une nouvelle série de cubes de débit dans l'intervale [92.0% 91.0%]
 
 ### Détermination du Débit Optimal
-   - Utilisation d'une méthode de dichotomie pour converger vers la valeur de débit optimale.
-   - Conclusion que la valeur de 92,3 est la plus appropriée pour le PETG.
+Avant de réaliser ce petit tutoriel dans le but de déterminer le % débit optimal j'avais opté pour une méthode de dichotmie pure consistant à faire N séries consituée de deux cubes borne supérieur / inférieure d'un intervale mais sachant qu'il faut récursivement imprimer plus ou moins 6 séries de cubes pour converger et déterminer à 0.1% la valeur du débit cela savére plus chronophage et fastidieux car il faut laisser chaque série de cubes revenir à température ambiante avant mesure et il ne faut pas se tromper dans la mise en oeuvre de la dichotomie (choix de l'intervale) ... Le seul avantage de cette solution c'est quelle met en évidence le fait qu'il peut exister plusieurs candidats solutions dans l'intervalle global pour le % débit et que certains sont des plus ou moins bon candidats ( liés à un phénoméne de cluster dispersion / regroupement) autour de la valeur consigne 1.6mm. Ainsi pour un même filament j'ai pu trouver deux bon candidats 91.7% et 92.3% pour un même filament.
 
-## Détail, explications de cette méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90% en vidéo 
+Pour les plus curieux reportez-vous à cette vidéeo qui reprend tout le modus operandis de la recherche du % débit pour cette intervale 100% à 90% presenté dans le tutoriel ci-dessus :  [![Détail, explications et méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90%](https://i9.ytimg.com/vi_webp/gn3A1lFX0vc/mq2.webp?sqp=COirprkG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD0gVChlMA8=&rs=AOn4CLAkej0COVnXFqI_hiDXwUg99ymBUw)](https://www.youtube.com/watch?v=gn3A1lFX0vc?si=RjfHDFoegoFpW7tH)
 
-[![Détail, explications et méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90%](https://i9.ytimg.com/vi_webp/gn3A1lFX0vc/mq2.webp?sqp=COirprkG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD0gVChlMA8=&rs=AOn4CLAkej0COVnXFqI_hiDXwUg99ymBUw)](https://www.youtube.com/watch?v=gn3A1lFX0vc?si=RjfHDFoegoFpW7tH)
+### Script de generation de .gcode
+
+Le processus de caractérisation du % débit de filament est crucial pour obtenir des impressions 3D de haute qualité. Il nécessite une ou deux séries de cubes, des  mesures précises et une analyse rigoureuse des données pour déterminer la valeur de débit optimale. Pour accéletrer et faciliter ce travail fastidieux et ingrats j'ai réalisé un script pyhon interactif qui permet de générer directement un fichier gcode pour un intervalle de travail donné [Xmax% .. Ymin%] et un pas de 1% ou 0.1%. 
 
 
-## Conclusion
-Le processus de caractérisation du débit de filament est crucial pour obtenir des impressions 3D de haute qualité. Il nécessite une série de mesures précises et une analyse rigoureuse des données pour déterminer la valeur de débit optimale. En suivant ce processus, il est possible de trouver la valeur de débit qui permet d'obtenir des parois de cube avec une épaisseur proche de la valeur théorique, garantissant ainsi des impressions de qualité.
 
 ### Remarques Finales
-Importance de la précision et de l'analyse des données dans le processus de caractérisation du débit de filament.l'utilité des outils de mesure précis et des méthodes d'analyse rigoureuses pour obtenir des résultats fiables. 
-La méthode de dichotomie est efficace pour converger rapidement vers la valeur de débit optimale mais elle implique l'impression succésive de série de cubes visant à encadrer la solution et donc de devoir attendre que les cubes ce stabilisent à température anbiante -> c'est donc un processus plus long, plus fastideux.
-
-
-
 
 
 -------------------------
-
-
-
-
-
-Afin de comprendre comment  Nous venons de charger le fichier qui nous permettra de caractériser le débit du filament. Il s'agit de cubes dont le débit varie de 100 à 90. Ce chiffre correspond au débit de chaque cube, que ce soit en termes de flux ou de débit. Nous avons les profils d'Ida Maker, avec un profil spécifique pour l'imprimante.
-
-Dans ce profil, nous trouvons deux informations cruciales : la taille du plateau et les extrudeurs. Sur les imprimantes Quid East, le plateau est annoncé comme étant de 360 mm, mais en réalité, il n'est exploitable que sur 330 mm selon l'axe X. Cela est dû à la double extrusion avec une seule tête. Nous avons deux extrudeurs : l'extrudeur de gauche est étiqueté T1 et l'extrudeur de droite est étiqueté T0. La taille maximale est donc de 0 à 330 mm sur l'axe X et de 0 à 250 mm sur l'axe Y.
-
-Sur la Quid Fast, l'extrudeur de gauche (T1) correspond à la buse Z2 et imprime du PETG, tandis que l'extrudeur de droite (T0) correspond à la buse Z1 et imprime du PLA. L'extrudeur de droite est utilisé pour les supports. Nous imprimons sur la tête de gauche avec du PETG, qui a déjà été caractérisé. Le diamètre du filament PETG a été caractérisé à 1,724 mm, ce qui est crucial avant de calibrer le débit.
-
-Le débit n'est pas de 100 % car il a déjà été caractérisé. Cette valeur est propre à chaque bobine de filament et ne peut être extrapolée ou transposée à un autre filament. Il est impératif de fixer cette valeur à 100 %. Le PLA ne sera pas utilisé puisque nous travaillons sur l'extrudeur de gauche.
-
-Le fichier Quid Fast via Ida Maker peut utiliser plusieurs templates. Nous nous contenterons de charger celui fourni avec ce fichier. Lorsque nous importerons un fichier à partir du disque local, nous utiliserons celui du 17/10/224, intitulé "export printer". Il contient toutes les caractéristiques nécessaires. Si des modifications sont nécessaires, elles doivent être effectuées dans ce fichier, mais il ne faut pas toucher à la case permettant de contourner les paramètres du tranchage du profil liés aux matériaux.
-
-Chaque cube a un débit différent, allant de 100 à 90. Cela permet de créer une tour de purge avec un bouclier d'essuyage pour éviter les suintements de la buse. Nous avons également une jupe de maintien pour éviter que les pièces ne se décollent.
-
-Pour caractériser le débit, nous devons mesurer les parois de chaque cube. Nous utilisons un outil précis avec une molette pour assurer une pression constante. Nous mesurons les parois X1, X2, Y1 et Y2 de chaque cube et notons les valeurs dans un tableur.
-
-Après avoir mesuré les cubes, nous reportons les valeurs moyennes dans un tableau pour créer un diagramme. Nous cherchons la valeur de débit qui donne une épaisseur de paroi proche de la valeur théorique. Nous préférons une légère surextrusion à une sous-extrusion, car il est plus facile d'enlever de la matière que d'en ajouter.
-
-Enfin, nous analysons les clusters de points pour déterminer la meilleure valeur de débit. Nous utilisons une méthode de dichotomie pour converger vers la valeur optimale. Après plusieurs séries de tests, nous avons trouvé que la valeur de 92,3 est la plus appropriée pour notre PETG.
-
-En résumé, la caractérisation du débit du filament nécessite une série de mesures précises et une analyse rigoureuse des données pour déterminer la valeur optimale.
 
 
 

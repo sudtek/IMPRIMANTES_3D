@@ -124,21 +124,20 @@ Faites un fast Leveling à chaud de l'imprimante au besoin se reporter à [Étap
 ### Impression des Cubes
 L'impression va durer environ 4 heures 1/4 et consommer 37g de filament.
 
-Chaque couche de cube est imprimée avec un débit d'écoulement unique décroissant 100.0%; 99.0% ... 90.0% mais la QIDI-IFAST a un bug* d'affichage; l'écran de l'imprimante n'est jamais mis à jour avec la valeur du débit courant et il faut forcer manuelement le rafraichissement de cette valeur en basculant entre l'écran 1/2 et 2/2 pour verifier que les bon paramètres de debit sont appliqué à chacun des cubes. 
+Chaque couche de cube est imprimée avec un débit d'écoulement unique décroissant 100.0%; 99.0% ... 90.0% mais la QIDI-IFAST a un bug* d'affichage ... L'écran de l'imprimante QIDI-IFAST n'est jamais mis à jour avec la valeur du débit courant et il faut forcer manuelement le rafraichissement de cette valeur en basculant entre l'écran 1/2 et 2/2 pour verifier que les bon paramètres de debit sont appliqué à chacun des cubes. 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/590ed48f2fef80f08a1cb919f9494207e8ea42d6/QIDI/IFAST/CALIBRATION/Etape%2004/media/QIDI_IFAST_ECRAN_BUG_MAJ_DEBIT.jpg)
-Cette verification est à faire uniquement pour la 1er couche des 11 cubes lorsque l'on génère sont premier gcode.
 
-_* Note : Bug de màj d'affichage signalé au support de QIDI mais à ce jour aucun correctif en vue ..._
+_* Note : J'ai signalé ce bug de màj d'affichage au support de QIDI mais à ce jour aucun correctif ..._
 
 Laisser les cubes refroidir sur le plateau le temps qu'ils reviennent à temperature ambiante cela limitera le risque de déformation.
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/0c5fa474c00300508d8980d77553aec96af0cd91/QIDI/IFAST/CALIBRATION/Etape%2004/media/PRINTCUBE_01.png)
 
-Proceder à une inspection visuelle des cubes imprimés pour s'assurer qu'ils sont correctements imprimés et conformes.
+Proceder a une inspection visuelle des cubes imprimés pour s'assurer qu'ils sont correctements imprimés et conformes.
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/5a3fb5728029d8960e37ff5dc597c570d68dc350/QIDI/IFAST/CALIBRATION/Etape%2004/media/PRINTCUBE_02.png)
 
 ### Mesure des Parois des Cubes
 
-Mesurer avec precision les parois X1, X2, Y1 et Y2 de chacuns des cubes à l'aide d'un micrometre precision 1/100mm.
+Mesurer avec precision les parois X1, X2, Y1 et Y2 de chacuns des cubes à l'aide d'un micrometre precision 1/100.
 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/f1941dd6f5dbcfc983f447e04092b3a1cd396673/QIDI/IFAST/CALIBRATION/Etape%2004/media/MESURE_00.png)
 
@@ -152,27 +151,29 @@ Dupliquer l'onglet **PROFORMAT_Debit_Filament_Matrice_Cubes_10C_x_1L_Y%..Z%_Pas_
 
 ### Analyse des Données
 
-Le tableur calculera les valeurs moyennes arithmétiques (x1+x2+y1+y2)/4 de chaque cube et dessinera automatiquement un graphe composé d'une polyligne. Ce graphe a pour but de vous aider à localiser un intervale solution ou vous pourrez trouver à minima une solution. Un intervale solution c'est une ligne entre deux points Moyn et Moym qui coupe pour une valeur d'épaisseur 1,6mm. Cette valeur correspond à lépaisseur d'une coque * nombre de coques qui compose une paroi -> 0,4mm*4=1,6mm. Dans le fichier tableur vous trouverez un onglet intitulé :"Exemple_Test_Debit_Filament_Matrice_Cubes_10C_x_1L_100%..90%_Pas_1%" qui correspond à une serie réélle suite à la caractérisation d'une de mes bobines de PETG qui me servira référentiel pour la suite de mes explications. 
+Le tableur calculera les valeurs moyennes arithmétiques (x1+x2+y1+y2)/4 de chaque cube et dessinera automatiquement un graphe composé d'une polyligne. Ce graphe a pour but de vous aider à localiser un intervale solution ou vous pourrez trouver à minima une solution. Un intervale solution c'est une ligne entre deux points Mmoy et Nmoy qui coupe pour une valeur d'épaisseur 1,6mm. Cette valeur correspond à lépaisseur d'une coque * nombre de coques qui compose une paroi (0,4mm*4=1,6mm). Dans le fichier tableur vous trouverez un onglet intitulé :"Exemple_Test_Debit_Filament_Matrice_Cubes_10C_x_1L_100%..90%_Pas_1%" qui correspond à une serie que j'ai effectuée suite à la caractérisation d'une de mes bobines de PETG qui me servira de référence pour la suite de mes explications. 
 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/3bf69e476241725de97882081f60ca12b5b21d91/QIDI/IFAST/CALIBRATION/Etape%2004/media/TABLEUR_Exemple_Moyenne_01.png)
 
 _Note : Si vous ne trouvez pas d'intervale solution compris dans l'intervale inital [100% .. 90%]% de débit il doit se situer à proximité immédiate de la borne inférieure ou supérieure, si ce n'est pas le cas il y a fort à parier que vous avez mal caractérisé le diamétre principal de votre filament reportez-vous à l'[Étape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/8ec18aae8171912256d8da4de497ad06e5ea1aaa/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md) et reprendre ce tuto depuis le début._
 
-Cette polyligne composée de segments coupe pour une valeur d'épaisseur 1,6mm entre les cubes de débit de [92.0% 91.0%] il y a bien une solution dans cet intervale sachant que graphiquement on constate que ces deux bornes ne sont pas solutions. Le % débit solution est donc compris dans l'intervale ]92% ..91%[ entre le cube 92% et le cube 91%. Sachant que la précision de saisi dans le sliccer IDEAMAKER pour le % de débit est 1/10 (0.1)
+Cette polyligne composée de segments coupe pour une valeur d'épaisseur 1,6mm entre les cubes de débit de 92.0% et 91.0%; il y a bien une solution dans cet intervale sachant que graphiquement on constate que ces deux bornes ne sont pas solutions. Le % débit solution est donc compris dans l'intervale ]92% .. 91%[ (entre le cube 92% et le cube 91% exclus). Sachant que la précision de saisi dans le sliccer IDEAMAKER pour le % de débit est 1/10 (0.1)
 
 Vous pouvez au choix :
 
-- Vous arreter ici et "couper la poire en deux" en choisisant une valeur intermédiare; en observant soigneusement le graphique on comprend intuitivementque la solution est située dans le demi intervale de gauche compris entre ]92% .. 91.5%[ soit au choix {91.6%;91.7%;91.8%} avec une erreur de maximum de +- 0.2% c'est trois points sont acceptable.
+- Vous arreter ici et "couper la poire en deux" en choisisant une valeur intermédiare; en observant soigneusement le graphique on comprend intuitivement que la solution est située dans le demi intervale de gauche compris entre ]92% .. 91.5%[ soit au choix {91.6%;91.7%;91.8%} avec une erreur de maximum de +- 0.2% c'est trois points sont acceptable.
 
 - Rechercher la valeur exacte à 0,1% ce qui implique d'imprimer une nouvelle série de cubes de débit dans l'intervale [92.0% 91.0%]
 
 ### Détermination du Débit Optimal
-Avant de réaliser ce petit tutoriel dans le but de déterminer le % débit optimal j'avais opté pour une méthode de dichotmie pure consistant à faire N séries consituée de deux cubes borne supérieur / inférieure d'un intervale mais sachant qu'il faut récursivement imprimer plus ou moins 6 séries de cubes pour converger et déterminer à 0.1% la valeur du débit cela savére plus chronophage et fastidieux car il faut laisser chaque série de cubes revenir à température ambiante avant mesure et il ne faut pas se tromper dans la mise en oeuvre de la dichotomie (choix de l'intervale) ... Le seul avantage de cette solution c'est quelle met en évidence le fait qu'il peut exister plusieurs candidats solutions dans l'intervalle global pour le % débit et que certains sont des plus ou moins bon candidats ( liés à un phénoméne de cluster dispersion / regroupement) autour de la valeur consigne 1.6mm. Ainsi pour un même filament j'ai pu trouver deux bon candidats 91.7% et 92.3% pour un même filament.
+Avant de réaliser ce tutoriel, j'avais opté pour une méthode de dichotomie pure, consistant à effectuer plusieurs séries de deux cubes, représentant les bornes supérieure et inférieure d'un intervalle. Cependant, cette méthode nécessite l'impression récursive d'environ six séries de cubes pour converger et déterminer la valeur du débit à 0,1 % près. Cette approche est chronophage et fastidieuse, car il faut laisser chaque série de cubes revenir à température ambiante avant de procéder aux mesures, et il est crucial de ne pas se tromper dans la mise en œuvre de la dichotomie (choix de l'intervalle).
 
-Pour les plus curieux reportez-vous à cette vidéeo qui reprend tout le modus operandis de la recherche du % débit pour cette intervale 100% à 90% presenté dans le tutoriel ci-dessus :  [![Détail, explications et méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90%](https://i9.ytimg.com/vi_webp/gn3A1lFX0vc/mq2.webp?sqp=COirprkG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD0gVChlMA8=&rs=AOn4CLAkej0COVnXFqI_hiDXwUg99ymBUw)](https://www.youtube.com/watch?v=gn3A1lFX0vc?si=RjfHDFoegoFpW7tH)
+Le seul avantage de cette solution est qu'elle met en évidence l'existence de plusieurs candidats solutions dans l'intervalle global pour le pourcentage de débit, certains étant de meilleurs candidats que d'autres en raison du phénomène de dispersion/regroupement autour de la valeur consigne de 1,6 mm. Ainsi, pour un même filament, j'ai pu trouver deux bons candidats : 91,7 % et 92,3 %.
 
-## conclusion
-Le processus de caractérisation du % débit de filament est crucial pour obtenir des impressions 3D de haute qualité. Il nécessite une ou deux séries de cubes, plusieurs mesures précises et une analyse rigoureuse des données pour déterminer la valeur de débit optimale. Sachant que l'on doit caractériser chaque nouveau filament et que ce travail et fastidieux, ingrat et chronopahe j'ai réalisé un script python interactif qui permet de générer directement un fichier gcode pour un intervalle de travail donné [Xmax% .. Ymin%] avec un pas de 1% / 0.1% sans avoir besoin d'un slicer. pour l'instant il ne fonctionne que pour la buse Z2. Afin de ne pas alourdir ce tutoriel j'ai séparé les explications et je vous invite à vous y reporter : [Génerateur de séries de cubes à débit variable par pas décroissants constants de 1% / 0.1% pour calibration et encadrement du débit de Z2 (buse de gauche) sur imprimante 3D QIDI-IFAST](https://github.com/sudtek/IMPRIMANTES_3D/tree/787a158a1ccf9bd3e518755a8b3c06576e8295ef/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_Script).
+Pour les plus curieux, reportez-vous à cette vidéo qui reprend tout le modus operandi de la recherche du pourcentage de débit pour l'intervalle de 100 % à 90 %, présentée ci-dessus  [![Détail, explications et méthode de calibration du % de débit avec une série de 11 cubes de calibration 100% à 90%](https://i9.ytimg.com/vi_webp/gn3A1lFX0vc/mq2.webp?sqp=COirprkG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD0gVChlMA8=&rs=AOn4CLAkej0COVnXFqI_hiDXwUg99ymBUw)](https://www.youtube.com/watch?v=gn3A1lFX0vc?si=RjfHDFoegoFpW7tH)
+
+## Conclusion
+Le processus de caractérisation du % débit de filament est crucial pour obtenir des impressions 3D de precision. Il nécessite une ou deux séries de cubes, plusieurs mesures précises et une analyse rigoureuse des données pour déterminer la valeur de débit optimale.  Étant donné que chaque nouveau filament doit être caractérisé et que ce travail est fastidieux, ingrat et chronophage, j'ai développé un script Python interactif. Ce script permet de générer directement un fichier Gcode pour un intervalle de travail donné [Xmax% .. Ymin%] avec un pas de 1 % / 0,1 %, sans avoir besoin d'un slicer. Pour l'instant, ce script fonctionne uniquement pour la buse Z2. Afin de ne pas alourdir ce tutoriel, j'ai séparé les explications et je vous invite à vous y reporter : [Génerateur de séries de cubes à débit variable par pas décroissants constants de 1% / 0.1% pour calibration et encadrement du débit de Z2 (buse de gauche) sur imprimante 3D QIDI-IFAST](https://github.com/sudtek/IMPRIMANTES_3D/tree/787a158a1ccf9bd3e518755a8b3c06576e8295ef/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_Script).
 
 -------------------------
 

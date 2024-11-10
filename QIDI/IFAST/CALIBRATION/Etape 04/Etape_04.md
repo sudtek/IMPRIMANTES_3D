@@ -6,17 +6,21 @@ Vous devez impérativement avoir effectué les étapes suivantes pour la QIDI IF
 - [Etape 01 : Calibration des deux moteurs d'extrusion de Z1 / Z2](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2001/Etape_01.md)
 - [Etape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md)
 
-_Note 05/10/2024 : Au moment ou j'écris ce tuto j'utilise une autre solution qui ne requier plus l'utilisation d'IDEAMAKER via un script python qui génère un gcode customisé pour caractériser les filaments sur Z2. Les deux methodes seront inclues dans ce tutoriel à terme._
+_Note 05/10/2024 : Une nouvelle solution de Détermination du débit % ne nécessite plus l'utilisation d'IDEAMAKER. Un script Python est employé pour générer un fichier Gcode personnalisé, permettant de caractériser les filaments sur la buse Z2._
 
 ## Présentation
-Dans ce processus de caractérisation du % de débit d'un filament pour une imprimante 3D QIDI-IFAST je vais montrer pas à pas comment trouver / encadrer le % débit pour obtenir des impressions de précision et de haute qualité. Le processus implique l'utilisation d'un fichier source qui slice des cubes éprouvettes à des débits variables, la mesure précise des parois des cubes et l'analyse des données permetra de déterminer le débit optimal d'un filament donné. 
+Ce tutoriel détaille étape par étape la méthode pour déterminer et encadrer le pourcentage de débit optimal d'un filament afin d'obtenir des impressions avec une précision dimensionnelle accrue. Le processus comprend tous les fichier source pour génèrer des cubes éprouvettes à des débits variables, la mesure précise des parois des cubes et l'analyse des données pour déterminer le débit optimal d'un filament donné.
 
-Exemple pour le logiciel sliccer IDEAMAKER c'est la valeur exacte du % débit propre à un filament donné que l'on cherche à définir (encadrée en rouge) dans ce tuto; le diamétre du filament (ex 1,724mm encadré en orange) doit impérativement avoir été defini avant de continuer ce tuto; à defaut se reporter à [Etape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md)    : 
+Exemple pour le logiciel sliccer IDEAMAKER : 
 
-_Note : Toutes les méthode mises en oeuvres dans ce tuto consistent à imprimer couche par couches les elemenst du plateaux sans avoire recours à l'impression séquentielle car elle ne permet pas d'imprimer 11 cubes cotes à cotes (distance 5mm intercubes) sans risquer de colisions._ 
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/527fa37f381f61b011b10b9d9b2914b11b05b939/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_profil_petg_01.png)
+
+Pour déterminer la valeur exacte du pourcentage de débit propre à un filament donné (encadrée en rouge) il est impératif que le diamètre du filament (par exemple, 1,724 mm, encadré en orange) ait été défini avant de poursuivre ce tutoriel. En cas de non-définition, veuillez vous reporter à[Etape 03 : Calibration du diamètre du filament](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2003/Etape_03.md)
+
+_Note : Toutes les méthodes mises en œuvre dans ce tutoriel consistent à imprimer les éléments du plateau couche par couche, sans recourir à l'impression séquentielle. Cette approche est nécessaire car l'impression séquentielle ne permet pas d'imprimer 11 cubes côte à côte avec une distance intercubes de 5 mm sans risquer de collisions.._ 
 
 ## Objectif
-L'objectif principal de ce tutoriel est de vous expliquer comment j'ai caractérisé pas à pas le débit en % de mon filament PETG SUNLU sur la buse Z2 (buse gauche) de ma QIDI-IFAST en utilisant une série de cubes de tests à des débits variables décroisants. Le but est de trouver la valeur optimale de débit en % qui permet d'obtenir des parois de cube avec une épaisseur le pus proche de la valeur théorique de 1.6mm (0.4x4). Quel que soit votre slicer (IDEAMKER dans mon cas) il vous faudra toujours définir avec précision cette valeur (ainsi que le diamètre nominal)  afin de tirer le meilleur de votre imprimante ! Chaque filament est unique et doit être caracterisé une fois et avant d'en avoir besoin ... Par expérience je vous conseille de noter ces deux valeurs sur la bobine cela vous facilitera grandement la vie ! 
+L'objectif principal de ce tutoriel est d'expliquer étape par étape, comment le débit en pourcentage d'un filament PETG SUNLU est caractérisé sur la buse Z2 (buse gauche) d'une QIDI-IFAST, en utilisant une série de cubes de test à des débits variables décroissants. Le but est de trouver la valeur optimale de débit en pourcentage qui permet d'obtenir des parois de cube avec une épaisseur la plus proche possible de la valeur théorique de 1,6 mm (0,4 mm x 4). Quel que soit le slicer utilisé (IDEAMAKER dans mon cas), il est toujours nécessaire de définir cette valeur avec précision (ainsi que le diamètre nominal) pour tirer le meilleur de votre imprimante. Chaque filament est unique et doit être caractérisé avant utilisation. Par expérience, je vous conseille de noter ces deux valeurs sur la bobine, ce qui vous facilitera grandement la tâche.
 
 ![image](https://github.com/user-attachments/assets/1195653a-5a88-4350-ae09-b2b6b5d9bc97)# Étape 04 : Calibration du pourcentage de débit d'écoulement de la buse Z1/Z2 en fonction du diamètre du filament
 
@@ -28,20 +32,21 @@ L'objectif principal de ce tutoriel est de vous expliquer comment j'ai caractér
    ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/6f4cdd068f3487245cee3358175c3eef3447ab7e/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/Vue_01.png)
    
    
-   **Cas 2 :** Vous n'avez pas la même configuration que moi et/ou vous désirez (éditer / modififer / adapter) le fichier sources [17_10_2024_Calibration_[100%..90%]_V2.idea](https://github.com/sudtek/IMPRIMANTES_3D/blob/b954e0fb5198141b21f86ee10baec49635fdae2a/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.idea) à vos besoins, tous les fichiers peuvent être téléchargés sur [Etape 04
+   **Cas 2 :** Vous n'avez pas la même configuration que moi et/ou vous désirez (éditer / modifier / adapter) le fichier sources [17_10_2024_Calibration_[100%..90%]_V2.idea](https://github.com/sudtek/IMPRIMANTES_3D/blob/b954e0fb5198141b21f86ee10baec49635fdae2a/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.idea) à vos besoins, tous les fichiers peuvent être téléchargés sur ce lien [Etape 04
 /Z2_Calibration_PETG_235°c](https://github.com/sudtek/IMPRIMANTES_3D/tree/7b1b4db4feb8aaa148066c3f2ab6458e4ebc0bf5/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c)
 
-  - Lancer le logiciel IDEAMAKER (V>5.0.6).
+  - Lancer le logiciel IDEAMAKER (Version >= 5.0.6).
     
   - Charger le fichier [17_10_2024_Calibration_[100%..90%]_V2.idea](https://github.com/sudtek/IMPRIMANTES_3D/blob/b954e0fb5198141b21f86ee10baec49635fdae2a/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.idea)
     ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/dd77a2579ed883ef5e8eff893bc009ba6bb62ccd/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_Chargement_Fichier_11cubes%5B100%25...90%25%5D1%25.png)
     
- - Depuis le menu de tranchage simplifié appuyer sur le stilo rouge ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/0894b3a91323984d481de2000f3e4227fd0351bc/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_niveau_0.png)
+ - Depuis le menu de tranchage simplifié appuyer sur l'icone stilo rouge ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/0894b3a91323984d481de2000f3e4227fd0351bc/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_niveau_0.png)
 
    pour acceder au menu de tranchage detaillé qui devrait être vierge :
    ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/5e340b0a7590bee1af5fe61316c21f14138fffa1/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Vierge_niveau_1.png)
    
- - Importer de haut en bas les profils liés à l'imprimante QIDI-IFAST, au filament de gauche et de droite,  au template ... via les boutons "Plus"
+ - Importer de haut en bas les profils liés à l'imprimante QIDI-IFAST, du filament de gauche et celui de droite, du template ... via les boutons "Plus"
+   
  De haut en bas :
 
  #1 Importer le profil de l'imprimante 
@@ -64,7 +69,7 @@ dans la troisième ligne en appuyant sur Plus :
 dans la seconde ligne en appuyant sur Plus :
  ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/4566f302fe43216aef2d1f766e220cac8bce1b17/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_Ligne4_TEMPLATEMATERIAUX.png)
  
-_*(Note : ATTENTION risque de confusion plus tard avec mon template de la méthode #2 qui utilise aussi le terme template mais ils n'ont rien en commun !)_
+_*(Note : ATTENTION risque de confusion : Dans le tutoriel utilisant le script utilise aussi le terme template mais ils n'ont rien en commun !)_
 
 Vous devriez avoir cette présentation : 
  ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/0894b3a91323984d481de2000f3e4227fd0351bc/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_menu_tranchage_niveau_1.png)
@@ -72,53 +77,56 @@ Vous devriez avoir cette présentation :
 Importer le fichier paramétrage des 11 cubes "**Paramètres de groupes et couches**" -> "**Importer et Exporter**" -> "**Importer d'un disque Local**" 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/3f0e0337d4df9fc1193c668eef40fb1c53a33e74/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER__menu_ParametresGroupesCouches_Vierge.png)
 
-Choisir le fichier [17_10_2024_Calibration_[100%..90%]_V2_export.settinggroup](https://github.com/sudtek/IMPRIMANTES_3D/blob/7cd00734a7899714554ef4374b111f3f644160e2/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2_export.settinggroup). Ce fichier contient toutes les paramètres qui **SURPASSENT (ECRASENT)** les paramètres du profil matériaux PETG sur Z2 afin de créeer des groupes possédant chacun un % de débit propre / unique qui ne dépend plus du profil du matériaux sur la buse Z2 située à gauche. Ainsi dans IDEAMKER chaque élement sur le plateau peut être customisé et avoir ses propres spécifités par groupe et / ou couche. 
+Choisir le fichier [17_10_2024_Calibration_[100%..90%]_V2_export.settinggroup](https://github.com/sudtek/IMPRIMANTES_3D/blob/7cd00734a7899714554ef4374b111f3f644160e2/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2_export.settinggroup). Ce fichier contient toutes les paramètres qui **SURPASSENT (ECRASENT)** les paramètres du profil matériaux PETG sur Z2 afin de créeer des groupes possédant chacun un pourcentage de débit propre / unique qui ne dépend plus du profil du matériaux sur la buse Z2 située à gauche. Ainsi dans IDEAMAKER chaque élement du plateau peut être customisé et avoir ses propres spécifités par groupe et / ou couche. 
 
-Note : Les fichiers avec l'extension "**.settinggroup**" n'ont en général de sens qu'avec le fichier le fichier "**.idea**" auquel ils sont associés et sont pas nature que "peut" transposables / associables à d'autres items hormis pour récupérer des configurations particulières.
+_Note : Les fichiers avec l'extension "**.settinggroup**" n'ont en général de sens qu'avec le fichier le fichier "**.idea**" auquel ils sont associés et par nature ne sont que "peut" transposables / associables à d'autres items hormis pour récupérer des configurations particulières.
+_
 
-Si l'import des paramètres c'est bien déroulé vous devriez voir une liste de groupes correspondats aux éléments (Cubes, légende et tour de purge) :
+Si l'import des paramètres c'est bien déroulé vous devriez voir une liste de groupes correspondats aux éléments des 11 Cubes, de la légende et de la tour de purge :
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/c1b234019d060fd0832e5eb9d003cb621b1c3000/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER__menu_ParametresGroupesCouches_Final.png)
 
-Les paramètres propres et uniques à chaque groupe, exemple groupe B : 
+Exemple : Détails des paramètres propres et uniques à chaque groupe, ici le groupe B : 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/c1b234019d060fd0832e5eb9d003cb621b1c3000/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER__menu_ParametresGroupesCouches_CUBE_B.png)
  
-Paramètres du Cube débit 99.0% :
+Paramètres customisés du Cube débit 99.0% :
 
 **Ordre d'impression*** : N'est pas le même que les autres objets du plateau; le cube du groupe B à ses parois imprimés dans un ordre précis #1 la parois / coque périphérie externe, #2 la parois / coque coque périphérie interne et finalement #3 le remplissage entre les deux coques, ce choix assure un positionement plus précis et une précision de l'épaisseur finale des parois en limitant les effets liés à des poussés latérales.
 _Note : Attention le terme Ordre d'impression dans cette option n'a rien avoir avec la possibilité d'impression séquentiel qui consiste elle à imprimer intégralement un cube de la première couche z=0mm à la derniere couche z=20mm avant de passer au prochain cube.
 _
-**Densité du remplissage** : Ne concerne que l'intérieur du cube, ce paramètre est fixé à 0% afin que notre cube soit vide pour pouvoir mesurer la parois avec un micromètre 1/100.
+**Densité du remplissage** : Ne concerne que l'intérieur du cube, ce paramètre est fixé à 0% afin que notre cube soit vide pour pouvoir mesurer les parois au  1/100 avec un micromètre.
 
-**Couche de remplissage solide** : C'est le nombre de couches en contact avec le plateau / bed. On aurait pu se contenter de la valeur par défaut contenu dans le profil du matériaux PETG buse Z2 mais je désirais avoir un nombre de coques uniforme sur toutes l'éprouvette pour éliminer / limiter les déformations des éprouvettes mais également pouvoir les recyler en récipients ...  
+**Couche de remplissage solide** : C'est le nombre de couches en contact avec le plateau / bed. On aurait pu se contenter de la valeur par défaut contenu dans le profil du matériaux PETG (Z2) mais je désirais avoir un nombre de coques uniforme sur toutes l'éprouvette pour limiter les déformations des éprouvettes mais également pouvoir les recyler en récipients ...  
 
 **Débit du matériaux gauche (Ecrase les réglages du materiaux)** : Chaque cube a un débit customisé unique qui est propre à son groupe, le cube du groupe B est imprimé à 99%; le cube suivant du groupe C est imprimé à 98%, etc ... écrasant les réglages des matériaux.
 
-**Activer le mur de netoyage** : Inclus mais désactivé, par défaut cette option est toujours activée dans mon "profil du matériaux" pour le PETG car j'imprime avec deux filaments, mais dans le cadre de la calibration afin de pouvoir imprimer les cubes sur une seule et unique ligne j'ai choisi de désactiver cette option au niveau des groupes cela a pour avantages de ne pas avoir à (re)modifier mon profil matériaux, éviter des colisions entre murs de purges étant donné que la distance intercubes est de 5mm mais également accélérer l'impression du plateau. La tour de purge 10x10x20mm elle n'integre pas cette option et donc posséde un mur de netoyage.
+**Activer le mur de netoyage** : Inclus mais désactivé, par défaut cette option est toujours activée dans mon "profil du matériaux" pour le PETG car j'imprime avec deux filaments, mais dans le cadre de la calibration afin de pouvoir imprimer les cubes sur une seule et unique ligne j'ai choisi de désactiver cette option au niveau des groupes cela a pour avantages de ne pas avoir à (re)modifier mon profil matériaux, éviter des colisions entre murs de netoyages étant donné que la distance intercubes est de 5mm mais également accélérer l'impression du plateau. La tour de purge 10x10x20mm elle n'integre pas cette option et donc posséde un mur de netoyage.
 
 Les **Paramètres de couches** : Egalement customisés avec des options qui concernent uniquement la témpérature des extrudeurs dans le but de faciliter la réutilisation et modification de ce plateau pour caracteriser d'autres types de filaments nécèssitant d'autres températures, il faut donc modifier ces valeurs dans chacun des groupes et faire impérativement une verification des valeurs thermiques appliqués à la buse avant d'exporter et imprimer un gcode. Mes vaparamêtres :
 Buse Z2 située à gauche (L) 235°c pour le PETG
-Buse Z1 située à droite (R) 205°c pour le PLA -> Attention même si ce plateau imprime du PETG la QIDI-IFAST au départ de chaque impression la QIDI-IFAST fait un trait de purge de 100mm de longueur, si la température de Z1 n'est pas adéquate avec la température du filament présent il y a un risque de casser / endomager la tête. 
+Buse Z1 située à droite (R) 205°c pour le PLA -> Attention même si ce plateau imprime du PETG la QIDI-IFAST au départ de chaque impression la QIDI-IFAST fait un trait de purge de 100mm de longueur, si la température de Z1 n'est pas adéquate avec la température du filament que vous avez chargé il y a un risque de casser / endomager la tête et/ou boucher la buse. 
 
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/9b1b6daf2745e975ca76cbf3927c7ab1c6f96028/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_Visualisation_temperature.png)
 
- La température de l'enceinte est fixé par defaut à 40°c, elle peut être modifiée en éditant le matériaux principal sur Z2 -> "**IFAST PETG BLANC SUNLU**" -> "**Modifier les paramètres du Matériaux selectionné**" -> "**Gcode Personalisé**" et modifiant le gcode "**M141 S40**". Le choix de cette température n'est pas anodine cela  permet à la fois d'imprimer n'importe quel type de filament tout en ayant une dilation totalement controlée de l'imprimante. En effet etant donné que ma QIDI est localisée dans un atelier elle subit une amplitude thermique moyenne de 35°c entre la saison hivernale et estivale; ainsi travailler dans une enceinte à température constante et contrôlée assure une meilleure répétatiblité d'impression et une constance des réglages indépendement de la saison, les mécanismes d'entrainements sont sensibles aux dilations d'ou l'idée de travailler toujours à température constante de 40°.
+ La température de l'enceinte est fixé par defaut à 40°c, elle peut être modifiée dasn IDEAMAKER en éditant le matériaux principal sur Z2 -> "**IFAST PETG BLANC SUNLU**" -> "**Modifier les paramètres du Matériaux selectionné**" -> "**Gcode Personalisé**" et modifiant le gcode "**M141 S40**". Le choix de cette température n'est pas anodine cela  permet à la fois d'imprimer n'importe quel type de filament tout en ayant une dilation totalement controlée de l'imprimante. En effet etant donné que ma QIDI est localisée dans un atelier elle subit une amplitude thermique d'environ 35°c entre la saison hivernale et estivale; ainsi travailler dans une enceinte à température constante et contrôlée assure une meilleure répétatiblité d'impression et une constance des réglages indépendement de la saison, les mécanismes d'entrainements sont sensibles aux dilations d'ou l'idée de travailler toujours à température constante de 40°.
 
-La température du plateau est fixée à 65°c car j'imprime en PETG le corps de piéce et mes supports en PLA, il faut donc trouver une temperature medianne qui est compatible avec les deux filaments. Il vous faudra adapter cette valeur en fonction de vos materiaux. 
+La température du plateau est fixée à 65°c car j'imprime en PETG le corps de piéce et mes supports en PLA [sur une fine couche de colle soluble](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2002/Etape_02.md#pr%C3%A9requis), il faut donc trouver une temperature medianne qui est compatible avec les deux filaments.
 ![](https://github.com/sudtek/IMPRIMANTES_3D/blob/7696ddd079a5c97c509103294c85bcd0db28b6b0/QIDI/IFAST/CALIBRATION/Etape%2004/media/IDEAMAKER_MATERIEL_GAUCHE_Z2_PETG_BLANC_SUNLU_Temperature.png)
 
-Rendu de la serie de cubes de calibrage de 100% à 90% à débit decroissant par pas de 1.0% afin de s'assurer que tout est correct.![](https://github.com/sudtek/IMPRIMANTES_3D/blob/6f4cdd068f3487245cee3358175c3eef3447ab7e/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/Vue_02.png)
+Rendu de la serie de cubes de calibrage de 100% à 90% à débits dècroissants par pas de 1.0% afin de s'assurer que tout est correct.![](https://github.com/sudtek/IMPRIMANTES_3D/blob/6f4cdd068f3487245cee3358175c3eef3447ab7e/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/Vue_02.png)
 
 Faites un export du fichier .gcode [17_10_2024_Calibration_[100%..90%]_V2.gcode](https://github.com/sudtek/IMPRIMANTES_3D/blob/8bae97a4e72fbc0f8e1de0a924a69d353455d964/QIDI/IFAST/CALIBRATION/Etape%2004/Z2_Calibration_PETG_235%C2%B0c/17_10_2024_Calibration_%5B100%25..90%25%5D_V2.gcode) vers une clef USB.
 
 ### Préparation de l'imprimante avant d'imprimer le gcode
 Fixer manuellement les températures des materiaux, du plateau et de l'enceinte via le menu de l'imprimante et laisser l'imprimante se dilater et stabiliser au moins 15 minutes avant de lancer votre impression. Je vous invite à vous reporter aux explications détaillés sur ce point l'[Etape 2 Calibration Mise à niveau / hauteur du plateau](https://github.com/sudtek/IMPRIMANTES_3D/blob/main/QIDI/IFAST/CALIBRATION/Etape%2002/Etape_02.md#pr%C3%A9requis)
 
-Faites un fast Leveling à chaud de l'imprimante au besoin se reporter à l'[Étape 02 : Calibration Mise à niveau / hauteur du plateau](https://github.com/sudtek/IMPRIMANTES_3D/blob/8bae97a4e72fbc0f8e1de0a924a69d353455d964/QIDI/IFAST/CALIBRATION/Etape%2002/Etape_02.md#pr%C3%A9requis)
+Faites un fast Leveling à chaud de l'imprimante au besoin se reporter à [Étape 02 : Calibration Mise à niveau / hauteur du plateau](https://github.com/sudtek/IMPRIMANTES_3D/blob/8bae97a4e72fbc0f8e1de0a924a69d353455d964/QIDI/IFAST/CALIBRATION/Etape%2002/Etape_02.md#pr%C3%A9requis)
 
 ### Impression des Cubes
 L'impression va durer environ 4 heures 1/4 et consommer 37g de filament.
 
-Chaque couche de cube est imprimée avec un débit d'écoulement unique décroissant 100.0%; 99.0% ... 90.0% mais la QIDI-IFAST a un bug* d'affichage; l'écran de l'imprimante n'est jamais mis à jour avec la valeur du débit courant et il faut forcer manuelement le rafraichissement de cette valeur en basculant entre l'écran 1/2 et 2/2 pour verifier que les bon paramètres de debit sont appliqué à chacun des cubes. Cette verification est à faire uniquement pour la 1er couche des 11 cubes.
+Chaque couche de cube est imprimée avec un débit d'écoulement unique décroissant 100.0%; 99.0% ... 90.0% mais la QIDI-IFAST a un bug* d'affichage; l'écran de l'imprimante n'est jamais mis à jour avec la valeur du débit courant et il faut forcer manuelement le rafraichissement de cette valeur en basculant entre l'écran 1/2 et 2/2 pour verifier que les bon paramètres de debit sont appliqué à chacun des cubes. 
+![](https://github.com/sudtek/IMPRIMANTES_3D/blob/590ed48f2fef80f08a1cb919f9494207e8ea42d6/QIDI/IFAST/CALIBRATION/Etape%2004/media/QIDI_IFAST_ECRAN_BUG_MAJ_DEBIT.jpg)
+Cette verification est à faire uniquement pour la 1er couche des 11 cubes lorsque l'on génère sont premier gcode.
 
 _* Note : Bug de màj d'affichage signalé au support de QIDI mais à ce jour aucun correctif en vue ..._
 
